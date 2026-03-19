@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.lang-switcher {
+				position: fixed;
+				top: 1.25rem;
+				right: 1.25rem;
+				z-index: 10001;
+				display: flex;
+				gap: 0.5rem;
+			}
+
+			.lang-switcher button {
+				background: rgba(255, 255, 255, 0.12);
+				border: solid 1px rgba(255, 255, 255, 0.35);
+				color: #ffffff;
+				border-radius: 999px;
+				padding: 0.35rem 0.85rem;
+				font-size: 0.75rem;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				cursor: pointer;
+				transition: all 0.2s ease;
+			}
+
+			.lang-switcher button.active,
+			.lang-switcher button:hover {
+				background: rgba(255, 255, 255, 0.9);
+				color: #6366f1;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div class="lang-switcher" aria-label="Language switcher">
+			<button type="button" data-lang-button="en" onclick="setLanguage('en')">EN</button>
+			<button type="button" data-lang-button="de" onclick="setLanguage('de')">DE</button>
+		</div>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1 data-i18n="header_title">Meiklet</h1>
+						<p data-i18n-html="header_subtitle">Just another free, fully responsive site template<br />built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active" data-i18n="nav_intro">Introduction</a></li>
+							<li><a href="#first" data-i18n="nav_first">Therapy</a></li>
+							<li><a href="#second" data-i18n="nav_second">Second Section</a></li>
+							<li><a href="#individual" data-i18n="nav_individual">Individuals</a></li>
+							<li><a href="#cta" data-i18n="nav_cta">Get Started</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 data-i18n="intro_title">Ipsum sed adipiscing</h2>
+										</header>
+										<p data-i18n="intro_text">Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+										<!-- <ul class="actions">
+											<li><a href="generic.html" class="button" data-i18n="learn_more">Learn More</a></li>
+										</ul> -->
+									</div>
+									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2 data-i18n="first_title">Magna veroeros</h2>
+								</header>
+								<p class="content" data-i18n="feature1_text">Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+								<!-- <footer class="major">
+									<ul class="actions special">
+										<li><a href="generic.html" class="button" data-i18n="learn_more">Learn More</a></li>
+									</ul>
+								</footer> -->
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2 data-i18n="second_title">Ipsum consequat</h2>
+									<p data-i18n-html="second_intro">Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+								</header>
+								<!-- <ul class="statistics">
+									<li class="style1">
+										<span class="icon solid fa-code-branch"></span>
+										<strong>5,120</strong> <span data-i18n="stat1">Etiam</span>
+									</li>
+									<li class="style2">
+										<span class="icon fa-folder-open"></span>
+										<strong>8,192</strong> <span data-i18n="stat2">Magna</span>
+									</li>
+									<li class="style3">
+										<span class="icon solid fa-signal"></span>
+										<strong>2,048</strong> <span data-i18n="stat3">Tempus</span>
+									</li>
+									<li class="style4">
+										<span class="icon solid fa-laptop"></span>
+										<strong>4,096</strong> <span data-i18n="stat4">Aliquam</span>
+									</li>
+									<li class="style5">
+										<span class="icon fa-gem"></span>
+										<strong>1,024</strong> <span data-i18n="stat5">Nullam</span>
+									</li>
+								</ul> -->
+								<!-- <p class="content" data-i18n="second_text">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p> -->
+								<!-- <footer class="major">
+									<ul class="actions special">
+										<li><a href="generic.html" class="button" data-i18n="learn_more">Learn More</a></li>
+									</ul>
+								</footer> -->
+							</section>
+
+						<!-- Individuals -->
+							<section id="individual" class="main special">
+								<header class="major">
+									<h2 data-i18n="individual_title">Individuals</h2>
+									<p data-i18n="individual_text">...</p>
+								</header>
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2 data-i18n="cta_title">Congue imperdiet</h2>
+									<p data-i18n-html="cta_text">Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+								</header>
+								<!-- <footer class="major">
+									<ul class="actions special">
+										<li><a href="generic.html" class="button primary" data-i18n="get_started">Get Started</a></li>
+										<li><a href="generic.html" class="button" data-i18n="learn_more">Learn More</a></li>
+									</ul>
+								</footer> -->
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2 data-i18n="footer_left_title">Aliquam sed mauris</h2>
+							<p data-i18n="footer_left_text">Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="generic.html" class="button" data-i18n="learn_more">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2 data-i18n="footer_right_title">Etiam feugiat</h2>
+							<dl class="alt">
+								<dt data-i18n="address">Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt data-i18n="phone">Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd>
+								<dt data-i18n="email">Email</dt>
+								<dd><a href="#">information@untitled.tld</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright" data-i18n-html="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				const translations = {
+					en: {
+						header_title: 'Systemic Counseling and Therapy',
+						header_subtitle: 'Just another free, fully responsive site template<br />built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.',
+						nav_intro: 'Introduction',
+						nav_first: 'Pairs',
+						nav_second: 'Family',
+						nav_individual: 'Individuals',
+						nav_cta: 'About Me',
+						intro_title: 'This is in English',
+						intro_text: 'Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.',
+					//	learn_more: 'Learn More',
+						first_title: 'Pairs',
+						//feature1_title: 'Family',
+						feature1_text: 'Ich unterstütze Paare die sich in einer Krise, in einer Umbruch – oder Trennungsphase befinden, oder die ihre Elternrolle reflektieren möchten. In Beziehungen befinden wir uns in immer wiederkehrenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, Ihre eigenen festgefahrenen Muster zu erkennen, die Sichtweisen des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern. Dabei arbeite ich mit dem emotionsfokussierten Ansatz der zum Ziel hat, die Gefühle und Bedürfnisse, die diesen Dynamiken zugrunde liegen, aufzudecken. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen. Sollten Sie sich für eine Trennung entscheiden, biete ich Ihnen auch im Trennungsprozess Unterstützung und Begleitung.',
+						//feature2_title: 'Amed sed feugiat',
+						//feature2_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
+						//feature3_title: 'Dolor nullam',
+						//feature3_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
+						second_title: 'Family',
+						second_intro: 'In der systemischen Familienarbeit schaue ich mit Ihnen darauf, wie einzelne Belastungen mit dem Miteinander in der Familie verbunden sind. Symptome eines Familienmitglieds sind oft Hinweise auf gemeinsame Muster oder Spannungen – nicht auf ein individuelles Problem. Auch Veränderungen, wie beispielsweise die Geburt eines Kindes oder Krisen, sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann. Gemeinsam entdecken wir diese Zusammenhänge, entwickeln neue Perspektiven und stärken so das Miteinander und die Ressourcen der ganzen Familie.',
+						// stat1: 'Etiam',
+						// stat2: 'Magna',
+						// stat3: 'Tempus',
+						// stat4: 'Aliquam',
+						// stat5: 'Nullam',
+						//second_text: 'Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.',
+						individual_title: 'Individuals',
+						individual_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
+						cta_title: 'About Me',
+						cta_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
+						get_started: 'Get Started',
+						footer_left_title: 'Aliquam sed mauris',
+						footer_left_text: 'Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.',
+						footer_right_title: 'Etiam feugiat',
+						address: 'Address',
+						phone: 'Phone',
+						email: 'Email',
+						copyright: '&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.'
+					},
+					de: {
+						header_title: 'Systemische Beratung und Therapie',
+						header_subtitle: 'Nur eine weitere kostenlose, vollständig responsive Website-Vorlage<br />erstellt von <a href="https://twitter.com/ajlkn">@ajlkn</a> für <a href="https://html5up.net">HTML5 UP</a>.',
+						nav_intro: 'Einführung',
+						nav_first: 'Paare',
+						nav_second: 'Familien',
+						nav_individual: 'Einzelpersonen',
+						nav_cta: 'Über mich',
+						intro_title: 'Das ist in English',
+						intro_text: 'Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.',
+						//learn_more: 'Mehr erfahren',
+						first_title: 'Paare',
+						//feature1_title: 'Familien',
+						feature1_text: 'Ich unterstütze Paare die sich in einer Krise, in einer Umbruch – oder Trennungsphase befinden, oder die ihre Elternrolle reflektieren möchten. In Beziehungen befinden wir uns in immer wiederkehrenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, Ihre eigenen festgefahrenen Muster zu erkennen, die Sichtweisen des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern. Dabei arbeite ich mit dem emotionsfokussierten Ansatz der zum Ziel hat, die Gefühle und Bedürfnisse, die diesen Dynamiken zugrunde liegen, aufzudecken. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen. Sollten Sie sich für eine Trennung entscheiden, biete ich Ihnen auch im Trennungsprozess Unterstützung und Begleitung.',
+						// feature2_title: 'Amed sed feugiat',
+						// feature2_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
+						// feature3_title: 'Dolor nullam',
+						// feature3_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
+						second_title: 'Familien',
+						second_intro: 'In der systemischen Familienarbeit schaue ich mit Ihnen darauf, wie einzelne Belastungen mit dem Miteinander in der Familie verbunden sind. Symptome eines Familienmitglieds sind oft Hinweise auf gemeinsame Muster oder Spannungen – nicht auf ein individuelles Problem. Auch Veränderungen, wie beispielsweise die Geburt eines Kindes oder Krisen, sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann. Gemeinsam entdecken wir diese Zusammenhänge, entwickeln neue Perspektiven und stärken so das Miteinander und die Ressourcen der ganzen Familie.',
+						// stat1: 'Etiam',
+						// stat2: 'Magna',
+						// stat3: 'Tempus',
+						// stat4: 'Aliquam',
+						// stat5: 'Nullam',
+						//second_text: 'Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.',
+						individual_title: 'Einzelpersonen',
+						individual_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
+						cta_title: 'Über mich',
+						cta_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
+						get_started: 'Loslegen',
+						footer_left_title: 'Aliquam sed mauris',
+						footer_left_text: 'Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.',
+						footer_right_title: 'Etiam feugiat',
+						address: 'Adresse',
+						phone: 'Telefon',
+						email: 'E-Mail',
+						copyright: '&copy; Ohne Titel. Design: <a href="https://html5up.net">HTML5 UP</a>.'
+					}
+				};
+
+				function applyTranslations(lang) {
+					const dict = translations[lang] || translations.en;
+					document.documentElement.lang = lang;
+					document.querySelectorAll('[data-i18n]').forEach((element) => {
+						const key = element.getAttribute('data-i18n');
+						if (dict[key] !== undefined) element.textContent = dict[key];
+					});
+					document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+						const key = element.getAttribute('data-i18n-html');
+						if (dict[key] !== undefined) element.innerHTML = dict[key];
+					});
+					document.querySelectorAll('[data-lang-button]').forEach((button) => {
+						button.classList.toggle('active', button.getAttribute('data-lang-button') === lang);
+					});
+				}
+
+				function setLanguage(lang) {
+					localStorage.setItem('site-language', lang);
+					applyTranslations(lang);
+				}
+
+				const savedLanguage = localStorage.getItem('site-language') || 'en';
+				applyTranslations(savedLanguage);
+			</script>
+
+	</body>
+</html>
