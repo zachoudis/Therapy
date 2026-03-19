@@ -100,10 +100,13 @@ input, select, textarea {
 
 	body {
 		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), url("../background.png");
+		background-repeat: repeat, no-repeat;
+		background-position: top left, center 0px;
+		/* Keep the photo visible while scrolling by pinning only the photo layer */
+		background-attachment: scroll, fixed;
+		/* Prevent the photo from feeling "too small" by scaling it to viewport width */
+		background-size: auto, 110% auto;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {

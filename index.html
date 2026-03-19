@@ -306,6 +306,29 @@
 
 				const savedLanguage = localStorage.getItem('site-language') || 'en';
 				applyTranslations(savedLanguage);
+
+				// Parallax-ish background movement for the photo layer.
+				// We only adjust the photo layer (second background) so it stays visible while scrolling.
+				(function initBackgroundParallax() {
+					const body = document.body;
+					if (!body) return;
+
+					let ticking = false;
+					const update = () => {
+						const offset = Math.round(window.scrollY * 0.1);
+						body.style.backgroundPosition = `top left, center ${-offset}px`;
+						ticking = false;
+					};
+
+					const onScroll = () => {
+						if (ticking) return;
+						ticking = true;
+						window.requestAnimationFrame(update);
+					};
+
+					window.addEventListener('scroll', onScroll, { passive: true });
+					update();
+				})();
 			</script>
 
 	</body>
