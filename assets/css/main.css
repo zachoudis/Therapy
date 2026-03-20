@@ -3287,9 +3287,9 @@ input, select, textarea {
 					-ms-transition: font-size 0.2s ease;
 					transition: font-size 0.2s ease;
 					display: inline-block;
-					height: 2.6em;
-					line-height: 2.6em;
-					padding: 0 1.5em;
+					height: 2.25em;
+					line-height: 2.25em;
+					padding: 0 1.25em;
 					border: 0;
 					border-radius: 8px;
 					font-size: 1em;
@@ -3341,7 +3341,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: transparent;
 		color: #636363;
 		border-radius: 0.25em;
 	}
@@ -3590,7 +3590,12 @@ input, select, textarea {
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
 			border-top: solid 1px #dddddd;
+		background-color: rgba(255, 255, 255, 0.96);
 		}
+
+	#main > .main:nth-child(even) {
+		background-color: rgba(240, 240, 240, 0.96);
+	}
 
 			#main > .main:first-child {
 				border-top: 0;

@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+
 			.lang-switcher {
 				position: fixed;
 				top: 1.25rem;
@@ -38,6 +40,30 @@
 			.lang-switcher button:hover {
 				background: rgba(255, 255, 255, 0.9);
 				color: #6366f1;
+			}
+
+			/* Calligraphic look for the main page title */
+			#header h1 {
+				font-family: 'Dancing Script', cursive !important;
+				font-weight: 600;
+				letter-spacing: 0;
+				color: #000000 !important;
+			}
+
+			/* Match the menu tab font to the calligraphic title */
+			#nav ul li a {
+				font-family: 'Dancing Script', cursive !important;
+				font-weight: 600;
+				letter-spacing: 0;
+				font-size: 1.25em;
+			}
+
+			/* Calligraphic look for all main section titles */
+			#main header.major h2 {
+				font-family: 'Dancing Script', cursive !important;
+				font-weight: 600;
+				letter-spacing: 0;
+				color: #000000 !important;
 			}
 		</style>
 	</head>
@@ -78,9 +104,9 @@
 							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
-										<header class="major">
+										<!-- <header class="major">
 											<h2 data-i18n="intro_title">Ipsum sed adipiscing</h2>
-										</header>
+										</header> -->
 										<p class="content" data-i18n="intro_text">Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
 										<!-- <ul class="actions">
 											<li><a href="generic.html" class="button" data-i18n="learn_more">Learn More</a></li>
@@ -160,7 +186,7 @@
 								<header class="major">
 									<h2 data-i18n="prices_title">Prices</h2>
 								</header>
-								<p class="content" data-i18n="prices_text">No text added yet.</p>
+								<p class="content" data-i18n-html="prices_text">No text added yet.</p>
 							</section>
 
 						<!-- Get Started -->
@@ -231,7 +257,7 @@
 						nav_supervision: 'Supervision',
 						nav_prices: 'Prices',
 						nav_cta: 'About Me',
-						intro_title: 'This is in English',
+						intro_title: '',
 						intro_text: 'Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.',
 					//	learn_more: 'Learn More',
 						first_title: 'Pairs',
@@ -254,7 +280,7 @@
 						supervision_title: 'Supervision',
 						supervision_text: 'No text added yet.',
 						prices_title: 'Prices',
-						prices_text: 'No text added yet.',
+						prices_text: 'Couple Therapy<br />145 € - 90 min.<br /><br />Family Therapy<br />145 € - 90 min.<br /><br />In family therapy, you have the option of working with two therapists, which can help in adding multiple perspectives on the problems. In this case I would work with an experienced colleague, and we would agree on a fee individually.<br /><br />Individual coaching<br />100 € - 60 min.<br /><br />As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" § 19 Abs. 3 UStG.)<br /><br />Please be advised that couple and family therapy as well as individual coaching are not covered by German health insurance.',
 						cta_title: 'About Me',
 						cta_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
 						get_started: 'Get Started',
@@ -276,7 +302,7 @@
 						nav_supervision: 'Supervision',
 						nav_prices: 'Preise',
 						nav_cta: 'Über mich',
-						intro_title: 'Das ist in English',
+						intro_title: '',
 						intro_text: 'Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.',
 						//learn_more: 'Mehr erfahren',
 						first_title: 'Paare',
@@ -299,7 +325,7 @@
 						supervision_title: 'Supervision',
 						supervision_text: 'Noch kein Text hinterlegt.',
 						prices_title: 'Preise',
-						prices_text: 'Noch kein Text hinterlegt.',
+						prices_text: 'Couple Therapy<br />145 € - 90 min.<br /><br />Family Therapy<br />145 € - 90 min.<br /><br />In family therapy, you have the option of working with two therapists, which can help in adding multiple perspectives on the problems. In this case I would work with an experienced colleague, and we would agree on a fee individually.<br /><br />Individual coaching<br />100 € - 60 min.<br /><br />As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" § 19 Abs. 3 UStG.)<br /><br />Please be advised that couple and family therapy as well as individual coaching are not covered by German health insurance.',
 						cta_title: 'Über mich',
 						cta_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
 						get_started: 'Loslegen',
