@@ -12,58 +12,158 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
-
 			.lang-switcher {
 				position: fixed;
 				top: 1.25rem;
 				right: 1.25rem;
 				z-index: 10001;
-				display: flex;
-				gap: 0.5rem;
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35rem;
+				padding: 0.35rem;
+				border-radius: 999px;
+				background: rgba(239, 229, 214, 0.96);
+				border: 1px solid rgba(145, 124, 98, 0.18);
+				box-shadow: 0 12px 28px rgba(80, 58, 34, 0.14);
+				backdrop-filter: blur(10px);
 			}
 
 			.lang-switcher button {
-				background: rgba(255, 255, 255, 0.12);
-				border: solid 1px rgba(255, 255, 255, 0.35);
-				color: #ffffff;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				min-width: 3.25rem;
+				height: 2.4rem;
+				padding: 0 1rem;
+				margin: 0;
+				background: transparent;
+				border: 0;
 				border-radius: 999px;
-				padding: 0.35rem 0.85rem;
-				font-size: 0.75rem;
+				color: #6c5a45;
+				font-size: 0.82rem;
+				font-weight: 700;
+				line-height: 1;
+				letter-spacing: 0.08em;
+				text-align: center;
+				cursor: pointer;
+				transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.lang-switcher button:hover {
+				background: rgba(255, 255, 255, 0.55);
+				color: #4e4031;
+			}
+
+			.lang-switcher button.active {
+				background: #ffffff;
+				color: #4e4031;
+				box-shadow: 0 8px 18px rgba(80, 58, 34, 0.12);
+			}
+
+			.lang-switcher button:focus-visible {
+				outline: 2px solid #8a7356;
+				outline-offset: 2px;
+			}
+
+			@media screen and (max-width: 736px) {
+				.lang-switcher {
+					top: 0.9rem;
+					right: 0.9rem;
+					padding: 0.3rem;
+				}
+
+				.lang-switcher button {
+					min-width: 2.9rem;
+					height: 2.2rem;
+					padding: 0 0.8rem;
+					font-size: 0.76rem;
+				}
+			}
+
+			/* Clean sans-serif (same as theme: Source Sans Pro from main.css) */
+			#header h1 {
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-weight: 400;
+				letter-spacing: normal;
+				color: #000000 !important;
+			}
+
+			#nav ul li a {
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-weight: 700;
+				letter-spacing: 0.01em;
+			}
+
+			#main header.major h2 {
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-weight: 400;
+				letter-spacing: normal;
+				color: #000000 !important;
+			}
+
+			.price-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1.5rem;
+				text-align: left;
+				margin-top: 1rem;
+			}
+
+			.price-card {
+				padding: 2rem 1.75rem;
+				border-radius: 1.5rem;
+				background: linear-gradient(180deg, rgba(250, 246, 240, 0.98) 0%, rgba(244, 236, 226, 0.96) 100%);
+				border: 1px solid rgba(149, 125, 96, 0.16);
+				box-shadow: 0 18px 40px rgba(92, 71, 46, 0.08);
+				min-height: 100%;
+			}
+
+			.price-card__label {
+				display: inline-block;
+				padding: 0.35rem 0.8rem;
+				margin-bottom: 1rem;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.72);
+				color: #8a7356;
+				font-size: 0.72rem;
 				font-weight: 700;
 				letter-spacing: 0.08em;
-				cursor: pointer;
-				transition: all 0.2s ease;
+				text-transform: uppercase;
 			}
 
-			.lang-switcher button.active,
-			.lang-switcher button:hover {
-				background: rgba(255, 255, 255, 0.9);
-				color: #6366f1;
+			.price-card h3 {
+				margin: 0 0 0.5rem 0;
+				font-size: 1.45rem;
+				color: #4e4031;
 			}
 
-			/* Calligraphic look for the main page title */
-			#header h1 {
-				font-family: 'Dancing Script', cursive !important;
-				font-weight: 600;
-				letter-spacing: 0;
-				color: #000000 !important;
+			.price-card__value {
+				margin: 0 0 1rem 0;
+				font-size: 1.05rem;
+				font-weight: 700;
+				color: #2f261e;
 			}
 
-			/* Match the menu tab font to the calligraphic title */
-			#nav ul li a {
-				font-family: 'Dancing Script', cursive !important;
-				font-weight: 600;
-				letter-spacing: 0;
-				font-size: 1.25em;
+			.price-card__description {
+				margin: 0;
+				min-height: 8.5rem;
+				color: #5f5144;
 			}
 
-			/* Calligraphic look for all main section titles */
-			#main header.major h2 {
-				font-family: 'Dancing Script', cursive !important;
-				font-weight: 600;
-				letter-spacing: 0;
-				color: #000000 !important;
+			.price-note {
+				max-width: 60rem;
+				margin: 1.5rem auto 0;
+				color: #5f5144;
+			}
+
+			@media screen and (max-width: 980px) {
+				.price-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.price-card__description {
+					min-height: 0;
+				}
 			}
 		</style>
 	</head>
@@ -186,7 +286,30 @@
 								<header class="major">
 									<h2 data-i18n="prices_title">Prices</h2>
 								</header>
-								<p class="content" data-i18n-html="prices_text">No text added yet.</p>
+								<div class="price-grid">
+									<article class="price-card">
+										<span class="price-card__label" data-i18n="price_category_couples">Couple Therapy</span>
+										<h3 data-i18n="price_title_couples">Couple Therapy</h3>
+										<p class="price-card__value" data-i18n="price_value_couples">145 € · 90 min.</p>
+										<p class="price-card__description" data-i18n="price_desc_couples"></p>
+									</article>
+
+									<article class="price-card">
+										<span class="price-card__label" data-i18n="price_category_individual">Individual Therapy</span>
+										<h3 data-i18n="price_title_individual">Individual Therapy</h3>
+										<p class="price-card__value" data-i18n="price_value_individual">100 € · 60 min.</p>
+										<p class="price-card__description" data-i18n="price_desc_individual"></p>
+									</article>
+
+									<article class="price-card">
+										<span class="price-card__label" data-i18n="price_category_coaching">Individual Coaching</span>
+										<h3 data-i18n="price_title_coaching">Individual Coaching</h3>
+										<p class="price-card__value" data-i18n="price_value_coaching">100 € · 60 min.</p>
+										<p class="price-card__description" data-i18n="price_desc_coaching"></p>
+									</article>
+								</div>
+								<p class="price-note" data-i18n="price_note_vat"></p>
+								<p class="price-note" data-i18n="price_note_insurance"></p>
 							</section>
 
 						<!-- Get Started -->
@@ -280,7 +403,20 @@
 						supervision_title: 'Supervision',
 						supervision_text: 'No text added yet.',
 						prices_title: 'Prices',
-						prices_text: 'Couple Therapy<br />145 € - 90 min.<br /><br />Family Therapy<br />145 € - 90 min.<br /><br />In family therapy, you have the option of working with two therapists, which can help in adding multiple perspectives on the problems. In this case I would work with an experienced colleague, and we would agree on a fee individually.<br /><br />Individual coaching<br />100 € - 60 min.<br /><br />As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" § 19 Abs. 3 UStG.)<br /><br />Please be advised that couple and family therapy as well as individual coaching are not covered by German health insurance.',
+						price_category_couples: 'Couple Therapy',
+						price_title_couples: 'Couple Therapy',
+						price_value_couples: '145 € · 90 min.',
+						price_desc_couples: 'Space for a short explanation of how sessions work, what themes can be addressed, and what clients can expect from the process.',
+						price_category_individual: 'Individual Therapy',
+						price_title_individual: 'Individual Therapy',
+						price_value_individual: '100 € · 60 min.',
+						price_desc_individual: 'Space for a short explanation about one-to-one support, personal topics, and the therapeutic focus of the sessions.',
+						price_category_coaching: 'Individual Coaching',
+						price_title_coaching: 'Individual Coaching',
+						price_value_coaching: '100 € · 60 min.',
+						price_desc_coaching: 'Space for a short explanation about coaching topics such as professional development, decision-making, or life transitions.',
+						price_note_vat: 'As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" according to § 19 UStG).',
+						price_note_insurance: 'Please note that couple therapy, individual therapy, and individual coaching are not covered by German statutory health insurance.',
 						cta_title: 'About Me',
 						cta_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
 						get_started: 'Get Started',
@@ -325,7 +461,20 @@
 						supervision_title: 'Supervision',
 						supervision_text: 'Noch kein Text hinterlegt.',
 						prices_title: 'Preise',
-						prices_text: 'Couple Therapy<br />145 € - 90 min.<br /><br />Family Therapy<br />145 € - 90 min.<br /><br />In family therapy, you have the option of working with two therapists, which can help in adding multiple perspectives on the problems. In this case I would work with an experienced colleague, and we would agree on a fee individually.<br /><br />Individual coaching<br />100 € - 60 min.<br /><br />As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" § 19 Abs. 3 UStG.)<br /><br />Please be advised that couple and family therapy as well as individual coaching are not covered by German health insurance.',
+						price_category_couples: 'Paartherapie',
+						price_title_couples: 'Paartherapie',
+						price_value_couples: '145 € · 90 Min.',
+						price_desc_couples: 'Hier ist Platz für einen kurzen Erklärungstext dazu, wie die Sitzungen ablaufen, welche Themen Raum haben und was Klient*innen erwarten können.',
+						price_category_individual: 'Einzeltherapie',
+						price_title_individual: 'Einzeltherapie',
+						price_value_individual: '100 € · 60 Min.',
+						price_desc_individual: 'Hier ist Platz für einen kurzen Erklärungstext zu persönlicher Begleitung, individuellen Themen und dem therapeutischen Fokus der Sitzungen.',
+						price_category_coaching: 'Einzelcoaching',
+						price_title_coaching: 'Einzelcoaching',
+						price_value_coaching: '100 € · 60 Min.',
+						price_desc_coaching: 'Hier ist Platz für einen kurzen Erklärungstext zu Coaching-Themen wie beruflicher Entwicklung, Entscheidungsfindung oder Übergangsphasen im Leben.',
+						price_note_vat: 'Als Kleinunternehmerin sind meine Honorare von der Umsatzsteuer befreit (Kleinunternehmerregelung gemäß § 19 UStG).',
+						price_note_insurance: 'Bitte beachten Sie, dass Paartherapie, Einzeltherapie und Einzelcoaching nicht von den gesetzlichen Krankenkassen übernommen werden.',
 						cta_title: 'Über mich',
 						cta_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
 						get_started: 'Loslegen',
