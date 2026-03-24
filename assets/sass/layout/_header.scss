@@ -20,7 +20,15 @@
 		}
 
 		&.alt {
-			@include padding(6em, 5em, (1em, 0, 0, 0));
+			/* Hero: vertically center title in the viewport band; top padding clears #nav */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: stretch;
+			box-sizing: border-box;
+			min-height: calc(100vh - 5.5rem);
+			min-height: calc(100svh - 5.5rem);
+			@include padding(6em, 5em, (1em, 0, 2em, 0));
 
 			h1 {
 				font-size: 3.25em;
@@ -31,29 +39,15 @@
 				@include vendor('transition-delay', '0.5s');
 				opacity: 1;
 			}
-
-			.logo {
-				@include vendor('transition', (
-					'opacity 1.25s ease',
-					'transform 0.5s ease'
-				));
-				@include vendor('transition-delay', '0s');
-				display: block;
-				margin: 0 0 (_size(element-margin) * 0.75) 0;
-
-				img {
-					display: block;
-					margin: 0 auto;
-					max-width: 75%;
-				}
-			}
 		}
 
 		@include breakpoint('<=large') {
 			@include padding(4em, 4em, (0, 0, -2em, 0));
 
 			&.alt {
-				@include padding(5em, 4em, (1em, 0, 0, 0));
+				min-height: calc(100vh - 6rem);
+				min-height: calc(100svh - 6rem);
+				@include padding(5em, 4em, (1.5em, 0, 2em, 0));
 			}
 		}
 
@@ -61,7 +55,9 @@
 			@include padding(4em, 3em, (0, 0, -2em, 0));
 
 			&.alt {
-				@include padding(4em, 3em, (1em, 0, 0, 0));
+				min-height: calc(100vh - 6rem);
+				min-height: calc(100svh - 6rem);
+				@include padding(4em, 3em, (1.75em, 0, 2em, 0));
 			}
 		}
 
@@ -78,7 +74,8 @@
 			}
 
 			&.alt {
-				@include padding(3em, 2em, (1em, 0, 0, 0));
+				min-height: min(75vh, 32rem);
+				@include padding(3em, 2em, (2em, 0, 2em, 0));
 
 				h1 {
 					font-size: 2.5em;
@@ -90,7 +87,8 @@
 			@include padding(3em, 1.5em, (0, 0, -1em, 0));
 
 			&.alt {
-				@include padding(3em, 1.5em, (1em, 0, 0, 0));
+				min-height: min(70vh, 28rem);
+				@include padding(3em, 1.5em, (1.75em, 0, 1.75em, 0));
 			}
 		}
 
@@ -98,7 +96,8 @@
 			@include padding(2.5em, 1em, (0, 0, -1em, 0));
 
 			&.alt {
-				@include padding(2.5em, 1em, (1em, 0, 0, 0));
+				min-height: min(68vh, 26rem);
+				@include padding(2.5em, 1em, (1.75em, 0, 1.5em, 0));
 			}
 		}
 
@@ -106,10 +105,6 @@
 			&.alt {
 				> * {
 					opacity: 0;
-				}
-
-				.logo {
-					@include vendor('transform', 'scale(0.8) rotate(-30deg)');
 				}
 			}
 		}
