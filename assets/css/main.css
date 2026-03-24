@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /*
 	Stellar by HTML5 UP
@@ -125,12 +125,15 @@ input, select, textarea {
 	body {
 		background-color: #935d8c;
 		color: rgba(255, 255, 255, 0.65);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Helvetica, sans-serif;
 		font-size: 17pt;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.65;
 	}
 
@@ -3089,7 +3092,14 @@ input, select, textarea {
 		}
 
 		#header.alt {
-			padding: 7em 5em 4em 5em ;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: stretch;
+			box-sizing: border-box;
+			min-height: calc(100vh - 5.5rem);
+			min-height: calc(100svh - 5.5rem);
+			padding: 6em 5em 3em 5em ;
 		}
 
 			#header.alt h1 {
@@ -3108,25 +3118,6 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-			#header.alt .logo {
-				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
-				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
-				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
-				transition: opacity 1.25s ease, transform 0.5s ease;
-				-moz-transition-delay: 0s;
-				-webkit-transition-delay: 0s;
-				-ms-transition-delay: 0s;
-				transition-delay: 0s;
-				display: block;
-				margin: 0 0 1.5em 0;
-			}
-
-				#header.alt .logo img {
-					display: block;
-					margin: 0 auto;
-					max-width: 75%;
-				}
-
 		@media screen and (max-width: 1280px) {
 
 			#header {
@@ -3134,7 +3125,9 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 6em 4em 3em 4em ;
+					min-height: calc(100vh - 6rem);
+					min-height: calc(100svh - 6rem);
+					padding: 6.5em 4em 3em 4em ;
 				}
 
 		}
@@ -3146,7 +3139,9 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 5em 3em 2em 3em ;
+					min-height: calc(100vh - 6rem);
+					min-height: calc(100svh - 6rem);
+					padding: 5.75em 3em 2.5em 3em ;
 				}
 
 		}
@@ -3167,7 +3162,8 @@ input, select, textarea {
 					}
 
 				#header.alt {
-					padding: 4em 2em 1em 2em ;
+					min-height: min(75vh, 32rem);
+					padding: 5em 2em 2em 2em ;
 				}
 
 					#header.alt h1 {
@@ -3183,7 +3179,8 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 4em 1.5em 1em 1.5em ;
+					min-height: min(70vh, 28rem);
+					padding: 4.75em 1.5em 1.75em 1.5em ;
 				}
 
 		}
@@ -3195,20 +3192,14 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 3.5em 1em 0.5em 1em ;
+					min-height: min(68vh, 26rem);
+					padding: 4.25em 1em 1.5em 1em ;
 				}
 
 		}
 
 		body.is-preload #header.alt > * {
 			opacity: 0;
-		}
-
-		body.is-preload #header.alt .logo {
-			-moz-transform: scale(0.8) rotate(-30deg);
-			-webkit-transform: scale(0.8) rotate(-30deg);
-			-ms-transform: scale(0.8) rotate(-30deg);
-			transform: scale(0.8) rotate(-30deg);
 		}
 
 /* Nav */
@@ -3221,8 +3212,9 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		position: absolute;
-		width: 64em;
-		max-width: calc(100% - 4em);
+		top: 0;
+		width: 100%;
+		max-width:100%;
 		padding: 1em;
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
@@ -3261,7 +3253,7 @@ input, select, textarea {
 		}
 
 		#nav + #main {
-			padding-top: 4.25em;
+			padding-top: 0;
 		}
 
 		#nav ul {
@@ -3292,10 +3284,10 @@ input, select, textarea {
 					padding: 0 1.25em;
 					border: 0;
 					border-radius: 8px;
-					font-size: 1em;
+					font-size: 1.05em;
 					font-weight: 800;
 					letter-spacing: 0.02em;
-					box-shadow: inset 0 0 0 1px rgba(99, 99, 99, 0.25);
+					box-shadow: none;
 				}
 
 					#nav ul li a:hover {
@@ -3304,7 +3296,7 @@ input, select, textarea {
 
 					#nav ul li a.active {
 						background-color: #ffffff;
-						box-shadow: inset 0 0 0 1px rgba(99, 99, 99, 0.25);
+						box-shadow: none;
 						color: #6366f1;
 					}
 
@@ -3323,7 +3315,7 @@ input, select, textarea {
 			}
 
 				#nav.alt ul li a {
-					font-size: 0.9em;
+					font-size: 0.95em;
 				}
 
 		@media screen and (max-width: 736px) {
@@ -3775,8 +3767,8 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		width: 64em;
-		max-width: calc(100% - 4em);
+		width: 100%;
+		max-width: 100%;
 		margin: 0 auto;
 	}
 
