@@ -289,7 +289,7 @@
 				margin: 0 0 1rem 0;
 				font-size: 1.05rem;
 				font-weight: 700;
-				color: #2f261e;
+				color: #2f261e;	
 			}
 
 			.price-card__description {
@@ -399,6 +399,11 @@
 				text-align: left;
 				margin-top: 1rem;
 			}
+			/* If the image is on the left, keep it in the narrower column (same size as before) */
+			#first .service-split,
+			#individual .service-split {
+				grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.65fr);
+			}
 			.service-split .content {
 				margin: 0;
 			}
@@ -489,12 +494,12 @@
 									<h2 data-i18n="first_title">Magna veroeros</h2>
 								</header>
 								<div class="service-split">
-									<p class="content" data-i18n="feature1_text">Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
 									<article class="service-card">
 										<div class="service-card__photo">
 											<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80&auto=format&fit=crop" alt="" width="800" height="600" loading="lazy" decoding="async" />
 										</div>
 									</article>
+									<p class="content" data-i18n="feature1_text">Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
 								</div>
 							</section>
 
@@ -519,12 +524,12 @@
 									<h2 data-i18n="individual_title">Individuals</h2>
 								</header>
 								<div class="service-split">
-									<p class="content" data-i18n="individual_text">...</p>
 									<article class="service-card">
 										<div class="service-card__photo">
 											<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop" alt="" width="800" height="600" loading="lazy" decoding="async" />
 										</div>
 									</article>
+									<p class="content" data-i18n="individual_text">...</p>
 								</div>
 							</section>
 
