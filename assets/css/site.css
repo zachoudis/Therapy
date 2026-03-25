@@ -513,3 +513,86 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Modal (Impressum, etc.)
+   ============================================================ */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 16, 12, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.modal__dialog {
+  position: relative;
+  width: min(48rem, calc(100% - 2rem));
+  max-height: min(82vh, 52rem);
+  overflow: auto;
+  margin: 10vh auto;
+  padding: 1.6rem 1.6rem 1.4rem 1.6rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(149, 125, 96, 0.2);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.modal__dialog h2 {
+  margin: 0 0 0.85rem 0;
+}
+
+.modal__content {
+  color: #4a4036;
+}
+
+.modal__content p {
+  margin: 0 0 1rem 0;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  background: rgba(28, 22, 16, 0.82);
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.modal__close:hover {
+  background: rgba(28, 22, 16, 0.92);
+}
+
+.modal__close:focus-visible {
+  outline: 2px solid #8a7356;
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 736px) {
+  .modal__dialog {
+    margin: 6vh auto;
+    padding: 1.25rem 1.25rem 1.1rem 1.25rem;
+  }
+}
