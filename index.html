@@ -1,784 +1,301 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!doctype html>
 <html lang="en">
-	<head>
-		<title>Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
-		<style>
-			/*
-				Hero background: photo only behind the title; scaled to full header width (height follows ratio).
-				Uses assets/background1.png — change the url if your file is elsewhere.
-			*/
-			body {
-				background-image: none !important;
-				background-attachment: scroll !important;
-				background-size: auto !important;
-				background-position: top left !important;
-			}
-			#header.alt {
-				position: relative;
-				isolation: isolate;
-				overflow: hidden;
-			}
-			/* Photo sharp on top; light wash only in the last band (kept subtle so bottom stays clear) */
-			#header.alt::before {
-				content: "";
-				position: absolute;
-				inset: 0;
-				z-index: 0;
-				pointer-events: none;
-				background-color: #f4f1eb;
-				background-image:
-					linear-gradient(
-						180deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(255, 255, 255, 0) 74%,
-						rgba(252, 250, 247, 0.18) 90%,
-						rgba(248, 246, 242, 0.48) 100%
-					),
-					url("assets/background1.png");
-				background-repeat: no-repeat, no-repeat;
-				background-size: 100% 100%, 100% auto;
-				background-position: center, center top;
-			}
-			#header.alt > * {
-				position: relative;
-				z-index: 1;
-			}
+  <head>
+    <title>Meike Behrends – Systemic Counseling and Therapy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Systemic counseling and therapy in Berlin. Individual, couple and family sessions by Meike Behrends."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Meike Behrends – Systemic Counseling and Therapy"
+    />
+    <meta
+      property="og:description"
+      content="Systemic counseling and therapy in Berlin."
+    />
+    <meta property="og:image" content="images/therapist.jpg" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <link rel="canonical" href="https://your-domain.de/" />
 
-			/* Language control sits in #nav (last item); JS swaps one SVG. */
-			.lang-switcher {
-				position: static;
-				display: inline-block;
-				margin: 0;
-				padding: 0;
-				line-height: 0;
-				vertical-align: middle;
-			}
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
 
-			/* Language control pinned to the far right of the bar; links stay centered */
-			@media screen and (min-width: 737px) {
-				#nav {
-					padding-right: 3.25rem;
-				}
-				#nav.alt {
-					padding-right: 3.25rem !important;
-				}
-				#nav ul li.nav-lang {
-					position: absolute;
-					right: 1em;
-					top: 50%;
-					transform: translateY(-50%);
-					margin: 0 !important;
-					vertical-align: middle;
-				}
-			}
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" sizes="any" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
-			.lang-switcher__btn {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 2.5rem;
-				height: 2.5rem;
-				margin: 0;
-				padding: 0;
-				border: 0;
-				border-radius: 50%;
-				background: transparent;
-				cursor: pointer;
-				transition: opacity 0.2s ease, transform 0.2s ease;
-			}
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <!-- Google uses this to display rich results -->
+	<!-- TODO: add the real info -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Meike Behrends – Systemische Beratung und Therapie",
+      "url": "https://your-domain.de",
+      "telephone": "+491632721699",
+      "email": "info@example.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Skalitzer Straße 100",
+        "postalCode": "10997",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "priceRange": "€€",
+      "availableLanguage": ["German", "English"]
+    }
+  </script>
+  <body class="is-preload">
+    <a class="skip-link" href="#intro">Skip to main content</a>
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <h1 data-i18n="header_title">Systemic Counseling and Therapy</h1>
+        <p data-i18n="header_subtitle">Meike Behrends</p>
+      </header>
 
-			.lang-switcher__btn:hover {
-				opacity: 0.88;
-			}
+      <!-- Nav -->
+      <nav id="nav" aria-label="Main navigation">
+        <ul>
+          <li>
+            <a href="#intro" class="active" data-i18n="nav_intro"
+              >Introduction</a
+            >
+          </li>
+          <li><a href="#first" data-i18n="nav_first">Pairs</a></li>
+          <li><a href="#second" data-i18n="nav_second">Families</a></li>
+          <li>
+            <a href="#individual" data-i18n="nav_individual">Individuals</a>
+          </li>
+          <li><a href="#prices" data-i18n="nav_prices">Prices</a></li>
+          <li><a href="#cta" data-i18n="nav_cta">Get Started</a></li>
+          <li class="nav-lang">
+            <div class="lang-switcher" role="presentation">
+              <button
+                type="button"
+                class="lang-switcher__btn"
+                id="lang-switch-btn"
+                onclick="toggleLanguage()"
+                title="Switch language"
+              >
+                <span
+                  class="lang-switcher__icon"
+                  id="lang-switch-flag"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </nav>
 
-			.lang-switcher__btn:active {
-				transform: scale(0.96);
-			}
+      <!-- Main -->
+      <main id="main" tabindex="-1">
+        <!-- Introduction -->
+        <section id="intro" class="main">
+          <div class="spotlight">
+            <div class="content">
+              <p class="content" data-i18n="intro_text">Systemic counseling and therapy in Berlin for individuals, couples, and families.</p>
+            </div>
+            <span class="image"
+              ><img
+                src="images/therapist.jpg"
+                alt="Meike Behrends"
+                width="256"
+                height="256"
+                decoding="async"
+            /></span>
+          </div>
+        </section>
 
-			.lang-switcher__btn:focus-visible {
-				outline: 2px solid #8a7356;
-				outline-offset: 3px;
-			}
+        <!-- First Section -->
+        <section id="first" class="main special">
+          <header class="major">
+            <h2 data-i18n="first_title">Therapy Services</h2>
+          </header>
+          <div class="service-split">
+            <article class="service-card">
+              <div class="service-card__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80&auto=format&fit=crop"
+                  alt=""
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+            <p class="content" data-i18n="feature1_text">Support for your personal growth and well-being.</p>
+          </div>
+        </section>
 
-			.lang-switcher__icon {
-				display: block;
-				line-height: 0;
-			}
+        <!-- Second Section -->
+        <section id="second" class="main special">
+          <header class="major">
+            <h2 data-i18n="second_title">About Systemic Therapy</h2>
+          </header>
+          <div class="service-split">
+            <p class="content" data-i18n-html="second_intro">Systemic therapy considers the individual in relation to their social systems.</p>
+            <article class="service-card">
+              <div class="service-card__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80&auto=format&fit=crop"
+                  alt=""
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+          </div>
+        </section>
 
-			.lang-switcher svg {
-				width: 25px;
-				height: 25px;
-				display: block;
-				overflow: hidden;
-			}
+        <!-- Individuals -->
+        <section id="individual" class="main special">
+          <header class="major">
+            <h2 data-i18n="individual_title">Individuals</h2>
+          </header>
+          <div class="service-split">
+            <article class="service-card">
+              <div class="service-card__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop"
+                  alt=""
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+            <p class="content" data-i18n="individual_text">Therapy for individuals seeking personal development or support through challenges.</p>
+          </div>
+        </section>
 
-			/* Template hides #nav on small screens — show a thin in-flow bar with only the language control (does not cover the header). */
-			@media screen and (max-width: 736px) {
-				#nav {
-					display: block !important;
-					position: relative !important;
-					top: auto !important;
-					left: auto !important;
-					width: 100% !important;
-					max-width: none !important;
-					padding: 0.5rem 1rem !important;
-					text-align: center;
-					background-color: rgba(247, 247, 247, 0.98) !important;
-					border-radius: 0 !important;
-					border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-				}
+        <!-- Prices -->
+        <section id="prices" class="main special">
+          <header class="major">
+            <h2 data-i18n="prices_title">Prices</h2>
+          </header>
+          <div class="price-grid">
+            <article class="price-card">
+              <h3 data-i18n="price_title_couples">Couple Therapy</h3>
+              <p class="price-card__value" data-i18n="price_value_couples">145 € · 90 min.</p>
+              <p class="price-card__description" data-i18n="price_desc_couples">For couples seeking to improve their relationship.</p>
+            </article>
 
-				#nav ul {
-					margin: 0;
-					display: flex !important;
-					justify-content: flex-end !important;
-					align-items: center !important;
-					width: 100%;
-				}
+            <article class="price-card">
+              <h3 data-i18n="price_title_individual">Individual Therapy</h3>
+              <p class="price-card__value" data-i18n="price_value_individual">100 € · 60 min.</p>
+              <p class="price-card__description" data-i18n="price_desc_individual">For individuals seeking personal support.</p>
+            </article>
 
-				#nav ul li:not(.nav-lang) {
-					display: none !important;
-				}
+            <article class="price-card">
+              <h3 data-i18n="price_title_coaching">Individual Coaching</h3>
+              <p class="price-card__value" data-i18n="price_value_coaching">100 € · 60 min.</p>
+              <p class="price-card__description" data-i18n="price_desc_coaching">Coaching for personal and professional growth.</p>
+            </article>
+          </div>
+          <p class="price-note" data-i18n="price_note_vat">All prices include VAT.</p>
+          <p class="price-note" data-i18n="price_note_insurance">Therapy is not covered by statutory health insurance.</p>
+        </section>
 
-				#nav ul li.nav-lang {
-					display: flex !important;
-					position: static !important;
-					transform: none !important;
-					margin: 0 !important;
-				}
+        <!-- Get Started -->
+        <section id="cta" class="main special">
+          <header class="major">
+            <h2 data-i18n="cta_title">Contact Me</h2>
+          </header>
+          <p class="contact-intro" data-i18n="cta_text">
+            I would be happy to hear from you. You can reach me by phone, email,
+            or at my practice in Berlin.
+          </p>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true"
+                ><span class="icon solid fa-map-marker-alt"></span
+              ></span>
+              <div class="contact-card__body">
+                <h3 data-i18n="contact_location_title">Location</h3>
+                <p data-i18n-html="contact_location_text">
+                  Skalitzer Straße 100<br />10997 Berlin
+                </p>
+              </div>
+            </article>
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true"
+                ><span class="icon solid fa-phone"></span
+              ></span>
+              <div class="contact-card__body">
+                <h3 data-i18n="contact_phone_title">Phone</h3>
+                <p data-i18n-html="contact_phone_text">
+                  <a href="tel:+491632721699">0163 2721699</a>
+                </p>
+              </div>
+            </article>
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true"
+                ><span class="icon solid fa-envelope"></span
+              ></span>
+              <div class="contact-card__body">
+                <h3 data-i18n="contact_email_title">E-Mail</h3>
+                <p data-i18n-html="contact_email_text">
+                  <a href="mailto:info@example.com">info@example.com</a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- Footer -->
+    <footer id="footer" role="contentinfo">
+      <div class="footer-inner">
+        <nav class="footer-nav" aria-label="Legal">
+          <ul>
+            <li><a href="#" data-i18n="footer_impressum">Imprint</a></li>
+            <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+            <li><span id="footer-year"></span> Meike Behrends</span></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
 
-				#nav + #main {
-					padding-top: 0 !important;
-				}
-
-				/* Allow theme’s sticky nav when scrolling (language stays in bar). */
-				#nav.alt {
-					position: fixed !important;
-					top: 0 !important;
-					left: 0 !important;
-					right: 0 !important;
-					width: 100% !important;
-					max-width: none !important;
-					z-index: 10000 !important;
-					border-radius: 0 !important;
-				}
-			}
-
-			/* Hero title: serif for a calmer, editorial feel; body copy stays Plus Jakarta Sans */
-			#header h1 {
-				font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif !important;
-				font-weight: 500;
-				font-feature-settings: "kern" 1, "liga" 1;
-				letter-spacing: -0.02em;
-				line-height: 1.12;
-				color: #2d2820 !important;
-				max-width: 14em;
-				margin-left: auto;
-				margin-right: auto;
-				text-wrap: balance;
-				text-shadow:
-					0 0 24px rgba(255, 255, 255, 0.95),
-					0 1px 2px rgba(255, 255, 255, 1),
-					0 2px 14px rgba(255, 255, 255, 0.55),
-					0 1px 3px rgba(0, 0, 0, 0.08);
-			}
-			#header.alt h1 {
-				font-size: clamp(2.95rem, 6.2vw, 4.1rem);
-				font-weight: 500;
-			}
-
-			/* Name line: italic serif, slightly smaller — pairs with the headline */
-			#header p {
-				font-family: "Cormorant Garamond", Georgia, serif !important;
-				font-style: italic;
-				font-weight: 500;
-				font-size: clamp(1.6rem, 3.4vw, 2.1rem);
-				letter-spacing: 0.06em;
-				line-height: 1.35;
-				color: #4a4036 !important;
-				margin-top: 0.5rem !important;
-				text-shadow:
-					0 0 18px rgba(255, 255, 255, 0.9),
-					0 1px 2px rgba(255, 255, 255, 1),
-					0 1px 4px rgba(0, 0, 0, 0.06);
-			}
-
-			#nav ul li a {
-				font-family: "Plus Jakarta Sans", system-ui, sans-serif !important;
-				font-weight: 600;
-				letter-spacing: 0.01em;
-			}
-
-			/* Section titles: same display face as hero (Cormorant Garamond) */
-			#main header.major h2 {
-				font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif !important;
-				font-weight: 500;
-				font-feature-settings: "kern" 1, "liga" 1;
-				letter-spacing: -0.02em;
-				line-height: 1.2;
-				color: #2d2820 !important;
-			}
-
-			/* Introduction: therapist portrait — swap images/therapist.jpg for your own photo */
-			#intro .spotlight .image img {
-				width: 16em;
-				height: 16em;
-				object-fit: cover;
-				object-position: center 22%;
-			}
-			@media screen and (max-width: 736px) {
-				#intro .spotlight .image img {
-					width: 12em;
-					height: 12em;
-				}
-			}
-
-			.price-grid {
-				display: grid;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: 1.5rem;
-				text-align: left;
-				margin-top: 1rem;
-			}
-
-			.price-card {
-				padding: 2rem 1.75rem;
-				border-radius: 1.5rem;
-				background: linear-gradient(180deg, rgba(250, 246, 240, 0.98) 0%, rgba(244, 236, 226, 0.96) 100%);
-				border: 1px solid rgba(149, 125, 96, 0.16);
-				box-shadow: 0 18px 40px rgba(92, 71, 46, 0.08);
-				min-height: 100%;
-			}
-
-			.price-card__label {
-				display: inline-block;
-				padding: 0.35rem 0.8rem;
-				margin-bottom: 1rem;
-				border-radius: 999px;
-				background: rgba(255, 255, 255, 0.72);
-				color: #8a7356;
-				font-size: 0.72rem;
-				font-weight: 700;
-				letter-spacing: 0.08em;
-				text-transform: uppercase;
-			}
-
-			.price-card h3 {
-				margin: 0 0 0.5rem 0;
-				font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-				font-weight: 500;
-				font-feature-settings: "kern" 1, "liga" 1;
-				letter-spacing: -0.015em;
-				font-size: 1.45rem;
-				color: #4e4031;
-			}
-
-			.price-card__value {
-				margin: 0 0 1rem 0;
-				font-size: 1.05rem;
-				font-weight: 700;
-				color: #2f261e;	
-			}
-
-			.price-card__description {
-				margin: 0;
-				min-height: 8.5rem;
-				color: #5f5144;
-			}
-
-			.price-note {
-				max-width: 60rem;
-				margin: 1.5rem auto 0;
-				color: #5f5144;
-			}
-
-			@media screen and (max-width: 980px) {
-				.price-grid {
-					grid-template-columns: 1fr;
-				}
-
-				.price-card__description {
-					min-height: 0;
-				}
-			}
-		
-			.contact-grid {
-				display: grid;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: 1.35rem;
-				margin-top: 1.5rem;
-				text-align: center;
-			}
-			/* Match #main > .main:nth-child(even) from main.css (Kontakt strip) */
-			.contact-card {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 1.1rem;
-				padding: 1.65rem 1.5rem;
-				border-radius: 1.35rem;
-				background-color: rgba(240, 240, 240, 0.96);
-				border: 1px solid rgba(200, 200, 200, 0.45);
-				box-shadow: none;
-				text-align: center;
-			}
-			.contact-card__body {
-				width: 100%;
-				text-align: center;
-			}
-			.contact-card__icon {
-				flex: 0 0 auto;
-				width: 3.35rem;
-				height: 3.35rem;
-				border-radius: 1rem;
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				background: rgba(149, 125, 96, 0.08);
-				box-shadow: inset 0 0 0 1px rgba(149, 125, 96, 0.12);
-				color: #8a7356;
-			}
-			.contact-card__icon .icon {
-				font-size: 1.5rem;
-				line-height: 1;
-			}
-			.contact-card__icon .icon:before {
-				display: block;
-			}
-			.contact-card h3 {
-				margin: 0 0 0.5rem 0;
-				font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-				font-weight: 500;
-				font-feature-settings: "kern" 1, "liga" 1;
-				letter-spacing: -0.015em;
-				font-size: 1.62rem;
-				line-height: 1.25;
-				color: #4e4031;
-			}
-			.contact-card p {
-				margin: 0;
-				font-size: 1.14rem;
- 				color: #5f5144;
-				line-height: 1.65;
-			}
-			.contact-card a {
-				color: #5f5144;
-				border-bottom: none;
-			}
-			.contact-card a:hover {
-				color: #2f261e;
-			}
-			.contact-intro {
-				max-width: 52rem;
-				margin: 0 auto 1rem;
-				color: #5f5144;
-			}
-			@media screen and (max-width: 980px) {
-				.contact-grid {
-					grid-template-columns: 1fr;
-				}
-			}
-
-			.service-split {
-				display: grid;
-				grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.9fr);
-				gap: 1.5rem;
-				align-items: stretch;
-				text-align: left;
-				margin-top: 1rem;
-			}
-			/* If the image is on the left, keep it in the narrower column (same size as before) */
-			#first .service-split,
-			#individual .service-split {
-				grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.65fr);
-			}
-			.service-split .content {
-				margin: 0;
-			}
-			.service-card {
-				display: block;
-				padding: 0;
-				border-radius: 1.5rem;
-				background: transparent;
-				border: none;
-				box-shadow: 0 18px 40px rgba(92, 71, 46, 0.12);
-				min-height: 0;
-				overflow: hidden;
-			}
-			.service-card__photo {
-				margin: 0;
-				border-radius: 1.5rem;
-				overflow: hidden;
-				aspect-ratio: 4 / 3;
-				background: rgba(149, 125, 96, 0.1);
-			}
-			.service-card__photo img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: center;
-				display: block;
-			}
-			@media screen and (max-width: 980px) {
-				.service-split {
-					grid-template-columns: 1fr;
-				}
-			}
-
-		</style>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1 data-i18n="header_title">Meiklet</h1>
-						<p data-i18n="header_subtitle">Meike Behrends</p>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active" data-i18n="nav_intro">Introduction</a></li>
-							<li><a href="#first" data-i18n="nav_first">Therapy</a></li>
-							<li><a href="#second" data-i18n="nav_second">Second Section</a></li>
-							<li><a href="#individual" data-i18n="nav_individual">Individuals</a></li>
-							<li><a href="#prices" data-i18n="nav_prices">Prices</a></li>
-							<li><a href="#cta" data-i18n="nav_cta">Get Started</a></li>
-							<li class="nav-lang">
-								<div class="lang-switcher" role="presentation">
-									<button type="button" class="lang-switcher__btn" id="lang-switch-btn" onclick="toggleLanguage()" title="Switch language">
-										<span class="lang-switcher__icon" id="lang-switch-flag" aria-hidden="true"></span>
-									</button>
-								</div>
-							</li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<!-- <header class="major">
-											<h2 data-i18n="intro_title">Ipsum sed adipiscing</h2>
-										</header> -->
-										<p class="content" data-i18n="intro_text">Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-										<!-- <ul class="actions">
-											<li><a href="generic.html" class="button" data-i18n="learn_more">Learn More</a></li>
-										</ul> -->
-									</div>
-									<span class="image"><img src="images/therapist.jpg" alt="Meike Behrends" width="256" height="256" decoding="async" /></span>
-								</div>
-							</section>
-
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2 data-i18n="first_title">Magna veroeros</h2>
-								</header>
-								<div class="service-split">
-									<article class="service-card">
-										<div class="service-card__photo">
-											<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80&auto=format&fit=crop" alt="" width="800" height="600" loading="lazy" decoding="async" />
-										</div>
-									</article>
-									<p class="content" data-i18n="feature1_text">Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-								</div>
-							</section>
-
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2 data-i18n="second_title">Ipsum consequat</h2>
-								</header>
-								<div class="service-split">
-									<p class="content" data-i18n-html="second_intro">Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-									<article class="service-card">
-										<div class="service-card__photo">
-											<img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80&auto=format&fit=crop" alt="" width="800" height="600" loading="lazy" decoding="async" />
-										</div>
-									</article>
-								</div>
-							</section>
-
-						<!-- Individuals -->
-							<section id="individual" class="main special">
-								<header class="major">
-									<h2 data-i18n="individual_title">Individuals</h2>
-								</header>
-								<div class="service-split">
-									<article class="service-card">
-										<div class="service-card__photo">
-											<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop" alt="" width="800" height="600" loading="lazy" decoding="async" />
-										</div>
-									</article>
-									<p class="content" data-i18n="individual_text">...</p>
-								</div>
-							</section>
-
-						<!-- Prices -->
-							<section id="prices" class="main special">
-								<header class="major">
-									<h2 data-i18n="prices_title">Prices</h2>
-								</header>
-								<div class="price-grid">
-									<article class="price-card">
-										<h3 data-i18n="price_title_couples">Couple Therapy</h3>
-										<p class="price-card__value" data-i18n="price_value_couples">145 € · 90 min.</p>
-										<p class="price-card__description" data-i18n="price_desc_couples"></p>
-									</article>
-
-									<article class="price-card">
-										<h3 data-i18n="price_title_individual">Individual Therapy</h3>
-										<p class="price-card__value" data-i18n="price_value_individual">100 € · 60 min.</p>
-										<p class="price-card__description" data-i18n="price_desc_individual"></p>
-									</article>
-
-									<article class="price-card">
-										<h3 data-i18n="price_title_coaching">Individual Coaching</h3>
-										<p class="price-card__value" data-i18n="price_value_coaching">100 € · 60 min.</p>
-										<p class="price-card__description" data-i18n="price_desc_coaching"></p>
-									</article>
-								</div>
-								<p class="price-note" data-i18n="price_note_vat"></p>
-								<p class="price-note" data-i18n="price_note_insurance"></p>
-							</section>
-
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2 data-i18n="cta_title">Contact Me</h2>
-								</header>
-								<p class="contact-intro" data-i18n="cta_text">I would be happy to hear from you. You can reach me by phone, email, or at my practice in Berlin.</p>
-								<div class="contact-grid">
-									<article class="contact-card">
-										<span class="contact-card__icon" aria-hidden="true"><span class="icon solid fa-map-marker-alt"></span></span>
-										<div class="contact-card__body">
-											<h3 data-i18n="contact_location_title">Location</h3>
-											<p data-i18n-html="contact_location_text">Skalitzer Straße 100<br />10997 Berlin</p>
-										</div>
-									</article>
-									<article class="contact-card">
-										<span class="contact-card__icon" aria-hidden="true"><span class="icon solid fa-phone"></span></span>
-										<div class="contact-card__body">
-											<h3 data-i18n="contact_phone_title">Phone</h3>
-											<p data-i18n-html="contact_phone_text"><a href="tel:+491632721699">0163 2721699</a></p>
-										</div>
-									</article>
-									<article class="contact-card">
-										<span class="contact-card__icon" aria-hidden="true"><span class="icon solid fa-envelope"></span></span>
-										<div class="contact-card__body">
-											<h3 data-i18n="contact_email_title">E-Mail</h3>
-											<p data-i18n-html="contact_email_text"><a href="mailto:info@example.com">info@example.com</a></p>
-										</div>
-									</article>
-								</div>
-							</section>
-
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				const translations = {
-					en: {
-						header_title: 'Systemic Counseling and Therapy',
-						header_subtitle: 'Meike Behrends',
-						nav_intro: 'Introduction',
-						nav_first: 'Pairs',
-						nav_second: 'Family',
-						nav_individual: 'Individuals',
-						nav_prices: 'Prices',
-						nav_cta: 'About Me',
-						intro_title: '',
-						intro_text: 'Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.',
-					//	learn_more: 'Learn More',
-						first_title: 'Pairs',
-						//feature1_title: 'Family',
-						service_card_label_couples: 'How I work',
-						service_card_title_couples: 'A calm space for couples',
-						service_card_text_couples: 'A short supporting block for this section with a few lines about focus, process, or what couples can expect.',
-						feature1_text: 'Ich unterstütze Paare die sich in einer Krise, in einer Umbruch – oder Trennungsphase befinden, oder die ihre Elternrolle reflektieren möchten. In Beziehungen befinden wir uns in immer wiederkehrenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, Ihre eigenen festgefahrenen Muster zu erkennen, die Sichtweisen des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern. Dabei arbeite ich mit dem emotionsfokussierten Ansatz der zum Ziel hat, die Gefühle und Bedürfnisse, die diesen Dynamiken zugrunde liegen, aufzudecken. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen. Sollten Sie sich für eine Trennung entscheiden, biete ich Ihnen auch im Trennungsprozess Unterstützung und Begleitung.',
-						//feature2_title: 'Amed sed feugiat',
-						//feature2_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
-						//feature3_title: 'Dolor nullam',
-						//feature3_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
-						second_title: 'Family',
-						service_card_label_family: 'Systemic view',
-						service_card_title_family: 'Working with family dynamics',
-						service_card_text_family: 'A short supporting block for this section with space to describe dynamics, shared patterns, and the strengths of family work.',
-						second_intro: 'In der systemischen Familienarbeit schaue ich mit Ihnen darauf, wie einzelne Belastungen mit dem Miteinander in der Familie verbunden sind. Symptome eines Familienmitglieds sind oft Hinweise auf gemeinsame Muster oder Spannungen – nicht auf ein individuelles Problem. Auch Veränderungen, wie beispielsweise die Geburt eines Kindes oder Krisen, sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann. Gemeinsam entdecken wir diese Zusammenhänge, entwickeln neue Perspektiven und stärken so das Miteinander und die Ressourcen der ganzen Familie.',
-						// stat1: 'Etiam',
-						// stat2: 'Magna',
-						// stat3: 'Tempus',
-						// stat4: 'Aliquam',
-						// stat5: 'Nullam',
-						//second_text: 'Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.',
-						individual_title: 'Individuals',
-						service_card_label_individual: 'One-to-one',
-						service_card_title_individual: 'Support for individual processes',
-						service_card_text_individual: 'A short supporting block for this section with space to mention themes, personal development, and what individual sessions can offer.',
-						individual_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
-						prices_title: 'Prices',
-						price_category_couples: 'Couple Therapy',
-						price_title_couples: 'Couple Therapy',
-						price_value_couples: '145 € · 90 min.',
-						price_desc_couples: 'Space for a short explanation of how sessions work, what themes can be addressed, and what clients can expect from the process.',
-						price_category_individual: 'Individual Therapy',
-						price_title_individual: 'Individual Therapy',
-						price_value_individual: '100 € · 60 min.',
-						price_desc_individual: 'Space for a short explanation about one-to-one support, personal topics, and the therapeutic focus of the sessions.',
-						price_category_coaching: 'Individual Coaching',
-						price_title_coaching: 'Individual Coaching',
-						price_value_coaching: '100 € · 60 min.',
-						price_desc_coaching: 'Space for a short explanation about coaching topics such as professional development, decision-making, or life transitions.',
-						price_note_vat: 'As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" according to § 19 UStG).',
-						price_note_insurance: 'Please note that couple therapy, individual therapy, and individual coaching are not covered by German statutory health insurance.',
-						cta_title: 'Contact Me',
-						cta_text: 'I would be happy to hear from you. You can reach me by phone, email, or at my practice in Berlin.',
-						contact_location_title: 'Location',
-						contact_location_text: 'Skalitzer Straße 100<br />10997 Berlin',
-						contact_phone_title: 'Phone',
-						contact_phone_text: '<a href="tel:+491632721699">0163 2721699</a>',
-						contact_email_title: 'E-mail',
-						contact_email_text: '<a href="mailto:info@example.com">info@example.com</a>',
-						get_started: 'Get Started',
-					},
-					de: {
-						header_title: 'Systemische Beratung und Therapie',
-						header_subtitle: 'Meike Behrends',
-						nav_intro: 'Einführung',
-						nav_first: 'Paare',
-						nav_second: 'Familien',
-						nav_individual: 'Einzelpersonen',
-						nav_prices: 'Preise',
-						nav_cta: 'Über mich',
-						intro_title: '',
-						intro_text: 'Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.',
-						//learn_more: 'Mehr erfahren',
-						first_title: 'Paare',
-						service_card_label_couples: 'Arbeitsweise',
-						service_card_title_couples: 'Ein ruhiger Raum für Paare',
-						service_card_text_couples: 'Hier ist Platz für einen kurzen ergänzenden Text zu Fokus, Ablauf oder dem, was Paare in der Begleitung erwarten können.',
-						//feature1_title: 'Familien',
-						feature1_text: 'Ich unterstütze Paare die sich in einer Krise, in einer Umbruch – oder Trennungsphase befinden, oder die ihre Elternrolle reflektieren möchten. In Beziehungen befinden wir uns in immer wiederkehrenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, Ihre eigenen festgefahrenen Muster zu erkennen, die Sichtweisen des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern. Dabei arbeite ich mit dem emotionsfokussierten Ansatz der zum Ziel hat, die Gefühle und Bedürfnisse, die diesen Dynamiken zugrunde liegen, aufzudecken. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen. Sollten Sie sich für eine Trennung entscheiden, biete ich Ihnen auch im Trennungsprozess Unterstützung und Begleitung.',
-						// feature2_title: 'Amed sed feugiat',
-						// feature2_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
-						// feature3_title: 'Dolor nullam',
-						// feature3_text: 'Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.',
-						second_title: 'Familien',
-						service_card_label_family: 'Systemischer Blick',
-						service_card_title_family: 'Arbeit mit Familiendynamiken',
-						service_card_text_family: 'Hier ist Platz für einen kurzen ergänzenden Text zu Dynamiken, gemeinsamen Mustern und den Stärken systemischer Familienarbeit.',
-						second_intro: 'In der systemischen Familienarbeit schaue ich mit Ihnen darauf, wie einzelne Belastungen mit dem Miteinander in der Familie verbunden sind. Symptome eines Familienmitglieds sind oft Hinweise auf gemeinsame Muster oder Spannungen – nicht auf ein individuelles Problem. Auch Veränderungen, wie beispielsweise die Geburt eines Kindes oder Krisen, sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann. Gemeinsam entdecken wir diese Zusammenhänge, entwickeln neue Perspektiven und stärken so das Miteinander und die Ressourcen der ganzen Familie.',
-						// stat1: 'Etiam',
-						// stat2: 'Magna',
-						// stat3: 'Tempus',
-						// stat4: 'Aliquam',
-						// stat5: 'Nullam',
-						//second_text: 'Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.',
-						individual_title: 'Einzelpersonen',
-						service_card_label_individual: 'Einzelsitzungen',
-						service_card_title_individual: 'Begleitung für individuelle Prozesse',
-						service_card_text_individual: 'Hier ist Platz für einen kurzen ergänzenden Text zu Themen, persönlicher Entwicklung und dem, was Einzelsitzungen bieten können.',
-						individual_text: 'Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.',
-						prices_title: 'Preise',
-						price_category_couples: 'Paartherapie',
-						price_title_couples: 'Paartherapie',
-						price_value_couples: '145 € · 90 Min.',
-						price_desc_couples: 'Hier ist Platz für einen kurzen Erklärungstext dazu, wie die Sitzungen ablaufen, welche Themen Raum haben und was Klient*innen erwarten können.',
-						price_category_individual: 'Einzeltherapie',
-						price_title_individual: 'Einzeltherapie',
-						price_value_individual: '100 € · 60 Min.',
-						price_desc_individual: 'Hier ist Platz für einen kurzen Erklärungstext zu persönlicher Begleitung, individuellen Themen und dem therapeutischen Fokus der Sitzungen.',
-						price_category_coaching: 'Einzelcoaching',
-						price_title_coaching: 'Einzelcoaching',
-						price_value_coaching: '100 € · 60 Min.',
-						price_desc_coaching: 'Hier ist Platz für einen kurzen Erklärungstext zu Coaching-Themen wie beruflicher Entwicklung, Entscheidungsfindung oder Übergangsphasen im Leben.',
-						price_note_vat: 'Als Kleinunternehmerin sind meine Honorare von der Umsatzsteuer befreit (Kleinunternehmerregelung gemäß § 19 UStG).',
-						price_note_insurance: 'Bitte beachten Sie, dass Paartherapie, Einzeltherapie und Einzelcoaching nicht von den gesetzlichen Krankenkassen übernommen werden.',
-						cta_title: 'Kontakt',
-						cta_text: 'Ich freue mich, von Ihnen zu hören. Sie erreichen mich telefonisch, per E-Mail oder in meiner Praxis in Berlin.',
-						contact_location_title: 'Standort',
-						contact_location_text: 'Skalitzer Straße 100<br />10997 Berlin',
-						contact_phone_title: 'Telefon',
-						contact_phone_text: '<a href="tel:+491632721699">0163 2721699</a>',
-						contact_email_title: 'E-Mail',
-						contact_email_text: '<a href="mailto:info@example.com">info@example.com</a>',
-						get_started: 'Loslegen',
-					}
-				};
-
-				/* German: webcard-style blob flag (same asset as suessenbach /en). English: Union Jack (not the globe). Only one SVG is in the DOM. */
-				const FLAG_SVG_DE =
-					'<svg fill="none" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid" style="overflow:hidden"><g><g id="mc_36_flag_Germany"><path d="m1.12 24.26c2.543 6.855 9.14 11.74 16.88 11.74s14.337-4.885 16.88-11.74l-16.88-1.564z" fill="#ffda44"></path><path d="m18 0c-7.74 0-14.337 4.885-16.88 11.74l16.88 1.564 16.88-1.565c-2.543-6.854-9.14-11.739-16.88-11.739z" fill="#3d3d3d"></path><path d="m1.12001 11.74c-.742734 2.0034-1.12201193 4.1233-1.12000108 6.26-.00212985 2.137.37715008 4.2573 1.12000108 6.261h33.75999c.7429-2.0037 1.1221-4.124 1.12-6.261.0021-2.137-.3771-4.2572-1.12-6.261h-33.75999z" fill="#d80027"></path></g></g></svg>';
-				const FLAG_SVG_EN =
-					'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" preserveAspectRatio="xMidYMid" style="overflow:hidden"><defs><clipPath id="langUkRound"><circle cx="18" cy="18" r="17"/></clipPath></defs><g clip-path="url(#langUkRound)"><rect width="36" height="36" fill="#012169"/><path stroke="#fff" stroke-width="7" d="M0 0L36 36M36 0L0 36"/><path stroke="#C8102E" stroke-width="4" d="M0 0L36 36M36 0L0 36"/><path stroke="#fff" stroke-width="10" d="M18 0v36M0 18h36"/><path stroke="#C8102E" stroke-width="6" d="M18 0v36M0 18h36"/></g></svg>';
-
-				function updateLangSwitchUi(lang) {
-					const btn = document.getElementById('lang-switch-btn');
-					const wrap = document.getElementById('lang-switch-flag');
-					if (!btn || !wrap) return;
-					const viewingDe = lang === 'de';
-					/* Flag of the language you switch to: German UI → UK flag → English; English UI → German flag → Deutsch */
-					wrap.innerHTML = viewingDe ? FLAG_SVG_EN : FLAG_SVG_DE;
-					btn.setAttribute('aria-label', viewingDe ? 'Switch to English' : 'Switch to German');
-					btn.setAttribute('title', viewingDe ? 'English' : 'Deutsch');
-				}
-
-				function applyTranslations(lang) {
-					const dict = translations[lang] || translations.en;
-					document.documentElement.lang = lang;
-					document.querySelectorAll('[data-i18n]').forEach((element) => {
-						const key = element.getAttribute('data-i18n');
-						if (dict[key] !== undefined) element.textContent = dict[key];
-					});
-					document.querySelectorAll('[data-i18n-html]').forEach((element) => {
-						const key = element.getAttribute('data-i18n-html');
-						if (dict[key] !== undefined) element.innerHTML = dict[key];
-					});
-					updateLangSwitchUi(lang);
-				}
-
-				function setLanguage(lang) {
-					localStorage.setItem('site-language', lang);
-					applyTranslations(lang);
-				}
-
-				function toggleLanguage() {
-					const cur = document.documentElement.lang || 'en';
-					setLanguage(cur === 'en' ? 'de' : 'en');
-				}
-
-				const savedLanguage = localStorage.getItem('site-language') || 'en';
-				applyTranslations(savedLanguage);
-
-			</script>
-
-	</body>
+	<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+      // Set current year in footer
+      document.addEventListener('DOMContentLoaded', function() {
+        var yearSpan = document.getElementById('footer-year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
 </html>
