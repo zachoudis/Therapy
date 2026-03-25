@@ -110,10 +110,6 @@ section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
 ol,
 ul {
   list-style: none;
@@ -135,10 +131,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-body {
-  -webkit-text-size-adjust: none;
 }
 
 mark {
@@ -166,10 +158,6 @@ textarea {
   width: device-width;
 }
 
-body {
-  -ms-overflow-style: scrollbar;
-}
-
 @media screen and (max-width: 480px) {
   html,
   body {
@@ -188,7 +176,7 @@ html {
 }
 
 body {
-  background-color: #935d8c;
+  -webkit-text-size-adjust: none;
   background-image: url("images/overlay.png"), url("../background.png");
   background-repeat: repeat, no-repeat;
   background-position:
@@ -200,6 +188,12 @@ body {
   background-size:
     auto,
     110% auto;
+  color: rgba(255, 255, 255, 0.65);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -ms-overflow-style: scrollbar;
+  line-height: 1;
 }
 
 body.is-preload *,
@@ -216,14 +210,6 @@ body.is-preload *:after {
 }
 
 /* Type */
-
-body {
-  background-color: #935d8c;
-  color: rgba(255, 255, 255, 0.65);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
 
 body,
 input,
@@ -305,15 +291,8 @@ p {
 }
 
 p.content {
-  -moz-columns: 20em 2;
-  -webkit-columns: 20em 2;
-  -ms-columns: 20em 2;
-  columns: 20em 2;
-  -moz-column-gap: 2em;
-  -webkit-column-gap: 2em;
-  -ms-column-gap: 2em;
-  column-gap: 2em;
   text-align: justify;
+  padding: 0 40px;
 }
 
 h1,
@@ -3341,14 +3320,14 @@ body.is-preload #header.alt > * {
     border-top-left-radius 0.2s ease,
     border-top-right-radius 0.2s ease,
     padding 0.2s ease;
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 1px 1px 14px -4px #ddd;
   color: #636363;
   position: absolute;
   top: 0;
   width: 100%;
   max-width: 100%;
   padding: 1em;
-  background-color: #f7f7f7;
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;
   cursor: default;
@@ -3418,26 +3397,45 @@ body.is-preload #header.alt > * {
   -webkit-transition: font-size 0.2s ease;
   -ms-transition: font-size 0.2s ease;
   transition: font-size 0.2s ease;
+  position: relative;
   display: inline-block;
   height: 2.25em;
   line-height: 2.25em;
   padding: 0 1.25em;
   border: 0;
   border-radius: 8px;
-  font-size: 1.05em;
-  font-weight: 800;
+  font-size: 0.8em;
+  font-weight: 400;
   letter-spacing: 0.02em;
   box-shadow: none;
 }
 
-#nav ul li a:hover {
-  background-color: rgba(222, 222, 222, 0.25);
+#nav ul li a.active {
+  box-shadow: none;
 }
 
-#nav ul li a.active {
-  background-color: #ffffff;
-  box-shadow: none;
-  color: #6366f1;
+#nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.15rem;
+  width: 80%;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #efa8b0, #8a7356, #9bb2e1);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition:
+    transform 320ms cubic-bezier(0.2, 0.9, 0.3, 1),
+    opacity 220ms ease;
+  will-change: transform, opacity;
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 0.9;
 }
 
 #nav.alt {
@@ -3452,10 +3450,6 @@ body.is-preload #header.alt > * {
 
 #nav.alt ul li {
   margin: 0 0.175em;
-}
-
-#nav.alt ul li a {
-  font-size: 0.95em;
 }
 
 @media screen and (max-width: 736px) {
@@ -3726,7 +3720,7 @@ body.is-preload #header.alt > * {
 }
 
 #main > .main {
-  padding: 5em 5em 3em 5em;
+  padding: 4em 5em 3em 5em;
   border-top: solid 1px #dddddd;
   background-color: rgba(255, 255, 255, 0.96);
 }
