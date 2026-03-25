@@ -1,81 +1,105 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="en">
-	<head>
-		<title>Elements - Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.lang-switcher {
-				position: fixed;
-				top: 1.25rem;
-				right: 1.25rem;
-				z-index: 10001;
-				display: flex;
-				gap: 0.5rem;
-			}
-			.lang-switcher button {
-				background: rgba(255, 255, 255, 0.12);
-				border: solid 1px rgba(255, 255, 255, 0.35);
-				color: #ffffff;
-				border-radius: 999px;
-				padding: 0.35rem 0.85rem;
-				font-size: 0.75rem;
-				font-weight: 700;
-				letter-spacing: 0.08em;
-				cursor: pointer;
-				transition: all 0.2s ease;
-			}
-			.lang-switcher button.active,
-			.lang-switcher button:hover {
-				background: rgba(255, 255, 255, 0.9);
-				color: #6366f1;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Elements - Stellar by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <style>
+      .lang-switcher {
+        position: fixed;
+        top: 1.25rem;
+        right: 1.25rem;
+        z-index: 10001;
+        display: flex;
+        gap: 0.5rem;
+      }
+      .lang-switcher button {
+        background: rgba(255, 255, 255, 0.12);
+        border: solid 1px rgba(255, 255, 255, 0.35);
+        color: #ffffff;
+        border-radius: 999px;
+        padding: 0.35rem 0.85rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .lang-switcher button.active,
+      .lang-switcher button:hover {
+        background: rgba(255, 255, 255, 0.9);
+        color: #6366f1;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div class="lang-switcher" aria-label="Language switcher">
+      <button type="button" data-lang-button="en" onclick="setLanguage('en')">
+        EN
+      </button>
+      <button type="button" data-lang-button="de" onclick="setLanguage('de')">
+        DE
+      </button>
+    </div>
 
-		<div class="lang-switcher" aria-label="Language switcher">
-			<button type="button" data-lang-button="en" onclick="setLanguage('en')">EN</button>
-			<button type="button" data-lang-button="de" onclick="setLanguage('de')">DE</button>
-		</div>
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 data-i18n="header_title">Elements</h1>
+        <p data-i18n="header_subtitle">Ipsum dolor sit amet nullam</p>
+      </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1 data-i18n="header_title">Elements</h1>
-						<p data-i18n="header_subtitle">Ipsum dolor sit amet nullam</p>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Content -->
-							<section id="content" class="main">
-
-								<!-- Text -->
-									<section>
-										<h2 data-i18n="text_title">Text</h2>
-										<p data-i18n-html="text_p1">This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<p data-i18n="text_p2">Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2 data-i18n="heading2">Heading Level 2</h2>
-										<h3 data-i18n="heading3">Heading Level 3</h3>
-										<h4 data-i18n="heading4">Heading Level 4</h4>
-										<hr />
-										<h3 data-i18n="blockquote_title">Blockquote</h3>
-										<blockquote data-i18n="blockquote_text">Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h3 data-i18n="preformatted_title">Preformatted</h3>
-										<pre><code>i = 0;
+      <!-- Main -->
+      <div id="main">
+        <!-- Content -->
+        <section id="content" class="main">
+          <!-- Text -->
+          <section>
+            <h2 data-i18n="text_title">Text</h2>
+            <p data-i18n-html="text_p1">
+              This is <b>bold</b> and this is <strong>strong</strong>. This is
+              <i>italic</i> and this is <em>emphasized</em>. This is
+              <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+              This is <u>underlined</u> and this is code:
+              <code>for (;;) { ... }</code>. Finally,
+              <a href="#">this is a link</a>.
+            </p>
+            <hr />
+            <p data-i18n="text_p2">
+              Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida
+              odio porttitor sem non mi integer non faucibus ornare mi ut ante
+              amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem
+              accumsan varius montes viverra nibh in adipiscing blandit tempus
+              accumsan.
+            </p>
+            <hr />
+            <h2 data-i18n="heading2">Heading Level 2</h2>
+            <h3 data-i18n="heading3">Heading Level 3</h3>
+            <h4 data-i18n="heading4">Heading Level 4</h4>
+            <hr />
+            <h3 data-i18n="blockquote_title">Blockquote</h3>
+            <blockquote data-i18n="blockquote_text">
+              Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
+              sagittis eget tempus euismod. Vestibulum ante ipsum primis in
+              faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat
+              ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in
+              faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.
+            </blockquote>
+            <h3 data-i18n="preformatted_title">Preformatted</h3>
+            <pre><code>i = 0;
 
 while (!deck.isInOrder()) {
     print 'Iteration ' + i;
@@ -84,333 +108,931 @@ while (!deck.isInOrder()) {
 }
 
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+          </section>
 
-								<!-- Lists -->
-									<section>
-										<h2 data-i18n="lists_title">Lists</h2>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<h3 data-i18n="unordered_title">Unordered</h3>
-												<ul>
-													<li data-i18n="unordered_1">Dolor pulvinar magna etiam.</li>
-													<li data-i18n="unordered_2">Sagittis sed lorem adipiscing.</li>
-													<li data-i18n="unordered_3">Felis enim etiam feugiat.</li>
-													<li data-i18n="unordered_4">Ipsum lorem nullam consequat.</li>
-												</ul>
-												<h3 data-i18n="alternate_title">Alternate</h3>
-												<ul class="alt">
-													<li data-i18n="alternate_1">Dolor pulvinar magna etiam.</li>
-													<li data-i18n="alternate_2">Sagittis sed lorem adipiscing.</li>
-													<li data-i18n="alternate_3">Felis enim etiam feugiat.</li>
-													<li data-i18n="alternate_4">Ipsum lorem nullam consequat.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<h3 data-i18n="ordered_title">Ordered</h3>
-												<ol>
-													<li data-i18n="ordered_1">Dolor pulvinar etiam.</li>
-													<li data-i18n="ordered_2">Etiam vel felis viverra.</li>
-													<li data-i18n="ordered_3">Felis enim feugiat.</li>
-													<li data-i18n="ordered_4">Dolor pulvinar etiam.</li>
-													<li data-i18n="ordered_5">Etiam vel felis lorem.</li>
-													<li data-i18n="ordered_6">Felis enim et feugiat.</li>
-												</ol>
-												<h3 data-i18n="icons_title">Icons</h3>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-												</ul>
-												<ul class="icons">
-													<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-													<li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h2 data-i18n="actions_title">Actions</h2>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<ul class="actions">
-													<li><a href="#" class="button primary" data-i18n="default_button">Default</a></li>
-													<li><a href="#" class="button" data-i18n="default_button">Default</a></li>
-												</ul>
-												<ul class="actions small">
-													<li><a href="#" class="button primary small" data-i18n="small_button">Small</a></li>
-													<li><a href="#" class="button small" data-i18n="small_button">Small</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary" data-i18n="default_button">Default</a></li>
-													<li><a href="#" class="button" data-i18n="default_button">Default</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small" data-i18n="small_button">Small</a></li>
-													<li><a href="#" class="button small" data-i18n="small_button">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit" data-i18n="default_button">Default</a></li>
-													<li><a href="#" class="button fit" data-i18n="default_button">Default</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit" data-i18n="small_button">Small</a></li>
-													<li><a href="#" class="button small fit" data-i18n="small_button">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+          <!-- Lists -->
+          <section>
+            <h2 data-i18n="lists_title">Lists</h2>
+            <div class="row">
+              <div class="col-6 col-12-medium">
+                <h3 data-i18n="unordered_title">Unordered</h3>
+                <ul>
+                  <li data-i18n="unordered_1">Dolor pulvinar magna etiam.</li>
+                  <li data-i18n="unordered_2">
+                    Sagittis sed lorem adipiscing.
+                  </li>
+                  <li data-i18n="unordered_3">Felis enim etiam feugiat.</li>
+                  <li data-i18n="unordered_4">Ipsum lorem nullam consequat.</li>
+                </ul>
+                <h3 data-i18n="alternate_title">Alternate</h3>
+                <ul class="alt">
+                  <li data-i18n="alternate_1">Dolor pulvinar magna etiam.</li>
+                  <li data-i18n="alternate_2">
+                    Sagittis sed lorem adipiscing.
+                  </li>
+                  <li data-i18n="alternate_3">Felis enim etiam feugiat.</li>
+                  <li data-i18n="alternate_4">Ipsum lorem nullam consequat.</li>
+                </ul>
+              </div>
+              <div class="col-6 col-12-medium">
+                <h3 data-i18n="ordered_title">Ordered</h3>
+                <ol>
+                  <li data-i18n="ordered_1">Dolor pulvinar etiam.</li>
+                  <li data-i18n="ordered_2">Etiam vel felis viverra.</li>
+                  <li data-i18n="ordered_3">Felis enim feugiat.</li>
+                  <li data-i18n="ordered_4">Dolor pulvinar etiam.</li>
+                  <li data-i18n="ordered_5">Etiam vel felis lorem.</li>
+                  <li data-i18n="ordered_6">Felis enim et feugiat.</li>
+                </ol>
+                <h3 data-i18n="icons_title">Icons</h3>
+                <ul class="icons">
+                  <li>
+                    <a href="#" class="icon brands fa-twitter"
+                      ><span class="label">Twitter</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands fa-facebook-f"
+                      ><span class="label">Facebook</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands fa-instagram"
+                      ><span class="label">Instagram</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands fa-github"
+                      ><span class="label">GitHub</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands fa-dribbble"
+                      ><span class="label">Dribbble</span></a
+                    >
+                  </li>
+                </ul>
+                <ul class="icons">
+                  <li>
+                    <a href="#" class="icon brands alt fa-twitter"
+                      ><span class="label">Twitter</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands alt fa-facebook-f"
+                      ><span class="label">Facebook</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands alt fa-instagram"
+                      ><span class="label">Instagram</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands alt fa-github"
+                      ><span class="label">GitHub</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands alt fa-dribbble"
+                      ><span class="label">Dribbble</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h2 data-i18n="actions_title">Actions</h2>
+            <div class="row">
+              <div class="col-6 col-12-medium">
+                <ul class="actions">
+                  <li>
+                    <a
+                      href="#"
+                      class="button primary"
+                      data-i18n="default_button"
+                      >Default</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="button" data-i18n="default_button"
+                      >Default</a
+                    >
+                  </li>
+                </ul>
+                <ul class="actions small">
+                  <li>
+                    <a
+                      href="#"
+                      class="button primary small"
+                      data-i18n="small_button"
+                      >Small</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="button small" data-i18n="small_button"
+                      >Small</a
+                    >
+                  </li>
+                </ul>
+                <ul class="actions stacked">
+                  <li>
+                    <a
+                      href="#"
+                      class="button primary"
+                      data-i18n="default_button"
+                      >Default</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="button" data-i18n="default_button"
+                      >Default</a
+                    >
+                  </li>
+                </ul>
+                <ul class="actions stacked">
+                  <li>
+                    <a
+                      href="#"
+                      class="button primary small"
+                      data-i18n="small_button"
+                      >Small</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="button small" data-i18n="small_button"
+                      >Small</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6 col-12-medium">
+                <ul class="actions stacked">
+                  <li>
+                    <a
+                      href="#"
+                      class="button primary fit"
+                      data-i18n="default_button"
+                      >Default</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="button fit" data-i18n="default_button"
+                      >Default</a
+                    >
+                  </li>
+                </ul>
+                <ul class="actions stacked">
+                  <li>
+                    <a
+                      href="#"
+                      class="button primary small fit"
+                      data-i18n="small_button"
+                      >Small</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="button small fit"
+                      data-i18n="small_button"
+                      >Small</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
 
-								<!-- Table -->
-									<section>
-										<h2 data-i18n="table_title">Table</h2>
-										<h3 data-i18n="default_title">Default</h3>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th data-i18n="name">Name</th>
-														<th data-i18n="description">Description</th>
-														<th data-i18n="price">Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr><td data-i18n="item1">Item One</td><td data-i18n="item1_desc">Ante turpis integer aliquet porttitor.</td><td>29.99</td></tr>
-													<tr><td data-i18n="item2">Item Two</td><td data-i18n="item2_desc">Vis ac commodo adipiscing arcu aliquet.</td><td>19.99</td></tr>
-													<tr><td data-i18n="item3">Item Three</td><td data-i18n="item3_desc">Morbi faucibus arcu accumsan lorem.</td><td>29.99</td></tr>
-													<tr><td data-i18n="item4">Item Four</td><td data-i18n="item4_desc">Vitae integer tempus condimentum.</td><td>19.99</td></tr>
-													<tr><td data-i18n="item5">Item Five</td><td data-i18n="item5_desc">Ante turpis integer aliquet porttitor.</td><td>29.99</td></tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+          <!-- Table -->
+          <section>
+            <h2 data-i18n="table_title">Table</h2>
+            <h3 data-i18n="default_title">Default</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="name">Name</th>
+                    <th data-i18n="description">Description</th>
+                    <th data-i18n="price">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n="item1">Item One</td>
+                    <td data-i18n="item1_desc">
+                      Ante turpis integer aliquet porttitor.
+                    </td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item2">Item Two</td>
+                    <td data-i18n="item2_desc">
+                      Vis ac commodo adipiscing arcu aliquet.
+                    </td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item3">Item Three</td>
+                    <td data-i18n="item3_desc">
+                      Morbi faucibus arcu accumsan lorem.
+                    </td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item4">Item Four</td>
+                    <td data-i18n="item4_desc">
+                      Vitae integer tempus condimentum.
+                    </td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item5">Item Five</td>
+                    <td data-i18n="item5_desc">
+                      Ante turpis integer aliquet porttitor.
+                    </td>
+                    <td>29.99</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td>100.00</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
 
-										<h3 data-i18n="alternate_title_small">Alternate</h3>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th data-i18n="name">Name</th>
-														<th data-i18n="description">Description</th>
-														<th data-i18n="price">Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr><td data-i18n="item1">Item One</td><td data-i18n="item1_desc">Ante turpis integer aliquet porttitor.</td><td>29.99</td></tr>
-													<tr><td data-i18n="item2">Item Two</td><td data-i18n="item2_desc">Vis ac commodo adipiscing arcu aliquet.</td><td>19.99</td></tr>
-													<tr><td data-i18n="item3">Item Three</td><td data-i18n="item3_desc">Morbi faucibus arcu accumsan lorem.</td><td>29.99</td></tr>
-													<tr><td data-i18n="item4">Item Four</td><td data-i18n="item4_desc">Vitae integer tempus condimentum.</td><td>19.99</td></tr>
-													<tr><td data-i18n="item5">Item Five</td><td data-i18n="item5_desc">Ante turpis integer aliquet porttitor.</td><td>29.99</td></tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+            <h3 data-i18n="alternate_title_small">Alternate</h3>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th data-i18n="name">Name</th>
+                    <th data-i18n="description">Description</th>
+                    <th data-i18n="price">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n="item1">Item One</td>
+                    <td data-i18n="item1_desc">
+                      Ante turpis integer aliquet porttitor.
+                    </td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item2">Item Two</td>
+                    <td data-i18n="item2_desc">
+                      Vis ac commodo adipiscing arcu aliquet.
+                    </td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item3">Item Three</td>
+                    <td data-i18n="item3_desc">
+                      Morbi faucibus arcu accumsan lorem.
+                    </td>
+                    <td>29.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item4">Item Four</td>
+                    <td data-i18n="item4_desc">
+                      Vitae integer tempus condimentum.
+                    </td>
+                    <td>19.99</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="item5">Item Five</td>
+                    <td data-i18n="item5_desc">
+                      Ante turpis integer aliquet porttitor.
+                    </td>
+                    <td>29.99</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td>100.00</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
 
-								<!-- Buttons -->
-									<section>
-										<h3 data-i18n="buttons_title">Buttons</h3>
-										<ul class="actions">
-											<li><a href="#" class="button primary" data-i18n="primary">Primary</a></li>
-											<li><a href="#" class="button" data-i18n="default_button">Default</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button large" data-i18n="large">Large</a></li>
-											<li><a href="#" class="button" data-i18n="default_button">Default</a></li>
-											<li><a href="#" class="button small" data-i18n="small_button">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit" data-i18n="fit">Fit</a></li>
-											<li><a href="#" class="button fit" data-i18n="fit">Fit</a></li>
-											<li><a href="#" class="button fit" data-i18n="fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small" data-i18n="fit_small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small" data-i18n="fit_small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small" data-i18n="fit_small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solidfa-download" data-i18n="icon">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-upload" data-i18n="icon">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-save" data-i18n="icon">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled" data-i18n="disabled">Disabled</span></li>
-											<li><span class="button disabled" data-i18n="disabled">Disabled</span></li>
-										</ul>
-									</section>
+          <!-- Buttons -->
+          <section>
+            <h3 data-i18n="buttons_title">Buttons</h3>
+            <ul class="actions">
+              <li>
+                <a href="#" class="button primary" data-i18n="primary"
+                  >Primary</a
+                >
+              </li>
+              <li>
+                <a href="#" class="button" data-i18n="default_button"
+                  >Default</a
+                >
+              </li>
+            </ul>
+            <ul class="actions">
+              <li>
+                <a href="#" class="button large" data-i18n="large">Large</a>
+              </li>
+              <li>
+                <a href="#" class="button" data-i18n="default_button"
+                  >Default</a
+                >
+              </li>
+              <li>
+                <a href="#" class="button small" data-i18n="small_button"
+                  >Small</a
+                >
+              </li>
+            </ul>
+            <ul class="actions fit">
+              <li>
+                <a href="#" class="button primary fit" data-i18n="fit">Fit</a>
+              </li>
+              <li><a href="#" class="button fit" data-i18n="fit">Fit</a></li>
+              <li><a href="#" class="button fit" data-i18n="fit">Fit</a></li>
+            </ul>
+            <ul class="actions fit small">
+              <li>
+                <a
+                  href="#"
+                  class="button primary fit small"
+                  data-i18n="fit_small"
+                  >Fit + Small</a
+                >
+              </li>
+              <li>
+                <a href="#" class="button fit small" data-i18n="fit_small"
+                  >Fit + Small</a
+                >
+              </li>
+              <li>
+                <a href="#" class="button fit small" data-i18n="fit_small"
+                  >Fit + Small</a
+                >
+              </li>
+            </ul>
+            <ul class="actions">
+              <li>
+                <a
+                  href="#"
+                  class="button primary icon solidfa-download"
+                  data-i18n="icon"
+                  >Icon</a
+                >
+              </li>
+              <li>
+                <a href="#" class="button icon solid fa-upload" data-i18n="icon"
+                  >Icon</a
+                >
+              </li>
+              <li>
+                <a href="#" class="button icon solid fa-save" data-i18n="icon"
+                  >Icon</a
+                >
+              </li>
+            </ul>
+            <ul class="actions">
+              <li>
+                <span class="button primary disabled" data-i18n="disabled"
+                  >Disabled</span
+                >
+              </li>
+              <li>
+                <span class="button disabled" data-i18n="disabled"
+                  >Disabled</span
+                >
+              </li>
+            </ul>
+          </section>
 
-								<!-- Form -->
-									<section>
-										<h2 data-i18n="form_title">Form</h2>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" data-i18n-placeholder="name_placeholder" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" data-i18n-placeholder="email_placeholder" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="" data-i18n="category_placeholder">- Category -</option>
-														<option value="1" data-i18n="manufacturing">Manufacturing</option>
-														<option value="1" data-i18n="shipping">Shipping</option>
-														<option value="1" data-i18n="administration">Administration</option>
-														<option value="1" data-i18n="human_resources">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low" data-i18n="low">Low</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal" data-i18n="normal">Normal</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high" data-i18n="high">High</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy" data-i18n="email_copy">Email me a copy</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human" data-i18n="not_robot">Not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6" data-i18n-placeholder="message_placeholder"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="primary" data-i18n-value="send_message" /></li>
-														<li><input type="reset" value="Reset" data-i18n-value="reset" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+          <!-- Form -->
+          <section>
+            <h2 data-i18n="form_title">Form</h2>
+            <form method="post" action="#">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="demo-name"
+                    id="demo-name"
+                    value=""
+                    placeholder="Name"
+                    data-i18n-placeholder="name_placeholder"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="email"
+                    name="demo-email"
+                    id="demo-email"
+                    value=""
+                    placeholder="Email"
+                    data-i18n-placeholder="email_placeholder"
+                  />
+                </div>
+                <div class="col-12">
+                  <select name="demo-category" id="demo-category">
+                    <option value="" data-i18n="category_placeholder">
+                      - Category -
+                    </option>
+                    <option value="1" data-i18n="manufacturing">
+                      Manufacturing
+                    </option>
+                    <option value="1" data-i18n="shipping">Shipping</option>
+                    <option value="1" data-i18n="administration">
+                      Administration
+                    </option>
+                    <option value="1" data-i18n="human_resources">
+                      Human Resources
+                    </option>
+                  </select>
+                </div>
+                <div class="col-4 col-12-small">
+                  <input
+                    type="radio"
+                    id="demo-priority-low"
+                    name="demo-priority"
+                    checked
+                  />
+                  <label for="demo-priority-low" data-i18n="low">Low</label>
+                </div>
+                <div class="col-4 col-12-small">
+                  <input
+                    type="radio"
+                    id="demo-priority-normal"
+                    name="demo-priority"
+                  />
+                  <label for="demo-priority-normal" data-i18n="normal"
+                    >Normal</label
+                  >
+                </div>
+                <div class="col-4 col-12-small">
+                  <input
+                    type="radio"
+                    id="demo-priority-high"
+                    name="demo-priority"
+                  />
+                  <label for="demo-priority-high" data-i18n="high">High</label>
+                </div>
+                <div class="col-6 col-12-small">
+                  <input type="checkbox" id="demo-copy" name="demo-copy" />
+                  <label for="demo-copy" data-i18n="email_copy"
+                    >Email me a copy</label
+                  >
+                </div>
+                <div class="col-6 col-12-small">
+                  <input
+                    type="checkbox"
+                    id="demo-human"
+                    name="demo-human"
+                    checked
+                  />
+                  <label for="demo-human" data-i18n="not_robot"
+                    >Not a robot</label
+                  >
+                </div>
+                <div class="col-12">
+                  <textarea
+                    name="demo-message"
+                    id="demo-message"
+                    placeholder="Enter your message"
+                    rows="6"
+                    data-i18n-placeholder="message_placeholder"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li>
+                      <input
+                        type="submit"
+                        value="Send Message"
+                        class="primary"
+                        data-i18n-value="send_message"
+                      />
+                    </li>
+                    <li>
+                      <input
+                        type="reset"
+                        value="Reset"
+                        data-i18n-value="reset"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </section>
 
-								<!-- Image -->
-									<section>
-										<h2 data-i18n="image_title">Image</h2>
-										<h3 data-i18n="fit">Fit</h3>
-										<div class="box alt">
-											<div class="row gtr-uniform">
-												<div class="col-12"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h3 data-i18n="left_right">Left &amp; Right</h3>
-										<p data-i18n="image_p1"><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.</p>
-										<p data-i18n="image_p2"><span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus..</p>
-									</section>
+          <!-- Image -->
+          <section>
+            <h2 data-i18n="image_title">Image</h2>
+            <h3 data-i18n="fit">Fit</h3>
+            <div class="box alt">
+              <div class="row gtr-uniform">
+                <div class="col-12">
+                  <span class="image fit"
+                    ><img src="images/pic04.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic01.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic02.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic03.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic03.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic01.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic02.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic02.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic03.jpg" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/pic01.jpg" alt=""
+                  /></span>
+                </div>
+              </div>
+            </div>
+            <h3 data-i18n="left_right">Left &amp; Right</h3>
+            <p data-i18n="image_p1">
+              <span class="image left"
+                ><img src="images/pic05.jpg" alt="" /></span
+              >Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt
+              felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis
+              in faucibus vestibulum. Blandit adipiscing eu felis iaculis
+              volutpat ac adipiscing accumsan eu faucibus. Integer ac
+              pellentesque praesent tincidunt felis sagittis eget. tempus
+              euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+              Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+              accumsan eu faucibus. Integer ac pellentesque praesent. Donec
+              accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus
+              euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+              Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+              accumsan eu faucibus. Integer ac pellentesque praesent tincidunt
+              felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis
+              in faucibus vestibulum. Blandit adipiscing eu felis iaculis
+              volutpat ac adipiscing accumsan eu faucibus. Integer ac
+              pellentesque praesent. Blandit adipiscing eu felis iaculis
+              volutpat ac adipiscing accumsan eu faucibus. Integer ac
+              pellentesque praesent tincidunt felis sagittis eget. tempus
+              euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+              Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+              accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum
+              dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.
+            </p>
+            <p data-i18n="image_p2">
+              <span class="image right"
+                ><img src="images/pic06.jpg" alt="" /></span
+              >Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt
+              felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis
+              in faucibus vestibulum. Blandit adipiscing eu felis iaculis
+              volutpat ac adipiscing accumsan eu faucibus. Integer ac
+              pellentesque praesent tincidunt felis sagittis eget. tempus
+              euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+              Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+              accumsan eu faucibus. Integer ac pellentesque praesent. Donec
+              accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus
+              euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+              Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+              accumsan eu faucibus. Integer ac pellentesque praesent tincidunt
+              felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis
+              in faucibus vestibulum. Blandit adipiscing eu felis iaculis
+              volutpat ac adipiscing accumsan eu faucibus. Integer ac
+              pellentesque praesent. Blandit adipiscing eu felis iaculis
+              volutpat ac adipiscing accumsan eu faucibus. Integer ac
+              pellentesque praesent tincidunt felis sagittis eget. tempus
+              euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+              Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+              accumsan eu faucibus..
+            </p>
+          </section>
+        </section>
+      </div>
 
-							</section>
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2 data-i18n="footer_left_title">Aliquam sed mauris</h2>
+          <p data-i18n="footer_left_text">
+            Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat
+            magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris.
+            Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas
+            velit, vitae tincidunt odio.
+          </p>
+          <ul class="actions">
+            <li>
+              <a href="#" class="button" data-i18n="learn_more">Learn More</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 data-i18n="footer_right_title">Etiam feugiat</h2>
+          <dl class="alt">
+            <dt data-i18n="address">Address</dt>
+            <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+            <dt data-i18n="phone">Phone</dt>
+            <dd>(000) 000-0000 x 0000</dd>
+            <dt data-i18n="email">Email</dt>
+            <dd><a href="#">information@untitled.tld</a></dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands fa-twitter alt"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-facebook-f alt"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-instagram alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-dribbble alt"
+                ><span class="label">Dribbble</span></a
+              >
+            </li>
+          </ul>
+        </section>
+        <p class="copyright" data-i18n-html="copyright">
+          &copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
+        </p>
+      </footer>
+    </div>
 
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2 data-i18n="footer_left_title">Aliquam sed mauris</h2>
-							<p data-i18n="footer_left_text">Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="#" class="button" data-i18n="learn_more">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2 data-i18n="footer_right_title">Etiam feugiat</h2>
-							<dl class="alt">
-								<dt data-i18n="address">Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt data-i18n="phone">Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt data-i18n="email">Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright" data-i18n-html="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				const translations = {
-					en: {
-						header_title: 'Elements', header_subtitle: 'Ipsum dolor sit amet nullam', text_title: 'Text', text_p1: 'This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.', text_p2: 'Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.', heading2: 'Heading Level 2', heading3: 'Heading Level 3', heading4: 'Heading Level 4', blockquote_title: 'Blockquote', blockquote_text: 'Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.', preformatted_title: 'Preformatted', lists_title: 'Lists', unordered_title: 'Unordered', unordered_1: 'Dolor pulvinar magna etiam.', unordered_2: 'Sagittis sed lorem adipiscing.', unordered_3: 'Felis enim etiam feugiat.', unordered_4: 'Ipsum lorem nullam consequat.', alternate_title: 'Alternate', alternate_1: 'Dolor pulvinar magna etiam.', alternate_2: 'Sagittis sed lorem adipiscing.', alternate_3: 'Felis enim etiam feugiat.', alternate_4: 'Ipsum lorem nullam consequat.', ordered_title: 'Ordered', ordered_1: 'Dolor pulvinar etiam.', ordered_2: 'Etiam vel felis viverra.', ordered_3: 'Felis enim feugiat.', ordered_4: 'Dolor pulvinar etiam.', ordered_5: 'Etiam vel felis lorem.', ordered_6: 'Felis enim et feugiat.', icons_title: 'Icons', actions_title: 'Actions', default_button: 'Default', small_button: 'Small', table_title: 'Table', default_title: 'Default', name: 'Name', description: 'Description', price: 'Price', item1: 'Item One', item1_desc: 'Ante turpis integer aliquet porttitor.', item2: 'Item Two', item2_desc: 'Vis ac commodo adipiscing arcu aliquet.', item3: 'Item Three', item3_desc: 'Morbi faucibus arcu accumsan lorem.', item4: 'Item Four', item4_desc: 'Vitae integer tempus condimentum.', item5: 'Item Five', item5_desc: 'Ante turpis integer aliquet porttitor.', alternate_title_small: 'Alternate', buttons_title: 'Buttons', primary: 'Primary', large: 'Large', fit: 'Fit', fit_small: 'Fit + Small', icon: 'Icon', disabled: 'Disabled', form_title: 'Form', name_placeholder: 'Name', email_placeholder: 'Email', category_placeholder: '- Category -', manufacturing: 'Manufacturing', shipping: 'Shipping', administration: 'Administration', human_resources: 'Human Resources', low: 'Low', normal: 'Normal', high: 'High', email_copy: 'Email me a copy', not_robot: 'Not a robot', message_placeholder: 'Enter your message', send_message: 'Send Message', reset: 'Reset', image_title: 'Image', left_right: 'Left & Right', image_p1: '<span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.', image_p2: '<span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus..', footer_left_title: 'Aliquam sed mauris', footer_left_text: 'Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.', learn_more: 'Learn More', footer_right_title: 'Etiam feugiat', address: 'Address', phone: 'Phone', email: 'Email', copyright: '&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.' },
-					de: {
-						header_title: 'Elemente', header_subtitle: 'Ipsum dolor sit amet nullam', text_title: 'Text', text_p1: 'Dies ist <b>fett</b> und dies ist <strong>stark hervorgehoben</strong>. Dies ist <i>kursiv</i> und dies ist <em>betont</em>. Dies ist <sup>hochgestellt</sup> und dies ist <sub>tiefgestellt</sub>. Dies ist <u>unterstrichen</u> und dies ist Code: <code>for (;;) { ... }</code>. Zum Schluss ist <a href="#">dies ein Link</a>.', text_p2: 'Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.', heading2: 'Überschrift Ebene 2', heading3: 'Überschrift Ebene 3', heading4: 'Überschrift Ebene 4', blockquote_title: 'Blockzitat', blockquote_text: 'Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.', preformatted_title: 'Vorformatiert', lists_title: 'Listen', unordered_title: 'Unsortiert', unordered_1: 'Dolor pulvinar magna etiam.', unordered_2: 'Sagittis sed lorem adipiscing.', unordered_3: 'Felis enim etiam feugiat.', unordered_4: 'Ipsum lorem nullam consequat.', alternate_title: 'Alternativ', alternate_1: 'Dolor pulvinar magna etiam.', alternate_2: 'Sagittis sed lorem adipiscing.', alternate_3: 'Felis enim etiam feugiat.', alternate_4: 'Ipsum lorem nullam consequat.', ordered_title: 'Sortiert', ordered_1: 'Dolor pulvinar etiam.', ordered_2: 'Etiam vel felis viverra.', ordered_3: 'Felis enim feugiat.', ordered_4: 'Dolor pulvinar etiam.', ordered_5: 'Etiam vel felis lorem.', ordered_6: 'Felis enim et feugiat.', icons_title: 'Symbole', actions_title: 'Aktionen', default_button: 'Standard', small_button: 'Klein', table_title: 'Tabelle', default_title: 'Standard', name: 'Name', description: 'Beschreibung', price: 'Preis', item1: 'Element Eins', item1_desc: 'Ante turpis integer aliquet porttitor.', item2: 'Element Zwei', item2_desc: 'Vis ac commodo adipiscing arcu aliquet.', item3: 'Element Drei', item3_desc: 'Morbi faucibus arcu accumsan lorem.', item4: 'Element Vier', item4_desc: 'Vitae integer tempus condimentum.', item5: 'Element Fünf', item5_desc: 'Ante turpis integer aliquet porttitor.', alternate_title_small: 'Alternativ', buttons_title: 'Buttons', primary: 'Primär', large: 'Groß', fit: 'Passend', fit_small: 'Passend + Klein', icon: 'Icon', disabled: 'Deaktiviert', form_title: 'Formular', name_placeholder: 'Name', email_placeholder: 'E-Mail', category_placeholder: '- Kategorie -', manufacturing: 'Produktion', shipping: 'Versand', administration: 'Verwaltung', human_resources: 'Personalwesen', low: 'Niedrig', normal: 'Normal', high: 'Hoch', email_copy: 'Mir eine Kopie senden', not_robot: 'Kein Roboter', message_placeholder: 'Nachricht eingeben', send_message: 'Nachricht senden', reset: 'Zurücksetzen', image_title: 'Bild', left_right: 'Links & Rechts', image_p1: '<span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.', image_p2: '<span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus..', footer_left_title: 'Aliquam sed mauris', footer_left_text: 'Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.', learn_more: 'Mehr erfahren', footer_right_title: 'Etiam feugiat', address: 'Adresse', phone: 'Telefon', email: 'E-Mail', copyright: '&copy; Ohne Titel. Design: <a href="https://html5up.net">HTML5 UP</a>.' }
-				};
-				function applyTranslations(lang) {
-					const dict = translations[lang] || translations.en;
-					document.documentElement.lang = lang;
-					document.querySelectorAll('[data-i18n]').forEach((element) => {
-						const key = element.getAttribute('data-i18n');
-						if (dict[key] !== undefined) element.textContent = dict[key];
-					});
-					document.querySelectorAll('[data-i18n-html]').forEach((element) => {
-						const key = element.getAttribute('data-i18n-html');
-						if (dict[key] !== undefined) element.innerHTML = dict[key];
-					});
-					document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
-						const key = element.getAttribute('data-i18n-placeholder');
-						if (dict[key] !== undefined) element.setAttribute('placeholder', dict[key]);
-					});
-					document.querySelectorAll('[data-i18n-value]').forEach((element) => {
-						const key = element.getAttribute('data-i18n-value');
-						if (dict[key] !== undefined) element.setAttribute('value', dict[key]);
-					});
-					document.querySelectorAll('[data-lang-button]').forEach((button) => {
-						button.classList.toggle('active', button.getAttribute('data-lang-button') === lang);
-					});
-				}
-				function setLanguage(lang) {
-					localStorage.setItem('site-language', lang);
-					applyTranslations(lang);
-				}
-				applyTranslations(localStorage.getItem('site-language') || 'en');
-			</script>
-
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      const translations = {
+        en: {
+          header_title: "Elements",
+          header_subtitle: "Ipsum dolor sit amet nullam",
+          text_title: "Text",
+          text_p1:
+            'This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.',
+          text_p2:
+            "Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.",
+          heading2: "Heading Level 2",
+          heading3: "Heading Level 3",
+          heading4: "Heading Level 4",
+          blockquote_title: "Blockquote",
+          blockquote_text:
+            "Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.",
+          preformatted_title: "Preformatted",
+          lists_title: "Lists",
+          unordered_title: "Unordered",
+          unordered_1: "Dolor pulvinar magna etiam.",
+          unordered_2: "Sagittis sed lorem adipiscing.",
+          unordered_3: "Felis enim etiam feugiat.",
+          unordered_4: "Ipsum lorem nullam consequat.",
+          alternate_title: "Alternate",
+          alternate_1: "Dolor pulvinar magna etiam.",
+          alternate_2: "Sagittis sed lorem adipiscing.",
+          alternate_3: "Felis enim etiam feugiat.",
+          alternate_4: "Ipsum lorem nullam consequat.",
+          ordered_title: "Ordered",
+          ordered_1: "Dolor pulvinar etiam.",
+          ordered_2: "Etiam vel felis viverra.",
+          ordered_3: "Felis enim feugiat.",
+          ordered_4: "Dolor pulvinar etiam.",
+          ordered_5: "Etiam vel felis lorem.",
+          ordered_6: "Felis enim et feugiat.",
+          icons_title: "Icons",
+          actions_title: "Actions",
+          default_button: "Default",
+          small_button: "Small",
+          table_title: "Table",
+          default_title: "Default",
+          name: "Name",
+          description: "Description",
+          price: "Price",
+          item1: "Item One",
+          item1_desc: "Ante turpis integer aliquet porttitor.",
+          item2: "Item Two",
+          item2_desc: "Vis ac commodo adipiscing arcu aliquet.",
+          item3: "Item Three",
+          item3_desc: "Morbi faucibus arcu accumsan lorem.",
+          item4: "Item Four",
+          item4_desc: "Vitae integer tempus condimentum.",
+          item5: "Item Five",
+          item5_desc: "Ante turpis integer aliquet porttitor.",
+          alternate_title_small: "Alternate",
+          buttons_title: "Buttons",
+          primary: "Primary",
+          large: "Large",
+          fit: "Fit",
+          fit_small: "Fit + Small",
+          icon: "Icon",
+          disabled: "Disabled",
+          form_title: "Form",
+          name_placeholder: "Name",
+          email_placeholder: "Email",
+          category_placeholder: "- Category -",
+          manufacturing: "Manufacturing",
+          shipping: "Shipping",
+          administration: "Administration",
+          human_resources: "Human Resources",
+          low: "Low",
+          normal: "Normal",
+          high: "High",
+          email_copy: "Email me a copy",
+          not_robot: "Not a robot",
+          message_placeholder: "Enter your message",
+          send_message: "Send Message",
+          reset: "Reset",
+          image_title: "Image",
+          left_right: "Left & Right",
+          image_p1:
+            '<span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.',
+          image_p2:
+            '<span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus..',
+          footer_left_title: "Aliquam sed mauris",
+          footer_left_text:
+            "Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.",
+          learn_more: "Learn More",
+          footer_right_title: "Etiam feugiat",
+          address: "Address",
+          phone: "Phone",
+          email: "Email",
+          copyright:
+            '&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.',
+        },
+        de: {
+          header_title: "Elemente",
+          header_subtitle: "Ipsum dolor sit amet nullam",
+          text_title: "Text",
+          text_p1:
+            'Dies ist <b>fett</b> und dies ist <strong>stark hervorgehoben</strong>. Dies ist <i>kursiv</i> und dies ist <em>betont</em>. Dies ist <sup>hochgestellt</sup> und dies ist <sub>tiefgestellt</sub>. Dies ist <u>unterstrichen</u> und dies ist Code: <code>for (;;) { ... }</code>. Zum Schluss ist <a href="#">dies ein Link</a>.',
+          text_p2:
+            "Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.",
+          heading2: "Überschrift Ebene 2",
+          heading3: "Überschrift Ebene 3",
+          heading4: "Überschrift Ebene 4",
+          blockquote_title: "Blockzitat",
+          blockquote_text:
+            "Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.",
+          preformatted_title: "Vorformatiert",
+          lists_title: "Listen",
+          unordered_title: "Unsortiert",
+          unordered_1: "Dolor pulvinar magna etiam.",
+          unordered_2: "Sagittis sed lorem adipiscing.",
+          unordered_3: "Felis enim etiam feugiat.",
+          unordered_4: "Ipsum lorem nullam consequat.",
+          alternate_title: "Alternativ",
+          alternate_1: "Dolor pulvinar magna etiam.",
+          alternate_2: "Sagittis sed lorem adipiscing.",
+          alternate_3: "Felis enim etiam feugiat.",
+          alternate_4: "Ipsum lorem nullam consequat.",
+          ordered_title: "Sortiert",
+          ordered_1: "Dolor pulvinar etiam.",
+          ordered_2: "Etiam vel felis viverra.",
+          ordered_3: "Felis enim feugiat.",
+          ordered_4: "Dolor pulvinar etiam.",
+          ordered_5: "Etiam vel felis lorem.",
+          ordered_6: "Felis enim et feugiat.",
+          icons_title: "Symbole",
+          actions_title: "Aktionen",
+          default_button: "Standard",
+          small_button: "Klein",
+          table_title: "Tabelle",
+          default_title: "Standard",
+          name: "Name",
+          description: "Beschreibung",
+          price: "Preis",
+          item1: "Element Eins",
+          item1_desc: "Ante turpis integer aliquet porttitor.",
+          item2: "Element Zwei",
+          item2_desc: "Vis ac commodo adipiscing arcu aliquet.",
+          item3: "Element Drei",
+          item3_desc: "Morbi faucibus arcu accumsan lorem.",
+          item4: "Element Vier",
+          item4_desc: "Vitae integer tempus condimentum.",
+          item5: "Element Fünf",
+          item5_desc: "Ante turpis integer aliquet porttitor.",
+          alternate_title_small: "Alternativ",
+          buttons_title: "Buttons",
+          primary: "Primär",
+          large: "Groß",
+          fit: "Passend",
+          fit_small: "Passend + Klein",
+          icon: "Icon",
+          disabled: "Deaktiviert",
+          form_title: "Formular",
+          name_placeholder: "Name",
+          email_placeholder: "E-Mail",
+          category_placeholder: "- Kategorie -",
+          manufacturing: "Produktion",
+          shipping: "Versand",
+          administration: "Verwaltung",
+          human_resources: "Personalwesen",
+          low: "Niedrig",
+          normal: "Normal",
+          high: "Hoch",
+          email_copy: "Mir eine Kopie senden",
+          not_robot: "Kein Roboter",
+          message_placeholder: "Nachricht eingeben",
+          send_message: "Nachricht senden",
+          reset: "Zurücksetzen",
+          image_title: "Bild",
+          left_right: "Links & Rechts",
+          image_p1:
+            '<span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.',
+          image_p2:
+            '<span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus..',
+          footer_left_title: "Aliquam sed mauris",
+          footer_left_text:
+            "Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.",
+          learn_more: "Mehr erfahren",
+          footer_right_title: "Etiam feugiat",
+          address: "Adresse",
+          phone: "Telefon",
+          email: "E-Mail",
+          copyright:
+            '&copy; Ohne Titel. Design: <a href="https://html5up.net">HTML5 UP</a>.',
+        },
+      };
+      function applyTranslations(lang) {
+        const dict = translations[lang] || translations.en;
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (dict[key] !== undefined) element.textContent = dict[key];
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+          const key = element.getAttribute("data-i18n-html");
+          if (dict[key] !== undefined) element.innerHTML = dict[key];
+        });
+        document
+          .querySelectorAll("[data-i18n-placeholder]")
+          .forEach((element) => {
+            const key = element.getAttribute("data-i18n-placeholder");
+            if (dict[key] !== undefined)
+              element.setAttribute("placeholder", dict[key]);
+          });
+        document.querySelectorAll("[data-i18n-value]").forEach((element) => {
+          const key = element.getAttribute("data-i18n-value");
+          if (dict[key] !== undefined) element.setAttribute("value", dict[key]);
+        });
+        document.querySelectorAll("[data-lang-button]").forEach((button) => {
+          button.classList.toggle(
+            "active",
+            button.getAttribute("data-lang-button") === lang,
+          );
+        });
+      }
+      function setLanguage(lang) {
+        localStorage.setItem("site-language", lang);
+        applyTranslations(lang);
+      }
+      applyTranslations(localStorage.getItem("site-language") || "en");
+    </script>
+  </body>
 </html>

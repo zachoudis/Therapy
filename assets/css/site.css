@@ -1,0 +1,515 @@
+/*
+  site.css — Custom styles for Meike Behrends therapy website.
+  Loaded after main.css (the Stellar template base).
+*/
+
+/* ============================================================
+   Global body — strip template background image
+   ============================================================ */
+body {
+  background-image: none !important;
+  background-attachment: scroll !important;
+  background-size: auto !important;
+  background-position: top left !important;
+}
+
+/* ============================================================
+   Header hero — full-width photo behind the title
+   Uses assets/background1.png
+   ============================================================ */
+#header.alt {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Photo sharp on top; light wash only in the last band */
+#header.alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #f4f1eb;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 74%,
+      rgba(252, 250, 247, 0.18) 90%,
+      rgba(248, 246, 242, 0.48) 100%
+    ),
+    url("../background1.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size:
+    100% 100%,
+    100% auto;
+  background-position:
+    center,
+    center top;
+}
+
+#header.alt > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   Navigation — language switcher
+   ============================================================ */
+.lang-switcher {
+  position: static;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+/* Pin language control to far right of bar; nav links stay centred */
+@media screen and (min-width: 737px) {
+  #nav {
+    padding-right: 3.25rem;
+  }
+
+  #nav.alt {
+    padding-right: 3.25rem !important;
+  }
+
+  #nav ul li.nav-lang {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 !important;
+    vertical-align: middle;
+  }
+}
+
+.lang-switcher__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lang-switcher__btn:hover {
+  opacity: 0.88;
+}
+
+.lang-switcher__btn:active {
+  transform: scale(0.96);
+}
+
+.lang-switcher__btn:focus-visible {
+  outline: 2px solid #8a7356;
+  outline-offset: 3px;
+}
+
+.lang-switcher__icon {
+  display: block;
+  line-height: 0;
+}
+
+.lang-switcher svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* On small screens the template hides #nav — show a thin in-flow bar
+   with only the language control (does not cover the header). */
+@media screen and (max-width: 736px) {
+  #nav {
+    display: block !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0.5rem 1rem !important;
+    text-align: center;
+    background-color: rgba(247, 247, 247, 0.98) !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  #nav ul {
+    margin: 0;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  #nav ul li:not(.nav-lang) {
+    display: none !important;
+  }
+
+  #nav ul li.nav-lang {
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  #nav + #main {
+    padding-top: 0 !important;
+  }
+
+  /* Allow theme sticky nav when scrolling (language stays in bar). */
+  #nav.alt {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    z-index: 10000 !important;
+    border-radius: 0 !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  background: #fffbe8;
+  color: #4a3c2a;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    left 0.2s,
+    top 0.2s;
+  outline: none;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 99999;
+  outline: 2px solid #8a7356;
+}
+
+/* ============================================================
+   Typography — hero & section headings
+   ============================================================ */
+
+/* Hero title: Cormorant Garamond for an editorial feel */
+#header h1 {
+  font-family:
+    "Cormorant Garamond", Georgia, "Times New Roman", serif !important;
+  font-weight: 500;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  color: #2d2820 !important;
+  max-width: 14em;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+  text-shadow:
+    0 0 24px rgba(255, 255, 255, 0.95),
+    0 1px 2px rgba(255, 255, 255, 1),
+    0 2px 14px rgba(255, 255, 255, 0.55),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#header.alt h1 {
+  font-size: clamp(2.95rem, 6.2vw, 4.1rem);
+  font-weight: 500;
+}
+
+/* Name / subtitle line: italic serif, slightly smaller */
+#header p {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  color: #4a4036 !important;
+  margin-top: 0.5rem !important;
+  text-shadow:
+    0 0 18px rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(255, 255, 255, 1),
+    0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Nav links */
+#nav ul li a {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Section titles */
+#main header.major h2 {
+  font-family:
+    "Cormorant Garamond", Georgia, "Times New Roman", serif !important;
+  font-weight: 500;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #2d2820 !important;
+}
+
+/* ============================================================
+   Introduction section — therapist portrait
+   (swap images/therapist.jpg for your own photo)
+   ============================================================ */
+#intro .spotlight .image img {
+  width: 16em;
+  height: 16em;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+@media screen and (max-width: 736px) {
+  #intro .spotlight .image img {
+    width: 12em;
+    height: 12em;
+  }
+}
+
+/* ============================================================
+   Services — two-column split layout
+   ============================================================ */
+.service-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.9fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* Image in the left (narrower) column for odd sections */
+#first .service-split,
+#individual .service-split {
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.65fr);
+}
+
+.service-split .content {
+  margin: 0;
+}
+
+.service-card {
+  display: block;
+  padding: 0;
+  border-radius: 1.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: 0 18px 40px rgba(92, 71, 46, 0.12);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.service-card__photo {
+  margin: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: rgba(149, 125, 96, 0.1);
+}
+
+.service-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media screen and (max-width: 980px) {
+  .service-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Prices — three-column card grid
+   ============================================================ */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.price-card {
+  padding: 2rem 1.75rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 246, 240, 0.98) 0%,
+    rgba(244, 236, 226, 0.96) 100%
+  );
+  border: 1px solid rgba(149, 125, 96, 0.16);
+  box-shadow: 0 18px 40px rgba(92, 71, 46, 0.08);
+  min-height: 100%;
+}
+
+.price-card__label {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #8a7356;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+  letter-spacing: -0.015em;
+  font-size: 1.45rem;
+  color: #4e4031;
+}
+
+.price-card__value {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2f261e;
+}
+
+.price-card__description {
+  margin: 0;
+  min-height: 8.5rem;
+  color: #5f5144;
+}
+
+.price-note {
+  max-width: 60rem;
+  margin: 1.5rem auto 0;
+  color: #5f5144;
+}
+
+@media screen and (max-width: 980px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card__description {
+    min-height: 0;
+  }
+}
+
+/* ============================================================
+   Contact — three-column card grid
+   ============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.65rem 1.5rem;
+  border-radius: 1.35rem;
+  background-color: rgba(240, 240, 240, 0.96);
+  border: 1px solid rgba(200, 200, 200, 0.45);
+  box-shadow: none;
+  text-align: center;
+}
+
+.contact-card__body {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card__icon {
+  flex: 0 0 auto;
+  width: 3.35rem;
+  height: 3.35rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(149, 125, 96, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(149, 125, 96, 0.12);
+  color: #8a7356;
+}
+
+.contact-card__icon .icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.contact-card__icon .icon:before {
+  display: block;
+}
+
+.contact-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+  letter-spacing: -0.015em;
+  font-size: 1.62rem;
+  line-height: 1.25;
+  color: #4e4031;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 1.14rem;
+  color: #5f5144;
+  line-height: 1.65;
+}
+
+.contact-card a {
+  color: #5f5144;
+  border-bottom: none;
+}
+
+.contact-card a:hover {
+  color: #2f261e;
+}
+
+.contact-intro {
+  max-width: 52rem;
+  margin: 0 auto 1rem;
+  color: #5f5144;
+}
+
+@media screen and (max-width: 980px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
