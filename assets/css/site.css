@@ -272,6 +272,48 @@ body {
 }
 
 /* ============================================================
+   Main Content
+   ============================================================ */
+
+/* Constrain content while keeping sections full-bleed backgrounds */
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  box-sizing: border-box;
+}
+
+/* Larger screens: a bit wider spacing */
+@media screen and (min-width: 1200px) {
+  .main-content {
+    max-width: 1400px;
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Small screens: reduce padding */
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 1.25rem 1rem;
+  }
+}
+
+/* Prevent overflow of images inside content */
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Opt-out: make a particular block truly full-bleed */
+.main-content.full-bleed {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
    Introduction section — therapist portrait
    (swap images/therapist.jpg for your own photo)
    ============================================================ */
@@ -295,7 +337,7 @@ body {
 .service-split {
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.9fr);
-  gap: 1.5rem;
+  gap: 2.5rem;
   align-items: stretch;
   text-align: left;
   margin-top: 1rem;

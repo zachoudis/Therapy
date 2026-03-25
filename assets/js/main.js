@@ -96,6 +96,12 @@
       });
   }
 
+  // Set current year in footer
+  document.addEventListener("DOMContentLoaded", function () {
+    var yearSpan = document.getElementById("footer-year");
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  });
+
   // Scrolly.
   $(".scrolly").scrolly({
     speed: 1000,
