@@ -273,13 +273,62 @@
       <div class="footer-inner">
         <nav class="footer-nav" aria-label="Legal">
           <ul>
-            <li><a href="#" data-i18n="footer_impressum">Imprint</a></li>
+            <li>
+              <a
+                href="#"
+                id="imprint-link"
+                data-modal-target="site-modal"
+                data-modal-title="Impressum"
+                data-i18n="footer_imprint"
+                >Imprint</a
+              >
+            </li>
             <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
             <li><span id="footer-year"></span> Meike Behrends</span></li>
           </ul>
         </nav>
       </div>
     </footer>
+
+    <!-- Modal (Impressum) -->
+    <div class="modal" id="site-modal" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close="true"></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="site-modal-title"
+        tabindex="-1"
+      >
+        <button class="modal__close" type="button" aria-label="Close" data-modal-close="true">
+          ×
+        </button>
+        <h2 id="site-modal-title">Impressum</h2>
+        <div class="modal__content" id="site-modal-content">
+          <p><strong>Angaben gemäß § 5 TMG</strong></p>
+          <p>
+            Max Mustermann<br />
+            Musterstraße 12<br />
+            12345 Berlin
+          </p>
+          <p>
+            <strong>Kontakt:</strong><br />
+            Telefon: +49 123 456789<br />
+            E-Mail: info@deinewebsite.de
+          </p>
+          <p>
+            Berufsbezeichnung: [z. B. Heilpraktiker für Psychotherapie]<br />
+            Zuständige Aufsichtsbehörde: [falls zutreffend]
+          </p>
+          <p>Umsatzsteuer-ID: [falls vorhanden]</p>
+          <p>
+            <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong
+            ><br />
+            Max Mustermann
+          </p>
+        </div>
+      </div>
+    </div>
 
 	<!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -290,6 +339,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/modal.js"></script>
     <script>
       // Set current year in footer
       document.addEventListener('DOMContentLoaded', function() {
