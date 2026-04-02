@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Systemic counseling and therapy in Berlin. Individual, couple and family sessions by Meike Behrends."
+      content="Looking for therapy in Berlin? Find English-speaking therapists, learn about costs, and explore your options for mental health support."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -15,7 +15,7 @@
     />
     <meta
       property="og:description"
-      content="Systemic counseling and therapy in Berlin."
+      content="Looking for therapy in Berlin? Find English-speaking therapists, learn about costs, and explore your options for mental health support."
     />
     <meta property="og:image" content="images/therapist.jpg" />
     <meta property="og:locale" content="en_GB" />
@@ -273,13 +273,41 @@
       <div class="footer-inner">
         <nav class="footer-nav" aria-label="Legal">
           <ul>
-            <li><a href="#" data-i18n="footer_impressum">Imprint</a></li>
+            <li>
+              <a
+                href="impressum.html"
+                data-i18n="footer_impressum"
+                data-modal-target="site-modal"
+                data-modal-title="Impressum"
+                data-modal-url="impressum.html"
+              >Imprint</a>
+            </li>
             <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
             <li>© <span id="footer-year"></span> Meike Behrends</span></li>
           </ul>
         </nav>
       </div>
     </footer>
+
+    <!-- Modal (Impressum) -->
+    <div class="modal" id="site-modal" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close="true"></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="site-modal-title"
+        tabindex="-1"
+      >
+        <button class="modal__close" type="button" aria-label="Close" data-modal-close="true">
+          ×
+        </button>
+        <h2 id="site-modal-title">Impressum</h2>
+        <div class="modal__content" id="site-modal-content">
+          <p>Loading…</p>
+        </div>
+      </div>
+    </div>
 
 	<!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -289,6 +317,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/i18n.js"></script>
   </body>
 </html>

@@ -20,27 +20,28 @@
       header_title: "Systemic Counseling and Therapy",
       header_subtitle: "Meike Behrends",
 
+      nav_home: "Home",
       nav_intro: "Introduction",
       nav_first: "Pairs",
-      nav_second: "Family",
+      nav_second: "Families",
       nav_individual: "Individuals",
       nav_prices: "Prices",
       nav_cta: "Contact Me",
 
       intro_text:
-        "Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.",
+        "I support you through challenging life phases, crises, and change. My work is based on the belief that every person already carries the capacity for development and transformation. Sometimes all it takes is a protected space, new perspectives, and respectful guidance to access these resources again. My services are for individuals, couples, and families, and I welcome people of diverse backgrounds, religions, and relationship constellations. I work in English and German.",
 
       first_title: "Pairs",
       feature1_text:
-        "Ich unterstütze Paare die sich in einer Krise, in einer Umbruch – oder Trennungsphase befinden, oder die ihre Elternrolle reflektieren möchten. In Beziehungen befinden wir uns in immer wiederkehrenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, Ihre eigenen festgefahrenen Muster zu erkennen, die Sichtweisen des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern. Dabei arbeite ich mit dem emotionsfokussierten Ansatz der zum Ziel hat, die Gefühle und Bedürfnisse, die diesen Dynamiken zugrunde liegen, aufzudecken. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen. Sollten Sie sich für eine Trennung entscheiden, biete ich Ihnen auch im Trennungsprozess Unterstützung und Begleitung.",
+        "I support couples who are in crisis, navigating a transition, considering separation, or reflecting on their roles as partners and parents. Relationships often follow repeating interaction cycles that are hard to change alone. Together, we identify stuck patterns, broaden understanding of each other’s perspectives, and develop new steps for communication and connection. My approach is resource-oriented and focuses on emotions and needs underneath conflict—without blame, and with an emphasis on understanding and workable solutions. If separation is the right path, I also offer support for a respectful and well-structured separation process.",
 
       second_title: "Family",
       second_intro:
-        "In der systemischen Familienarbeit schaue ich mit Ihnen darauf, wie einzelne Belastungen mit dem Miteinander in der Familie verbunden sind. Symptome eines Familienmitglieds sind oft Hinweise auf gemeinsame Muster oder Spannungen – nicht auf ein individuelles Problem. Auch Veränderungen, wie beispielsweise die Geburt eines Kindes oder Krisen, sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann. Gemeinsam entdecken wir diese Zusammenhänge, entwickeln neue Perspektiven und stärken so das Miteinander und die Ressourcen der ganzen Familie.",
+        "In systemic family work, we explore how stress and symptoms are connected to interaction patterns within the family. Difficulties are often signals of shared dynamics or tension—not an individual fault. Life changes (for example the birth of a child, separation, loss, or crises) can put pressure on the family system and require a new balance. Together we identify patterns, develop new perspectives, and strengthen the family’s resources and cooperation.",
 
       individual_title: "Individuals",
       individual_text:
-        "Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.",
+        "I work independently as a systemic therapist and counselor and am recognized by the Systemische Gesellschaft (SG). Alongside my private practice, I have worked for many years in a counseling center for refugees in Berlin and previously supported families through family assistance services. I am currently continuing my education in trauma-focused counseling. I have a background in political and social sciences.",
 
       prices_title: "Prices",
       price_title_couples: "Couple Therapy",
@@ -71,6 +72,8 @@
       contact_email_text:
         '<a href="mailto:info@example.com">info@example.com</a>',
       footer_imprint: "Impressum",
+      // Backwards-compat key: some pages may still use data-i18n="footer_impressum"
+      footer_impressum: "Impressum",
       footer_privacy: "Privacy Policy",
     },
 
@@ -78,6 +81,7 @@
       header_title: "Systemische Beratung und Therapie",
       header_subtitle: "Meike Behrends",
 
+      nav_home: "Start",
       nav_intro: "Einführung",
       nav_first: "Paare",
       nav_second: "Familien",
@@ -129,6 +133,7 @@
       contact_email_text:
         '<a href="mailto:info@example.com">info@example.com</a>',
       footer_imprint: "Impressum",
+      footer_impressum: "Impressum",
       footer_privacy: "Datenschutzerklärung",
     },
   };
