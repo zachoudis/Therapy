@@ -70,7 +70,7 @@
       <!-- Header -->
       <header id="header" class="alt">
         <h1 data-i18n="header_title">Systemic Counseling and Therapy</h1>
-        <p data-i18n="header_subtitle">Meike Behrends</p>
+        <p data-i18n="header_subtitle">Meike Behrends & Jan Drunkenmölle-Nazeri</p>
       </header>
 
       <!-- Nav -->
@@ -86,6 +86,7 @@
           <li>
             <a href="#individual" data-i18n="nav_individual">Individuals</a>
           </li>
+          <li><a href="#supervision" data-i18n="nav_supervision">Supervision</a></li>
           <li><a href="#prices" data-i18n="nav_prices">Prices</a></li>
           <li><a href="#cta" data-i18n="nav_cta">Get Started</a></li>
           <li class="nav-lang">
@@ -114,7 +115,7 @@
         <section id="intro" class="main">
           <div class="main-content spotlight">
             <div class="content">
-              <p class="content" data-i18n="intro_text">Systemic counseling and therapy in Berlin for individuals, couples, and families.</p>
+              <p class="content" data-i18n-html="intro_text">Systemic counseling and therapy in Berlin for individuals, couples, and families.</p>
             </div>
             <span class="image"
               ><img
@@ -133,10 +134,11 @@
             <h2 data-i18n="first_title">Therapy Services</h2>
           </header>
           <div class="main-content  service-split">
+            <p class="content" data-i18n-html="feature1_text">Support for your personal growth and well-being.</p>
             <article class="service-card">
               <div class="service-card__photo">
                 <img
-                  src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80&auto=format&fit=crop"
+                  src="images/couple.jpeg"
                   alt=""
                   width="800"
                   height="600"
@@ -145,7 +147,6 @@
                 />
               </div>
             </article>
-            <p class="content" data-i18n="feature1_text">Support for your personal growth and well-being.</p>
           </div>
         </section>
 
@@ -159,7 +160,7 @@
             <article class="service-card">
               <div class="service-card__photo">
                 <img
-                  src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80&auto=format&fit=crop"
+                  src="images/family.jpeg"
                   alt=""
                   width="800"
                   height="600"
@@ -177,10 +178,11 @@
             <h2 data-i18n="individual_title">Individuals</h2>
           </header>
           <div class="main-content service-split">
+            <p class="content" data-i18n-html="individual_text">Therapy for individuals seeking personal development or support through challenges.</p>
             <article class="service-card">
               <div class="service-card__photo">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop"
+                  src="images/individuals.jpeg"
                   alt=""
                   width="800"
                   height="600"
@@ -189,7 +191,26 @@
                 />
               </div>
             </article>
-            <p class="content" data-i18n="individual_text">Therapy for individuals seeking personal development or support through challenges.</p>
+          </div>
+        </section>
+
+        <!-- Supervision -->
+        <section id="supervision" class="main special">
+          <header class="major">
+            <h2 data-i18n="supervision_title">Supervision</h2>
+          </header>
+          <div class="main-content spotlight">
+            <div class="content">
+              <div data-i18n-html="supervision_text"></div>
+            </div>
+            <span class="image"
+              ><img
+                src="images/therapist.jpg"
+                alt="Meike Behrends"
+                width="256"
+                height="256"
+                decoding="async"
+            /></span>
           </div>
         </section>
 
@@ -198,27 +219,36 @@
           <header class="major">
             <h2 data-i18n="prices_title">Prices</h2>
           </header>
-          <div class="main-content price-grid">
-            <article class="price-card">
-              <h3 data-i18n="price_title_couples">Couple Therapy</h3>
-              <p class="price-card__value" data-i18n="price_value_couples">145 € · 90 min.</p>
-              <p class="price-card__description" data-i18n="price_desc_couples">For couples seeking to improve their relationship.</p>
-            </article>
+          <div class="main-content">
+            <div class="price-grid">
+              <article class="price-card">
+                <h3 data-i18n="price_title_couples">Couple Therapy</h3>
+                <p class="price-card__value" data-i18n="price_value_couples">145 € · 90 min.</p>
+                <p class="price-card__description" data-i18n="price_desc_couples">For couples seeking to improve their relationship.</p>
+              </article>
 
-            <article class="price-card">
-              <h3 data-i18n="price_title_individual">Individual Therapy</h3>
-              <p class="price-card__value" data-i18n="price_value_individual">100 € · 60 min.</p>
-              <p class="price-card__description" data-i18n="price_desc_individual">For individuals seeking personal support.</p>
-            </article>
+              <article class="price-card">
+                <h3 data-i18n="price_title_individual">Individual Therapy</h3>
+                <p class="price-card__value" data-i18n="price_value_individual">100 € · 60 min.</p>
+                <p class="price-card__description" data-i18n="price_desc_individual">For individuals seeking personal support.</p>
+              </article>
 
-            <article class="price-card">
-              <h3 data-i18n="price_title_coaching">Individual Coaching</h3>
-              <p class="price-card__value" data-i18n="price_value_coaching">100 € · 60 min.</p>
-              <p class="price-card__description" data-i18n="price_desc_coaching">Coaching for personal and professional growth.</p>
-            </article>
+              <article class="price-card">
+                <h3 data-i18n="price_title_coaching">Individual Coaching</h3>
+                <p class="price-card__value" data-i18n="price_value_coaching">100 € · 60 min.</p>
+                <p class="price-card__description" data-i18n="price_desc_coaching">Coaching for personal and professional growth.</p>
+              </article>
+
+              <article class="price-card">
+                <h3 data-i18n="price_title_supervision">Supervision</h3>
+                <p class="price-card__value" data-i18n="price_value_supervision"></p>
+                <p class="price-card__description" data-i18n="price_desc_supervision"></p>
+              </article>
+            </div>
+
+            <div class="price-note" data-i18n-html="price_note_access"></div>
+            <p class="price-note" data-i18n="price_note_vat">All prices include VAT.</p>
           </div>
-          <p class="price-note" data-i18n="price_note_vat">All prices include VAT.</p>
-          <p class="price-note" data-i18n="price_note_insurance">Therapy is not covered by statutory health insurance.</p>
         </section>
 
         <!-- Get Started -->
@@ -226,10 +256,17 @@
           <header class="major">
             <h2 data-i18n="cta_title">Contact Me</h2>
           </header>
-          <p class="contact-intro" data-i18n="cta_text">
-            I would be happy to hear from you. You can reach me by phone, email,
-            or at my practice in Berlin.
-          </p>
+          <div class="cta-columns">
+            <div class="cta-col">
+              <div class="contact-intro" data-i18n-html="cta_text">
+                I would be happy to hear from you. You can reach me by phone, email,
+                or at my practice in Berlin.
+              </div>
+            </div>
+            <div class="cta-col">
+              <div class="contact-intro" data-i18n-html="cta_text"></div>
+            </div>
+          </div>
           <div class="contact-grid main-content">
             <article class="contact-card">
               <span class="contact-card__icon" aria-hidden="true"
@@ -239,17 +276,6 @@
                 <h3 data-i18n="contact_location_title">Location</h3>
                 <p data-i18n-html="contact_location_text">
                   Skalitzer Straße 100<br />10997 Berlin
-                </p>
-              </div>
-            </article>
-            <article class="contact-card">
-              <span class="contact-card__icon" aria-hidden="true"
-                ><span class="icon solid fa-phone"></span
-              ></span>
-              <div class="contact-card__body">
-                <h3 data-i18n="contact_phone_title">Phone</h3>
-                <p data-i18n-html="contact_phone_text">
-                  <a href="tel:+491632721699">0163 2721699</a>
                 </p>
               </div>
             </article>
