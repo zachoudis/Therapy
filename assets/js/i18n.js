@@ -17,118 +17,139 @@
      ------------------------------------------------------------------ */
   const translations = {
     en: {
-      header_title: "Systemic Counseling and Therapy",
-      header_subtitle: "Meike Behrends",
+      header_title: "Systemic Therapy in Berlin",
+      header_subtitle: "Meike Behrends & Jan Drunkenmölle-Nazeri",
 
-      nav_intro: "Introduction",
-      nav_first: "Pairs",
-      nav_second: "Family",
+      nav_home: "Home",
+      nav_intro: "What I offer",
+      nav_first: "Couples & Friends",
+      nav_second: "Families",
       nav_individual: "Individuals",
+      nav_supervision: "Supervision",
       nav_prices: "Prices",
-      nav_cta: "Contact Me",
+      nav_cta: "About Me",
 
       intro_text:
-        "Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.",
+        "<p>I’m Meike Behrends, a systemic therapist in Berlin-Kreuzberg, and I support you through crises and change processes. Together we look at what is currently weighing on you—whether as a couple, as a family, in friendships, or individually. As a systemic therapist, I assume that you already carry the resources for change within you. My role is to support you on equal footing in opening up new perspectives and reviewing old beliefs. This can help you gain more clarity about inner patterns and roles, and regain room for action.</p><p>I aim for a counseling space where diversity is seen and valued as a strength—regardless of sexual orientation, origin, gender, or lifestyle. I work in Berlin-Kreuzberg or online, in English and German.</p><p class=\"intro-section-title\"><strong>My work is</strong></p><p><strong>Systemic</strong><br />We look at your concerns in the context of your relationships and life circumstances. Which roles and patterns do you find yourself returning to? What feels difficult right now? It’s important to me to also focus on your strengths so you can reconnect with your inner resources.</p><p><strong>Emotion-focused (EFT)</strong><br />Conflicts in relationships often arise not only from what is said, but from deeper emotional needs such as closeness, safety, and recognition. In conflict these needs can be covered over, and it can feel hard to sense and express them. When you regain access to these needs, new connection can become possible.</p><p><strong>Trauma-sensitive</strong><br />I am attentive and sensitive to the effects of distressing experiences. Your personal boundaries, your experiences, and your pace are central. It matters to me that you can experience stability and safety again.</p>",
 
-      first_title: "Pairs",
+      first_title: "Couples & Friends",
       feature1_text:
-        "Ich unterstütze Paare die sich in einer Krise, in einer Umbruch – oder Trennungsphase befinden, oder die ihre Elternrolle reflektieren möchten. In Beziehungen befinden wir uns in immer wiederkehrenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, Ihre eigenen festgefahrenen Muster zu erkennen, die Sichtweisen des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern. Dabei arbeite ich mit dem emotionsfokussierten Ansatz der zum Ziel hat, die Gefühle und Bedürfnisse, die diesen Dynamiken zugrunde liegen, aufzudecken. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen. Sollten Sie sich für eine Trennung entscheiden, biete ich Ihnen auch im Trennungsprozess Unterstützung und Begleitung.",
+        "<p>In relationships we often find ourselves in recurring—and sometimes distressing—dynamics that are difficult to change alone. I support you in recognizing stuck patterns, understanding each other’s inner experience, and changing interactions step by step.</p><p>I work with the Emotionally Focused Therapy approach (EFT). The aim is to uncover the feelings and needs that underlie these dynamics. When they are seen and appreciated, a new sense of safety and connection can emerge. The focus is not on blame, but on understanding and developing shared solutions.</p><p>If you decide to separate, I also offer support and guidance through the separation process.</p><p><strong>Session length & fee</strong><br />90 min – 145 €</p><p><strong>Topics</strong></p><ul><li>Desire for more closeness and understanding in the relationship</li><li>Understanding and changing recurring conflicts and roles</li><li>Having a baby and changes in the partnership</li><li>Sexuality</li><li>Thoughts of separation and separation support</li></ul>",
 
-      second_title: "Family",
+      second_title: "Families",
       second_intro:
-        "In der systemischen Familienarbeit schaue ich mit Ihnen darauf, wie einzelne Belastungen mit dem Miteinander in der Familie verbunden sind. Symptome eines Familienmitglieds sind oft Hinweise auf gemeinsame Muster oder Spannungen – nicht auf ein individuelles Problem. Auch Veränderungen, wie beispielsweise die Geburt eines Kindes oder Krisen, sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann. Gemeinsam entdecken wir diese Zusammenhänge, entwickeln neue Perspektiven und stärken so das Miteinander und die Ressourcen der ganzen Familie.",
+        "<p>Concerns or symptoms of one family member are often not an individual problem, but signals of shared patterns or tension in the family system. Changes such as the birth of a child, illness, or loss can require the family to reorganize and can create pressure.</p><p>Together we explore these connections and previously unspoken needs, develop new perspectives, and strengthen cooperation within the family. I work in a multi-partial way, meaning I take each involved person’s perspective seriously and with appreciation.</p><p>I enjoy working with different systems, for example adult siblings, parent–child constellations, chosen family, and co-parenting.</p><p><strong>Topics</strong></p><ul><li>Conflicts in parenting</li><li>Family crises such as loss, abuse, or illness</li><li>Coping with medical conditions and psychological stress in the family</li><li>Adolescence and separation/individuation</li></ul><p><strong>Session length & fee</strong><br />90 min – 145 €</p>",
 
       individual_title: "Individuals",
       individual_text:
-        "Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.",
+        "<p>My services are for people who feel stuck, overwhelmed, or are going through a personal crisis.</p><p>How we perceive ourselves and relate to ourselves is often shaped by beliefs and experiences from our family of origin. What used to be helpful or necessary in the past can limit us today and make change harder. That’s why we look together at your relationships with other people as well as your relationship with yourself.</p><p><strong>Possible topics</strong></p><ul><li>Understanding your roles in relationships and recurring patterns</li><li>Regaining access to your inner strength and experiencing more self-efficacy</li><li>Noticing and setting boundaries more clearly</li><li>Processing distressing experiences</li></ul><p><strong>Session length & fee</strong><br />60 min – 90 €</p>",
+
+      supervision_title: "Supervision",
+      supervision_text:
+        "<p>I'm Meike Behrends, a systemic therapist in Berlin-Kreuzberg, and I support you through crises and change processes. Together we look at what is currently weighing on you—whether as a couple, as a family, in friendships, or individually. As a systemic therapist, I assume that you already carry the resources for change within you. My role is to support you on equal footing in opening up new perspectives and reviewing old beliefs. This can help you gain more clarity about inner patterns and roles, and regain room for action.</p>",
 
       prices_title: "Prices",
-      price_title_couples: "Couple Therapy",
+      price_title_couples: "Couples & Friends",
       price_value_couples: "145 € · 90 min.",
       price_desc_couples:
-        "Space for a short explanation of how sessions work, what themes can be addressed, and what clients can expect from the process.",
+        "Emotion-focused, systemic support for couples and close relationships.",
       price_title_individual: "Individual Therapy",
-      price_value_individual: "100 € · 60 min.",
+      price_value_individual: "90 € · 60 min.",
       price_desc_individual:
-        "Space for a short explanation about one-to-one support, personal topics, and the therapeutic focus of the sessions.",
-      price_title_coaching: "Individual Coaching",
-      price_value_coaching: "100 € · 60 min.",
+        "Systemic individual sessions for clarity, resources, and change.",
+      price_title_coaching: "Families",
+      price_value_coaching: "145 € · 90 min.",
       price_desc_coaching:
-        "Space for a short explanation about coaching topics such as professional development, decision-making, or life transitions.",
+        "Systemic family sessions and parenting support.",
+      price_title_supervision: "Supervision",
+      price_value_supervision: "",
+      price_desc_supervision: "",
       price_note_vat:
         'As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" according to § 19 UStG).',
-      price_note_insurance:
-        "Please note that couple therapy, individual therapy, and individual coaching are not covered by German statutory health insurance.",
+      price_note_access:
+        "<p>It matters to me that people with a limited budget can also access therapy. If your financial situation is currently restricted, please talk to me—we’ll look for a solution together.<br />If you’d like, we can start with a free 15‑minute introductory call to clarify whether my offer is a good fit for you.</p>",
 
-      cta_title: "Contact Me",
+      cta_title: "About Me",
       cta_text:
-        "I would be happy to hear from you. You can reach me by phone, email, or at my practice in Berlin.",
+        "<p class=\"cta-name\">Meike</p><p>I work independently as a systemic therapist and counselor and am recognized by the Systemische Gesellschaft (SG), the umbrella organization for systemic therapists in Germany. I have also completed a foundational training in Emotionally Focused Couple Therapy (EFT).</p><p>Alongside my private practice, I have worked for many years in a counseling center for refugees in Berlin. Further formative experience comes from supporting families in crisis through social-pedagogical family assistance. Ongoing supervision and intervision are important to me in order to reflect on and continuously develop my work.</p><p>I am currently training further in trauma education. I hold a Bachelor’s and Master’s degree in political and social sciences.</p>",
       contact_location_title: "Location",
-      contact_location_text: "Skalitzer Straße 100<br />10997 Berlin",
+      contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_phone_title: "Phone",
-      contact_phone_text: '<a href="tel:+491632721699">0163 2721699</a>',
+      contact_phone_text: '<a href="tel:+4917672160724">0176 72160724</a>',
       contact_email_title: "E-mail",
       contact_email_text:
         '<a href="mailto:info@example.com">info@example.com</a>',
       footer_imprint: "Impressum",
+      // Backwards-compat key: some pages may still use data-i18n="footer_impressum"
+      footer_impressum: "Impressum",
       footer_privacy: "Privacy Policy",
     },
 
     de: {
-      header_title: "Systemische Beratung und Therapie",
-      header_subtitle: "Meike Behrends",
+      header_title: "Systemische Beratung, Therapie und Supervision",
+      header_subtitle: "Meike Behrends & Jan Drunkenmölle-Nazeri",
 
-      nav_intro: "Einführung",
-      nav_first: "Paare",
+      nav_home: "Start",
+      nav_intro: "Was wir anbieten",
+      nav_first: "Paare und Freund*innen",
       nav_second: "Familien",
       nav_individual: "Einzelpersonen",
+      nav_supervision: "Supervision",
       nav_prices: "Preise",
-      nav_cta: "Über mich",
+      nav_cta: "Über uns",
 
       intro_text:
-        "Ich unterstütze Sie in herausfordernden Lebensphasen, bei Krisen und Veränderungen. Im Mittelpunkt meiner Arbeit steht die Überzeugung, dass jeder Mensch die Fähigkeit zur Veränderung und Entwicklung bereits in sich trägt. Manchmal braucht es lediglich einen geschützten Raum, neue Perspektiven und eine wertschätzende Begleitung, um diese Ressourcen wieder zugänglich zu machen. Mein Angebot richtet sich an Einzelpersonen, Paare, Familien sowie an Menschen in unterschiedlichsten Lebens- und Beziehungsformen. Ich heiße Sie willkommen – unabhängig von Ihrer Herkunft, Ihrer Religion oder der Art, wie Sie Ihr Leben gestalten. Ich arbeite auf Englisch und auf Deutsch.",
+        "<p>Ich bin <strong>Meike Behrends</strong>, systemische Therapeutin in Berlin-Kreuzberg. Ich begleite Sie in Krisen und Veränderungsprozessen. Gemeinsam schauen wir, was Sie aktuell belastet – ob als Paar, Familie, in Freundschaften oder individuell. Als systemische Therapeutin gehe ich davon aus, dass Sie die Ressourcen für Veränderung bereits in sich tragen. Meine Rolle dabei ist, Sie auf Augenhöhe dabei zu unterstützen, neue Perspektiven einzunehmen und alte Glaubenssätze zu überprüfen. Dadurch können Sie mehr Klarheit über innere Muster und Rollen gewinnen und wieder mehr Handlungsspielraum erlangen. Ich strebe eine Beratung an, in der Vielfalt als Stärke gesehen und geschätzt wird – unabhängig von sexueller Orientierung, Herkunft, Geschlecht oder Lebensmodell. Ich arbeite in Berlin-Kreuzberg oder online, auf Englisch und auf Deutsch.</p><p class=\"intro-section-title\"><strong>Meine Arbeit ist</strong></p><p><strong>Systemisch</strong><br />Ihr Anliegen betrachten wir gemeinsam im Kontext Ihrer Beziehungen und Lebensumstände. In welchen Rollen und Mustern finden Sie sich häufig wieder? Was fällt Ihnen / ist gerade schwer? Dabei ist es mir wichtig, auch Ihre Stärken in den Blick zu nehmen, damit Sie wieder Zugang zu Ihrer inneren Kraft finden.</p><p><strong>Emotionsfokussiert</strong><br />Konflikte in Beziehungen entstehen oft nicht nur durch das, was gesagt wird, sondern durch tieferliegende emotionale Bedürfnisse wie der Wunsch nach Nähe, Sicherheit und Anerkennung. Häufig werden diese Bedürfnisse in Konflikten überlagert und es fällt schwer, sie zu spüren und zu formulieren. Wenn Sie wieder Zugang zu diesen Bedürfnissen bekommen, kann neue Verbindung in der Beziehung entstehen.</p><p><strong>Traumasensibel</strong><br />Ich bin achtsam und sensibel für die Auswirkungen belastender Erlebnisse. Dabei stehen Ihre persönlichen Grenzen, Ihre Erfahrungen und Ihr Tempo im Mittelpunkt. Mir ist es wichtig, dass Sie wieder Stabilität und Sicherheit erleben.</p>",
 
-      first_title: "Paare",
+      first_title: "Paare und Freund*innen",
       feature1_text:
-        "Ich unterstütze Paare die sich in einer Krise, in einer Umbruch – oder Trennungsphase befinden, oder die ihre Elternrolle reflektieren möchten. In Beziehungen befinden wir uns in immer wiederkehrenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, Ihre eigenen festgefahrenen Muster zu erkennen, die Sichtweisen des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern. Dabei arbeite ich mit dem emotionsfokussierten Ansatz der zum Ziel hat, die Gefühle und Bedürfnisse, die diesen Dynamiken zugrunde liegen, aufzudecken. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen. Sollten Sie sich für eine Trennung entscheiden, biete ich Ihnen auch im Trennungsprozess Unterstützung und Begleitung.",
+        "<p>In Beziehungen befinden wir uns in immer wiederkehrenden und häufig belastenden Dynamiken, die alleine schwer zu durchbrechen sind. Ich unterstütze Sie dabei, festgefahrene Muster zu erkennen, das innere Erleben des*der anderen kennenzulernen und schließlich Ihre Interaktionen Schritt für Schritt zu verändern.</p><p>Dabei arbeite ich mit dem emotionsfokussierten Ansatz (EFT), der zum Ziel hat, die Gefühle und Bedürfnisse aufzudecken, die diesen Dynamiken zugrunde liegen. Wenn diese gesehen und gewertschätzt werden, kann eine neue Art von Sicherheit und Verbindung entstehen. Der Fokus liegt dabei nicht auf Schuld, sondern auf Verständnis und der Entwicklung von gemeinsamen Lösungswegen.</p><p>Sollten Sie sich für eine Trennung entscheiden, biete ich auch im Trennungsprozess Unterstützung und Begleitung an.</p><p><strong>Dauer & Honorar</strong><br />90 Min – 145 Euro</p><p><strong>Themen</strong></p><ul><li>Wunsch nach mehr Nähe und Verständnis in der Beziehung</li><li>Wiederkehrende Konflikte und Rollen verstehen und verändern</li><li>Geburt eines Kindes und Veränderungen in der Partnerschaft</li><li>Sexualität</li><li>Trennungsgedanken und Trennungsbegleitung</li></ul>",
 
       second_title: "Familien",
       second_intro:
-        "In der systemischen Familienarbeit schaue ich mit Ihnen darauf, wie einzelne Belastungen mit dem Miteinander in der Familie verbunden sind. Symptome eines Familienmitglieds sind oft Hinweise auf gemeinsame Muster oder Spannungen – nicht auf ein individuelles Problem. Auch Veränderungen, wie beispielsweise die Geburt eines Kindes oder Krisen, sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann. Gemeinsam entdecken wir diese Zusammenhänge, entwickeln neue Perspektiven und stärken so das Miteinander und die Ressourcen der ganzen Familie.",
+        "<p>Beschwerden oder Symptome eines Familienmitglieds sind oft kein individuelles Problem, sondern Hinweise auf gemeinsame Muster oder Spannungen im Familiensystem. Auch Veränderungen wie beispielsweise die Geburt eines Kindes, eine Krankheit oder ein Verlust sorgen dafür, dass sich die Familie als System neu ordnet und unter Druck geraten kann.</p><p>Gemeinsam entdecken wir diese Zusammenhänge und bisher unausgesprochene Bedürfnisse, entwickeln neue Perspektiven und stärken so das Miteinander in der Familie. Dabei arbeite ich allparteilich – das bedeutet, dass ich jede beteiligte Person in ihrer Sichtweise ernst nehme und wertschätze.</p><p>Ich arbeite gern mit unterschiedlichen Systemen wie z. B. erwachsenen Geschwistern, Eltern-Kind-Konstellationen, Wahlfamilie oder Co-Eltern...</p><p><strong>Themen</strong></p><ul><li>Konflikte in der Elternschaft</li><li>Familiäre Krisen wie z. B. Verlust, Missbrauch, Krankheit</li><li>Umgang mit Erkrankungen und psychischen Belastungen in der Familie</li><li>Adoleszenz und Ablösung</li></ul><p><strong>Dauer & Honorar</strong><br />90 Min – 145 Euro</p>",
 
       individual_title: "Einzelpersonen",
       individual_text:
-        "Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeuten. Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin und habe in der Vergangenheit mit Familien im Rahmen der Familienhilfe zusammengearbeitet. Aktuell bilde ich mich weiter zur traumazentrierten Fachberaterin. Ich bin Politik- und Sozialwissenschaftlerin.",
+        "<p>Mein Angebot richtet sich an Menschen, die sich festgefahren, überfordert fühlen oder sich in einer persönlichen Krise befinden.</p><p>Unsere Selbstwahrnehmung und unser Umgang mit uns selbst werden häufig von Überzeugungen und Erfahrungen beeinflusst, die wir in unserer Herkunftsfamilie entwickelt haben. Was früher hilfreich oder notwendig war, kann uns heute einschränken und Veränderungen behindern. Deshalb schauen wir gemeinsam auf Ihre Beziehungen zu anderen Menschen als auch zu sich selbst.</p><p><strong>Themen</strong></p><ul><li>Eigene Rollen in Beziehungen und festgefahrene Muster besser verstehen</li><li>Zugang zu eigener Kraft zurückgewinnen und mehr Selbstwirksamkeit erfahren</li><li>Eigene Grenzen bewusster wahrnehmen und setzen</li><li>Belastende Erlebnisse verarbeiten</li></ul><p><strong>Dauer & Honorar</strong><br />60 Min – 90 Euro</p>",
+
+      supervision_title: "Supervision",
+      supervision_text:
+        "<p>Ich bin <strong>Meike Behrends</strong>, systemische Therapeutin in Berlin-Kreuzberg. Ich begleite Sie in Krisen und Veränderungsprozessen. Gemeinsam schauen wir, was Sie aktuell belastet – ob als Paar, Familie, in Freundschaften oder individuell. Als systemische Therapeutin gehe ich davon aus, dass Sie die Ressourcen für Veränderung bereits in sich tragen. Meine Rolle dabei ist, Sie auf Augenhöhe dabei zu unterstützen, neue Perspektiven einzunehmen und alte Glaubenssätze zu überprüfen. Dadurch können Sie mehr Klarheit über innere Muster und Rollen gewinnen und wieder mehr Handlungsspielraum erlangen. Ich strebe eine Beratung an, in der Vielfalt als Stärke gesehen und geschätzt wird – unabhängig von sexueller Orientierung, Herkunft, Geschlecht oder Lebensmodell. Ich arbeite in Berlin-Kreuzberg oder online, auf Englisch und auf Deutsch.</p>",
 
       prices_title: "Preise",
-      price_title_couples: "Paartherapie",
+      price_title_couples: "Paare und Freund*innen",
       price_value_couples: "145 € · 90 Min.",
       price_desc_couples:
-        "Hier ist Platz für einen kurzen Erklärungstext dazu, wie die Sitzungen ablaufen, welche Themen Raum haben und was Klient*innen erwarten können.",
+        "Emotionsfokussierte, systemische Begleitung für Paare und enge Beziehungen.",
       price_title_individual: "Einzeltherapie",
-      price_value_individual: "100 € · 60 Min.",
+      price_value_individual: "90 € · 60 Min.",
       price_desc_individual:
-        "Hier ist Platz für einen kurzen Erklärungstext zu persönlicher Begleitung, individuellen Themen und dem therapeutischen Fokus der Sitzungen.",
-      price_title_coaching: "Einzelcoaching",
-      price_value_coaching: "100 € · 60 Min.",
+        "Systemische Einzeltermine für Klarheit, Ressourcen und Veränderung.",
+      price_title_coaching: "Familien",
+      price_value_coaching: "145 € · 90 Min.",
       price_desc_coaching:
-        "Hier ist Platz für einen kurzen Erklärungstext zu Coaching-Themen wie beruflicher Entwicklung, Entscheidungsfindung oder Übergangsphasen im Leben.",
+        "Systemische Familiensitzungen und Unterstützung in der Elternschaft.",
+      price_title_supervision: "Supervision",
+      price_value_supervision: "",
+      price_desc_supervision: "",
       price_note_vat:
         "Als Kleinunternehmerin sind meine Honorare von der Umsatzsteuer befreit (Kleinunternehmerregelung gemäß § 19 UStG).",
-      price_note_insurance:
-        "Bitte beachten Sie, dass Paartherapie, Einzeltherapie und Einzelcoaching nicht von den gesetzlichen Krankenkassen übernommen werden.",
+      price_note_access:
+        "<p>Mir ist es wichtig, dass auch Personen mit begrenztem Budget Therapie bekommen können. Sollten Ihre finanziellen Möglichkeiten gerade eingeschränkt sein, sprechen Sie mich bitte an. Wir finden gemeinsam eine Lösung.<br />Gerne können wir vorab ein kostenloses, 15‑minütiges Vorgespräch führen, um zu klären, ob mein Angebot das Richtige für Sie ist.</p>",
 
-      cta_title: "Kontakt",
+      cta_title: "Über uns",
       cta_text:
-        "Ich freue mich, von Ihnen zu hören. Sie erreichen mich telefonisch, per E-Mail oder in meiner Praxis in Berlin.",
+        "<p class=\"cta-name\">Meike</p><p>Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeut*innen. Außerdem habe ich ein Basistraining in emotionsfokussierter Paartherapie (EFT) abgeschlossen.</p><p>Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin. Prägende Erfahrungen habe ich außerdem bei der Arbeit mit Familien in Krisen im Rahmen der Sozialpädagogischen Familienhilfe gesammelt. Fortlaufende Supervision und Intervision sind mir wichtig, um meine Arbeit zu reflektieren und weiterzuentwickeln.</p><p>Aktuell bilde ich mich zur Traumapädagogin weiter. Ich habe einen Bachelor- und Masterabschluss in Politik- und Sozialwissenschaften.</p>",
       contact_location_title: "Standort",
-      contact_location_text: "Skalitzer Straße 100<br />10997 Berlin",
+      contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_phone_title: "Telefon",
-      contact_phone_text: '<a href="tel:+491632721699">0163 2721699</a>',
+      contact_phone_text: '<a href="tel:+4917672160724">0176 72160724</a>',
       contact_email_title: "E-Mail",
       contact_email_text:
         '<a href="mailto:info@example.com">info@example.com</a>',
       footer_imprint: "Impressum",
+      footer_impressum: "Impressum",
       footer_privacy: "Datenschutzerklärung",
     },
   };
