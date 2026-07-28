@@ -29,8 +29,10 @@
       nav_prices: "Prices",
       nav_cta: "About Me",
 
-      intro_text:
-        "<p>I’m Meike Behrends, a systemic therapist in Berlin-Kreuzberg, and I support you through crises and change processes. Together we look at what is currently weighing on you—whether as a couple, as a family, in friendships, or individually. As a systemic therapist, I assume that you already carry the resources for change within you. My role is to support you on equal footing in opening up new perspectives and reviewing old beliefs. This can help you gain more clarity about inner patterns and roles, and regain room for action.</p><p>I aim for a counseling space where diversity is seen and valued as a strength—regardless of sexual orientation, origin, gender, or lifestyle. I work in Berlin-Kreuzberg or online, in English and German.</p><p class=\"intro-section-title\"><strong>My work is</strong></p><p><strong>Systemic</strong><br />We look at your concerns in the context of your relationships and life circumstances. Which roles and patterns do you find yourself returning to? What feels difficult right now? It’s important to me to also focus on your strengths so you can reconnect with your inner resources.</p><p><strong>Emotion-focused (EFT)</strong><br />Conflicts in relationships often arise not only from what is said, but from deeper emotional needs such as closeness, safety, and recognition. In conflict these needs can be covered over, and it can feel hard to sense and express them. When you regain access to these needs, new connection can become possible.</p><p><strong>Trauma-sensitive</strong><br />I am attentive and sensitive to the effects of distressing experiences. Your personal boundaries, your experiences, and your pace are central. It matters to me that you can experience stability and safety again.</p>",
+      intro_bio:
+        "<p>I’m Meike Behrends, a systemic therapist in Berlin-Kreuzberg, and I support you through crises and change processes. Together we look at what is currently weighing on you—whether as a couple, as a family, in friendships, or individually. As a systemic therapist, I assume that you already carry the resources for change within you. My role is to support you on equal footing in opening up new perspectives and reviewing old beliefs. This can help you gain more clarity about inner patterns and roles, and regain room for action.</p><p>I aim for a counseling space where diversity is seen and valued as a strength—regardless of sexual orientation, origin, gender, or lifestyle. I work in Berlin-Kreuzberg or online, in English and German.</p>",
+      intro_work:
+        '<p class="intro-section-title"><strong>My work is</strong></p><div class="work-pillars"><div class="pillar"><div class="pillar-icon"><span class="icon solid fa-link"></span></div><strong>Systemic</strong><p>We look at your concerns in the context of your relationships and life circumstances. Which roles and patterns do you find yourself returning to? What feels difficult right now? It’s important to me to also focus on your strengths so you can reconnect with your inner resources.</p></div><div class="pillar"><div class="pillar-icon"><span class="icon solid fa-heart"></span></div><strong>Emotion-focused (EFT)</strong><p>Conflicts in relationships often arise not only from what is said, but from deeper emotional needs such as closeness, safety, and recognition. In conflict these needs can be covered over, and it can feel hard to sense and express them. When you regain access to these needs, new connection can become possible.</p></div><div class="pillar"><div class="pillar-icon"><span class="icon solid fa-leaf"></span></div><strong>Trauma-sensitive</strong><p>I am attentive and sensitive to the effects of distressing experiences. Your personal boundaries, your experiences, and your pace are central. It matters to me that you can experience stability and safety again.</p></div></div>',
 
       first_title: "Couples & Friends",
       feature1_text:
@@ -59,8 +61,7 @@
         "Systemic individual sessions for clarity, resources, and change.",
       price_title_coaching: "Families",
       price_value_coaching: "145 € · 90 min.",
-      price_desc_coaching:
-        "Systemic family sessions and parenting support.",
+      price_desc_coaching: "Systemic family sessions and parenting support.",
       price_title_supervision: "Supervision",
       price_value_supervision: "",
       price_desc_supervision: "",
@@ -71,7 +72,7 @@
 
       cta_title: "About Me",
       cta_text:
-        "<p class=\"cta-name\">Meike</p><p>I work independently as a systemic therapist and counselor and am recognized by the Systemische Gesellschaft (SG), the umbrella organization for systemic therapists in Germany. I have also completed a foundational training in Emotionally Focused Couple Therapy (EFT).</p><p>Alongside my private practice, I have worked for many years in a counseling center for refugees in Berlin. Further formative experience comes from supporting families in crisis through social-pedagogical family assistance. Ongoing supervision and intervision are important to me in order to reflect on and continuously develop my work.</p><p>I am currently training further in trauma education. I hold a Bachelor’s and Master’s degree in political and social sciences.</p>",
+        '<p class="cta-name">Meike</p><p>I work independently as a systemic therapist and counselor and am recognized by the Systemische Gesellschaft (SG), the umbrella organization for systemic therapists in Germany. I have also completed a foundational training in Emotionally Focused Couple Therapy (EFT).</p><p>Alongside my private practice, I have worked for many years in a counseling center for refugees in Berlin. Further formative experience comes from supporting families in crisis through social-pedagogical family assistance. Ongoing supervision and intervision are important to me in order to reflect on and continuously develop my work.</p><p>I am currently training further in trauma education. I hold a Bachelor’s and Master’s degree in political and social sciences.</p>',
       contact_location_title: "Location",
       contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_phone_title: "Phone",
@@ -98,8 +99,10 @@
       nav_prices: "Preise",
       nav_cta: "Über uns",
 
-      intro_text:
-        "<p>Ich bin <strong>Meike Behrends</strong>, systemische Therapeutin in Berlin-Kreuzberg. Ich begleite Sie in Krisen und Veränderungsprozessen. Gemeinsam schauen wir, was Sie aktuell belastet – ob als Paar, Familie, in Freundschaften oder individuell. Als systemische Therapeutin gehe ich davon aus, dass Sie die Ressourcen für Veränderung bereits in sich tragen. Meine Rolle dabei ist, Sie auf Augenhöhe dabei zu unterstützen, neue Perspektiven einzunehmen und alte Glaubenssätze zu überprüfen. Dadurch können Sie mehr Klarheit über innere Muster und Rollen gewinnen und wieder mehr Handlungsspielraum erlangen. Ich strebe eine Beratung an, in der Vielfalt als Stärke gesehen und geschätzt wird – unabhängig von sexueller Orientierung, Herkunft, Geschlecht oder Lebensmodell. Ich arbeite in Berlin-Kreuzberg oder online, auf Englisch und auf Deutsch.</p><p class=\"intro-section-title\"><strong>Meine Arbeit ist</strong></p><p><strong>Systemisch</strong><br />Ihr Anliegen betrachten wir gemeinsam im Kontext Ihrer Beziehungen und Lebensumstände. In welchen Rollen und Mustern finden Sie sich häufig wieder? Was fällt Ihnen / ist gerade schwer? Dabei ist es mir wichtig, auch Ihre Stärken in den Blick zu nehmen, damit Sie wieder Zugang zu Ihrer inneren Kraft finden.</p><p><strong>Emotionsfokussiert</strong><br />Konflikte in Beziehungen entstehen oft nicht nur durch das, was gesagt wird, sondern durch tieferliegende emotionale Bedürfnisse wie der Wunsch nach Nähe, Sicherheit und Anerkennung. Häufig werden diese Bedürfnisse in Konflikten überlagert und es fällt schwer, sie zu spüren und zu formulieren. Wenn Sie wieder Zugang zu diesen Bedürfnissen bekommen, kann neue Verbindung in der Beziehung entstehen.</p><p><strong>Traumasensibel</strong><br />Ich bin achtsam und sensibel für die Auswirkungen belastender Erlebnisse. Dabei stehen Ihre persönlichen Grenzen, Ihre Erfahrungen und Ihr Tempo im Mittelpunkt. Mir ist es wichtig, dass Sie wieder Stabilität und Sicherheit erleben.</p>",
+      intro_bio:
+        "<p>Ich bin <strong>Meike Behrends</strong>, systemische Therapeutin in Berlin-Kreuzberg. Ich begleite Sie in Krisen und Veränderungsprozessen. Gemeinsam schauen wir, was Sie aktuell belastet – ob als Paar, Familie, in Freundschaften oder individuell. Als systemische Therapeutin gehe ich davon aus, dass Sie die Ressourcen für Veränderung bereits in sich tragen. Meine Rolle dabei ist, Sie auf Augenhöhe dabei zu unterstützen, neue Perspektiven einzunehmen und alte Glaubenssätze zu überprüfen. Dadurch können Sie mehr Klarheit über innere Muster und Rollen gewinnen und wieder mehr Handlungsspielraum erlangen. Ich strebe eine Beratung an, in der Vielfalt als Stärke gesehen und geschätzt wird – unabhängig von sexueller Orientierung, Herkunft, Geschlecht oder Lebensmodell. Ich arbeite in Berlin-Kreuzberg oder online, auf Englisch und auf Deutsch.</p>",
+      intro_work:
+        '<p class="intro-section-title"><strong>Meine Arbeit ist</strong></p><div class="work-pillars"><div class="pillar"><div class="pillar-icon"><span class="icon solid fa-link"></span></div><strong>Systemisch</strong><p>Ihr Anliegen betrachten wir gemeinsam im Kontext Ihrer Beziehungen und Lebensumstände. In welchen Rollen und Mustern finden Sie sich häufig wieder? Was fällt Ihnen / ist gerade schwer? Dabei ist es mir wichtig, auch Ihre Stärken in den Blick zu nehmen, damit Sie wieder Zugang zu Ihrer inneren Kraft finden.</p></div><div class="pillar"><div class="pillar-icon"><span class="icon solid fa-heart"></span></div><strong>Emotionsfokussiert</strong><p>Konflikte in Beziehungen entstehen oft nicht nur durch das, was gesagt wird, sondern durch tieferliegende emotionale Bedürfnisse wie der Wunsch nach Nähe, Sicherheit und Anerkennung. Häufig werden diese Bedürfnisse in Konflikten überlagert und es fällt schwer, sie zu spüren und zu formulieren. Wenn Sie wieder Zugang zu diesen Bedürfnissen bekommen, kann neue Verbindung in der Beziehung entstehen.</p></div><div class="pillar"><div class="pillar-icon"><span class="icon solid fa-leaf"></span></div><strong>Traumasensibel</strong><p>Ich bin achtsam und sensibel für die Auswirkungen belastender Erlebnisse. Dabei stehen Ihre persönlichen Grenzen, Ihre Erfahrungen und Ihr Tempo im Mittelpunkt. Mir ist es wichtig, dass Sie wieder Stabilität und Sicherheit erleben.</p></div></div>',
 
       first_title: "Paare und Freund*innen",
       feature1_text:
@@ -140,7 +143,7 @@
 
       cta_title: "Über uns",
       cta_text:
-        "<p class=\"cta-name\">Meike</p><p>Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeut*innen. Außerdem habe ich ein Basistraining in emotionsfokussierter Paartherapie (EFT) abgeschlossen.</p><p>Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin. Prägende Erfahrungen habe ich außerdem bei der Arbeit mit Familien in Krisen im Rahmen der Sozialpädagogischen Familienhilfe gesammelt. Fortlaufende Supervision und Intervision sind mir wichtig, um meine Arbeit zu reflektieren und weiterzuentwickeln.</p><p>Aktuell bilde ich mich zur Traumapädagogin weiter. Ich habe einen Bachelor- und Masterabschluss in Politik- und Sozialwissenschaften.</p>",
+        '<p class="cta-name">Meike</p><p>Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeut*innen. Außerdem habe ich ein Basistraining in emotionsfokussierter Paartherapie (EFT) abgeschlossen.</p><p>Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin. Prägende Erfahrungen habe ich außerdem bei der Arbeit mit Familien in Krisen im Rahmen der Sozialpädagogischen Familienhilfe gesammelt. Fortlaufende Supervision und Intervision sind mir wichtig, um meine Arbeit zu reflektieren und weiterzuentwickeln.</p><p>Aktuell bilde ich mich zur Traumapädagogin weiter. Ich habe einen Bachelor- und Masterabschluss in Politik- und Sozialwissenschaften.</p>',
       contact_location_title: "Standort",
       contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_phone_title: "Telefon",
@@ -204,8 +207,21 @@
      Public API
      ------------------------------------------------------------------ */
   function setLanguage(lang) {
-    localStorage.setItem("site-language", lang);
-    applyTranslations(lang);
+    const $main = document.getElementById("main");
+    const $header = document.getElementById("header");
+
+    // Start fade out
+    if ($main) $main.style.opacity = "0";
+    if ($header) $header.style.opacity = "0";
+
+    setTimeout(() => {
+      localStorage.setItem("site-language", lang);
+      applyTranslations(lang);
+
+      // Fade back in
+      if ($main) $main.style.opacity = "1";
+      if ($header) $header.style.opacity = "1";
+    }, 400); // Matches transition duration in site.css
   }
 
   function toggleLanguage() {

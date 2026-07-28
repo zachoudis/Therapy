@@ -11,6 +11,15 @@ body {
   background-attachment: scroll !important;
   background-size: auto !important;
   background-position: top left !important;
+  font-family:
+    "Inter",
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #4a4a4a;
 }
 
 /* ============================================================
@@ -28,7 +37,12 @@ p.content {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 65vh !important;
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Photo sharp on top; light wash only in the last band */
@@ -39,8 +53,7 @@ p.content {
   z-index: 0;
   pointer-events: none;
   background-color: #f4f1eb;
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0) 74%,
@@ -49,12 +62,14 @@ p.content {
     ),
     url("../background1.png");
   background-repeat: no-repeat, no-repeat;
-  background-size:
-    100% 100%,
-    contain;
-  background-position:
-    center,
-    center center;
+  background-size: 100% 100%, cover;
+  background-position: center, center center;
+  transition: transform 8s ease-out;
+}
+
+/* Subtle zoom on load when is-preload is removed */
+body:not(.is-preload) #header.alt::before {
+  transform: scale(1.08);
 }
 
 #header.alt > * {
@@ -147,6 +162,80 @@ p.content {
   left: -9999px;
   top: auto;
   background: #fffbe8;
+  color: #333;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+
+/* ============================================================
+   Modern Polish — Glassmorphism & Staggered Headers
+   ============================================================ */
+
+/* Frosted glass effect for sticky nav */
+#nav.alt {
+  background-color: rgba(255, 252, 247, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Staggered load animations for Header */
+#header.alt h1 {
+  animation: fadeInDown 1.2s ease forwards;
+}
+
+#header.alt p {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease 0.4s forwards;
+}
+
+#header.alt .actions {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease 0.8s forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   Language Switch Transition
+   ============================================================ */
+
+/* The fade class is applied to the main content during language switch */
+.lang-changing {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#main, #header {
+  transition: opacity 0.4s ease-in-out;
+}
+
   color: #4a3c2a;
   padding: 0.5em 1em;
   border-radius: 4px;
@@ -199,10 +288,106 @@ body {
   margin: 0 0 1rem 0;
 }
 
+#intro .intro-spotlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+#intro .intro-spotlight .content {
+  flex: 1.2;
+}
+
+#intro .intro-spotlight .image {
+  flex: 0.8;
+  max-width: 400px;
+}
+
+#intro .intro-spotlight .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+#intro .intro-work {
+  width: 100%;
+}
+
 /* Extra breathing room before "My work is / Meine Arbeit ist" */
-#intro .spotlight .content p.intro-section-title {
-  margin-top: 3rem;
-  margin-bottom: 0.35rem;
+#intro .intro-work p.intro-section-title {
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8e9b8e; /* Sage green accent */
+  position: relative;
+}
+
+#intro .intro-work p.intro-section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #ccd5cc;
+  margin: 1.5rem auto 0;
+}
+
+.work-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-top: 4rem;
+  align-items: start;
+}
+
+.pillar {
+  text-align: center;
+}
+
+.pillar-icon {
+  font-size: 2.25rem;
+  color: #8e9b8e;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+.pillar strong {
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  color: #2d2820;
+}
+
+.pillar p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #5f5144;
+  text-align: left;
+}
+
+@media screen and (max-width: 980px) {
+  #intro .intro-work {
+    text-align: center;
+  }
+  .work-pillars {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .pillar p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #intro .intro-spotlight {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
 }
 
 /* Make the "headings" inside the intro block match section titles */

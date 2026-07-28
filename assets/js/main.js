@@ -104,6 +104,9 @@
 
   // Scrolly.
   $(".scrolly").scrolly({
-    speed: 1000,
+    speed: 500,
+    offset: function () {
+      return $("#nav").height() - 70;
+    },
   });
 })(jQuery);
