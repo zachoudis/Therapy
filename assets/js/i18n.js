@@ -17,7 +17,7 @@
      ------------------------------------------------------------------ */
   const translations = {
     en: {
-      header_title: "Systemic Counseling and Therapy",
+      header_title: "Systemic Therapy in Berlin",
       header_subtitle: "Meike Behrends & Jan Drunkenmölle-Nazeri",
 
       nav_home: "Home",
@@ -86,7 +86,7 @@
     },
 
     de: {
-      header_title: "Systemische Beratung und Therapie",
+      header_title: "Systemische Beratung, Therapie und Supervision",
       header_subtitle: "Meike Behrends & Jan Drunkenmölle-Nazeri",
 
       nav_home: "Start",
