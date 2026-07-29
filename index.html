@@ -73,8 +73,8 @@
         <p data-i18n="header_subtitle">Meike Behrends & Jan Drunkenmölle-Nazeri</p>
         <ul class="actions special">
           <li>
-            <a href="#intro" class="button primary scrolly" data-i18n="nav_cta"
-              >Get Started</a
+            <a href="#intro" class="button primary scrolly" data-i18n="nav_intro"
+              >About Us</a
             >
           </li>
         </ul>
@@ -85,31 +85,26 @@
         <ul>
           <li>
             <a href="#intro" class="active" data-i18n="nav_intro"
-              >Introduction</a
+              >What I offer</a
             >
           </li>
-          <li><a href="#first" data-i18n="nav_first">Pairs</a></li>
+          <li><a href="#first" data-i18n="nav_first">Couples & Friends</a></li>
           <li><a href="#second" data-i18n="nav_second">Families</a></li>
           <li>
             <a href="#individual" data-i18n="nav_individual">Individuals</a>
           </li>
           <li><a href="#supervision" data-i18n="nav_supervision">Supervision</a></li>
           <li><a href="#prices" data-i18n="nav_prices">Prices</a></li>
-          <li><a href="#cta" data-i18n="nav_cta">Get Started</a></li>
+          <li><a href="#cta" data-i18n="nav_cta">About Us</a></li>
           <li class="nav-lang">
             <div class="lang-switcher" role="presentation">
               <button
                 type="button"
                 class="lang-switcher__btn"
-                id="lang-switch-btn"
                 onclick="toggleLanguage()"
-                title="Switch language"
               >
-                <span
-                  class="lang-switcher__icon"
-                  id="lang-switch-flag"
-                  aria-hidden="true"
-                ></span>
+                <span class="lang-switcher__label">EN</span>
+                <span class="lang-switcher__icon" aria-hidden="true"></span>
               </button>
             </div>
           </li>
@@ -141,11 +136,11 @@
         <!-- First Section -->
         <section id="first" class="main special">
           <header class="major">
-            <h2 data-i18n="first_title">Therapy Services</h2>
+            <h2 data-i18n="first_title">Couples & Friends</h2>
           </header>
-          <div class="main-content  service-split">
-            <p class="content" data-i18n-html="feature1_text">Support for your personal growth and well-being.</p>
-            <article class="service-card">
+          <div class="main-content service-split">
+            <div class="content" data-i18n-html="feature1_text"></div>
+            <div class="service-card">
               <div class="service-card__photo">
                 <img
                   src="images/couple.jpeg"
@@ -156,18 +151,18 @@
                   decoding="async"
                 />
               </div>
-            </article>
+            </div>
           </div>
         </section>
 
         <!-- Second Section -->
         <section id="second" class="main special">
           <header class="major">
-            <h2 data-i18n="second_title">About Systemic Therapy</h2>
+            <h2 data-i18n="second_title">Families</h2>
           </header>
           <div class="main-content service-split">
-            <p class="content" data-i18n-html="second_intro">Systemic therapy considers the individual in relation to their social systems.</p>
-            <article class="service-card">
+            <div class="content" data-i18n-html="second_intro"></div>
+            <div class="service-card">
               <div class="service-card__photo">
                 <img
                   src="images/family.jpeg"
@@ -178,7 +173,7 @@
                   decoding="async"
                 />
               </div>
-            </article>
+            </div>
           </div>
         </section>
 
@@ -188,8 +183,8 @@
             <h2 data-i18n="individual_title">Individuals</h2>
           </header>
           <div class="main-content service-split">
-            <p class="content" data-i18n-html="individual_text">Therapy for individuals seeking personal development or support through challenges.</p>
-            <article class="service-card">
+            <div class="content" data-i18n-html="individual_text"></div>
+            <div class="service-card">
               <div class="service-card__photo">
                 <img
                   src="images/individuals.jpeg"
@@ -200,7 +195,7 @@
                   decoding="async"
                 />
               </div>
-            </article>
+            </div>
           </div>
         </section>
 
@@ -209,18 +204,20 @@
           <header class="major">
             <h2 data-i18n="supervision_title">Supervision</h2>
           </header>
-          <div class="main-content spotlight">
-            <div class="content">
-              <div data-i18n-html="supervision_text"></div>
+          <div class="main-content service-split">
+            <div class="content" data-i18n-html="supervision_text"></div>
+            <div class="service-card">
+              <div class="service-card__photo">
+                <img
+                  src="images/therapist.jpg"
+                  alt="Meike Behrends"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
-            <span class="image"
-              ><img
-                src="images/therapist.jpg"
-                alt="Meike Behrends"
-                width="256"
-                height="256"
-                decoding="async"
-            /></span>
           </div>
         </section>
 
@@ -256,25 +253,24 @@
               </article>
             </div>
 
-            <div class="price-note" data-i18n-html="price_note_access"></div>
-            <p class="price-note" data-i18n="price_note_vat">All prices include VAT.</p>
+            <div class="price-note-container">
+              <div class="price-note" data-i18n-html="price_note_access"></div>
+              <p class="price-note-vat" data-i18n="price_note_vat">All prices include VAT.</p>
+            </div>
           </div>
         </section>
 
         <!-- Get Started -->
         <section id="cta" class="main special">
           <header class="major">
-            <h2 data-i18n="cta_title">Contact Me</h2>
+            <h2 data-i18n="cta_title">About Us</h2>
           </header>
-          <div class="cta-columns">
-            <div class="cta-col">
-              <div class="contact-intro" data-i18n-html="cta_text">
-                I would be happy to hear from you. You can reach me by phone, email,
-                or at my practice in Berlin.
-              </div>
+          <div class="about-me-grid main-content">
+            <div class="about-me-col">
+              <div class="about-me-text" data-i18n-html="cta_text"></div>
             </div>
-            <div class="cta-col">
-              <div class="contact-intro" data-i18n-html="cta_text"></div>
+            <div class="about-me-col">
+              <div class="about-me-text" data-i18n-html="cta_text"></div>
             </div>
           </div>
           <div class="contact-grid main-content">
@@ -285,7 +281,7 @@
               <div class="contact-card__body">
                 <h3 data-i18n="contact_location_title">Location</h3>
                 <p data-i18n-html="contact_location_text">
-                  Skalitzer Straße 100<br />10997 Berlin
+                  Kottbusser Damm 94<br />10967 Berlin
                 </p>
               </div>
             </article>

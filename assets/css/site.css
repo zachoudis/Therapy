@@ -53,7 +53,8 @@ p.content {
   z-index: 0;
   pointer-events: none;
   background-color: #f4f1eb;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0) 74%,
@@ -62,8 +63,12 @@ p.content {
     ),
     url("../background1.png");
   background-repeat: no-repeat, no-repeat;
-  background-size: 100% 100%, cover;
-  background-position: center, center center;
+  background-size:
+    100% 100%,
+    cover;
+  background-position:
+    center,
+    center center;
   transition: transform 8s ease-out;
 }
 
@@ -81,81 +86,215 @@ body:not(.is-preload) #header.alt::before {
    Navigation — language switcher
    ============================================================ */
 .lang-switcher {
-  position: static;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  background: rgba(142, 155, 142, 0.08);
+  padding: 0 4px;
+  border-radius: 20px;
+  border: 1px solid rgba(142, 155, 142, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-/* Pin language control to far right of bar; nav links stay centred */
-@media screen and (min-width: 737px) {
-  #nav {
-    padding-right: 3.25rem;
-  }
-
-  #nav.alt {
-    padding-right: 3.25rem !important;
-  }
-
-  #nav ul li.nav-lang {
-    position: absolute;
-    right: 1em;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 !important;
-    vertical-align: middle;
-  }
+.lang-switcher:hover {
+  background: rgba(142, 155, 142, 0.12);
+  border-color: rgba(142, 155, 142, 0.3);
 }
 
 .lang-switcher__btn {
-  display: flex;
+  min-width: auto;
+  display: flex !important;
   align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-shadow: none;
-  background: transparent;
+  gap: 8px;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 4px 12px !important;
+  height: auto !important;
+  width: auto !important;
   cursor: pointer;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  border-radius: 16px !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
-.lang-switcher__btn:hover {
-  opacity: 0.88;
-}
-
-.lang-switcher__btn:active {
-  transform: scale(0.96);
-}
-
-.lang-switcher__btn:focus-visible {
-  outline: 2px solid #8a7356;
-  outline-offset: 3px;
+.lang-switcher__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #5f5144;
 }
 
 .lang-switcher__icon {
   display: block;
   line-height: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .lang-switcher svg {
-  width: 25px;
-  height: 25px;
+  width: 100%;
+  height: 100%;
   display: block;
-  overflow: hidden;
-  border-radius: 50%;
 }
 
-/* Mobile nav:
-   Let Stellar's default mobile nav/panel handle layout.
-   (We only keep desktop positioning rules for the language switcher.) */
+/* ============================================================
+   Navigation & Mobile Menu
+   ============================================================ */
 
+/* The Burger Button / Title Bar (Mobile Only) */
+#titleBar {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  #titleBar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    background: #fcfbf9;
+    background: rgba(252, 250, 249, 0.98);
+    backdrop-filter: blur(12px);
+    z-index: 10000;
+    border-bottom: 1px solid rgba(142, 155, 142, 0.1);
+  }
+
+  /* Hamburger Toggle */
+  #titleBar .toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 100%;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  #titleBar .toggle::before {
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: #5f5144;
+    display: block;
+    text-align: center;
+  }
+
+  /* Mobile Title */
+  #titleBar .title {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2d2820;
+    padding-left: 2rem; /* offset the hamburger */
+  }
+
+  /* Completely hide the desktop nav bar on tablets/mobile */
+  #nav {
+    display: none !important;
+  }
+}
+
+/* Side Panel (The Menu) */
+#navPanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18rem;
+  max-width: 80%;
+  height: 100%;
+  z-index: 10001;
+  background: #fcfbf9;
+  padding: 4rem 2rem;
+  box-shadow: 10px 0 50px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow-y: auto;
+}
+
+body.navPanel-visible #navPanel {
+  transform: translateX(0);
+}
+
+/* Panel Menu Links */
+#navPanel .link {
+  display: block;
+  padding: 1.25rem 0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5f5144;
+  border-bottom: 1px solid rgba(142, 155, 142, 0.08);
+  transition: all 0.3s ease;
+}
+
+#navPanel .link:hover,
+#navPanel .link.active {
+  color: #8e9b8e;
+  padding-left: 0.5rem;
+}
+
+/* Mobile Language Switcher (inside panel) */
+#navPanel .nav-lang {
+  padding-top: 2rem;
+}
+
+#navPanel .lang-switcher {
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+/* Overlay Shadow */
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(45, 40, 32, 0.4);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+body.navPanel-visible::after {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Desktop Pinning (Keep for Wide Screens) */
+@media screen and (min-width: 981px) {
+  #nav {
+    padding-right: 4rem;
+  }
+
+  #nav.alt {
+    padding-right: 4rem !important;
+  }
+
+  #nav ul li.nav-lang {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 !important;
+  }
+}
 
 .skip-link {
   position: absolute;
@@ -232,20 +371,11 @@ body:not(.is-preload) #header.alt::before {
   transition: opacity 0.4s ease-in-out;
 }
 
-#main, #header {
+#main,
+#header {
   transition: opacity 0.4s ease-in-out;
 }
 
-  color: #4a3c2a;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition:
-    left 0.2s,
-    top 0.2s;
-  outline: none;
-}
 .skip-link:focus {
   left: 1rem;
   top: 1rem;
@@ -280,12 +410,21 @@ body {
 }
 
 /* Intro paragraphs: match body typography used elsewhere */
-#intro .spotlight .content p {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+#intro .intro-spotlight .content p {
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
   color: #5f5144;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
+}
+
+#intro .intro-bio p {
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #5f5144;
 }
 
 #intro .intro-spotlight {
@@ -364,8 +503,10 @@ body {
 }
 
 .pillar p {
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
   color: #5f5144;
   text-align: left;
 }
@@ -391,18 +532,18 @@ body {
 }
 
 /* Make the "headings" inside the intro block match section titles */
-#intro .spotlight .content p > strong {
+#intro .intro-spotlight .content p > strong {
   display: inline;
   margin: 0;
   font-family: inherit;
   font-weight: 700;
-  font-size: 1.05em;
+  font-size: inherit; /* Reset from 1.05em */
   line-height: inherit;
   letter-spacing: 0;
   color: #2d2820 !important;
 }
 
-#intro .spotlight .content p > strong::after {
+#intro .intro-spotlight .content p > strong::after {
   display: none;
 }
 
@@ -460,6 +601,7 @@ body {
 
 /* Section titles */
 #main header.major h2 {
+  font-family: inherit;
   font-weight: 300;
   font-feature-settings:
     "kern" 1,
@@ -496,6 +638,377 @@ body {
   }
 }
 
+/* ============================================================
+   Service Sections Polish
+   ============================================================ */
+
+/* Section background variations */
+#second {
+  background-color: #faf9f6; /* Very subtle warm gray/cream */
+}
+
+.service-split {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  text-align: left;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.service-split .content {
+  flex: 1.2;
+}
+
+.service-split .service-card {
+  flex: 0.8;
+}
+
+/* Alternating layout for variety */
+#second .service-split {
+  flex-direction: row-reverse;
+}
+
+/* Content styling inside service sections */
+.service-split .content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #5f5144;
+}
+
+.service-split .content strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #2d2820;
+  letter-spacing: -0.01em;
+}
+
+/* Custom list styling */
+.service-split .content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.service-split .content ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.service-split .content ul li::before {
+  content: "→"; /* More modern than a bullet */
+  position: absolute;
+  left: 0;
+  color: #8e9b8e;
+  font-weight: bold;
+}
+
+/* Price/Duration Highlight Area (Removed from service descriptions but kept for potential future use) */
+.price-info {
+  background: rgba(142, 155, 142, 0.08);
+  border-left: 4px solid #8e9b8e;
+  padding: 1.25rem 1.75rem;
+  margin: 2.5rem 0;
+  border-radius: 0 12px 12px 0;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  color: #2d2820;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.price-info strong {
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8e9b8e !important;
+}
+
+/* ============================================================
+   Prices Section Grid
+   ============================================================ */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  perspective: 1000px;
+}
+
+.price-card {
+  background: #ffffff;
+  padding: 4rem 2.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+  overflow: hidden;
+}
+
+.price-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(142, 155, 142, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px rgba(92, 71, 46, 0.1);
+  border-color: rgba(142, 155, 142, 0.3);
+}
+
+.price-card:hover::after {
+  opacity: 1;
+}
+
+.price-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.price-card h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 2.5rem;
+  color: #8e9b8e;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.price-card__value {
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-card__value::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: #ccd5cc;
+  margin: 1.5rem 0;
+}
+
+.price-card__description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 90%;
+  margin: 0 auto;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.price-note-container {
+  margin-top: 4rem;
+}
+
+.price-note {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(142, 155, 142, 0.05);
+  border-radius: 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5f5144;
+  text-align: center;
+  border: 1px dashed rgba(142, 155, 142, 0.3);
+  position: relative;
+}
+
+.price-note::before {
+  content: "i";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: #8e9b8e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.price-note-vat {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #7a7067;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* ============================================================
+   About Us Section
+   ============================================================ */
+.about-me-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 4rem;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.about-me-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5f5144;
+}
+
+.about-me-text .cta-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d2820;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.about-me-text p {
+  margin-bottom: 1.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(142, 155, 142, 0.15);
+  padding-top: 3rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 0;
+  background: transparent;
+  transition: opacity 0.3s ease;
+}
+
+.contact-card__icon {
+  font-size: 1.1rem;
+  color: #8e9b8e;
+  margin-top: 0.2rem;
+  opacity: 0.8;
+}
+
+.contact-card__body h3 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  margin-bottom: 0.75rem;
+  color: #8e9b8e;
+}
+
+.contact-card__body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #5f5144;
+  font-weight: 300;
+}
+
+.contact-card__body a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(142, 155, 142, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-card__body a:hover {
+  border-bottom-color: #8e9b8e;
+  color: #2d2820;
+}
+
+@media screen and (max-width: 736px) {
+  .about-me-text {
+    text-align: center;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Image Frame & Polish */
+.service-card__photo {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card__photo:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.service-card__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.8s ease;
+}
+
+.service-card__photo:hover img {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 980px) {
+  .service-split,
+  #second .service-split {
+    flex-direction: column !important;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .service-split .content ul li {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .service-split .content ul li::before {
+    display: none;
+  }
+
+  .service-split .content p {
+    text-align: center;
+  }
+}
+
 /* Prevent overflow of images inside content */
 .main-content img {
   max-width: 100%;
@@ -515,15 +1028,34 @@ body {
    Introduction section — therapist portrait
    (swap images/therapist.jpg for your own photo)
    ============================================================ */
-#intro .spotlight .image img {
+#intro .intro-spotlight {
+  display: flex;
+  align-items: center; /* Center image vertically relative to text */
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+#intro .intro-spotlight .image img {
   width: 16em;
   height: 16em;
   object-fit: cover;
   object-position: center 22%;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 980px) {
+  #intro .intro-spotlight {
+    flex-direction: column-reverse;
+    align-items: center; /* Center image on mobile */
+    text-align: center;
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 736px) {
-  #intro .spotlight .image img {
+  #intro .intro-spotlight .image img {
     width: 12em;
     height: 12em;
   }
@@ -537,8 +1069,8 @@ body {
   /* Give text more room; keep photo column narrower */
   grid-template-columns: minmax(0, 2fr) minmax(220px, 0.75fr);
   gap: 2.5rem;
-  /* Prevent the image column from stretching to match long text */
-  align-items: start;
+  /* Center image vertically next to text */
+  align-items: center;
   text-align: left;
   margin-top: 1rem;
 }
@@ -565,23 +1097,86 @@ body {
   margin: 0;
   border-radius: 1.5rem;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  /* Add border and radius back */
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   /* Remove the tinted/white-looking base under the image */
   background: transparent;
 }
 
 .service-card__photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
+  border-radius: 1.25rem; /* Slightly smaller than container to show border */
+}
+
+/* ============================================================
+   Supervision Section Specifics
+   ============================================================ */
+#supervision .service-split {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+#supervision .service-split .content {
+  padding: 0; /* Vertical breathing room */
+  max-width: 48rem; /* Editorial line length */
+  margin: 0 auto; /* Keep centered */
+}
+
+#supervision .service-split .content p,
+#supervision .service-split .content ul {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#supervision .service-split .content ul li {
+  padding-left: 0;
+}
+
+#supervision .service-split .content ul li::before {
+  display: none;
+}
+
+#supervision .service-card {
+  max-width: 400px; /* Slightly smaller for circular shape */
+  margin: 2rem auto 0;
+  justify-self: center;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #ffffff; /* Background following the shape */
+}
+
+#supervision .service-card__photo {
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  aspect-ratio: 1 / 1;
+}
+
+#supervision .service-card__photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 @media screen and (max-width: 980px) {
   .service-split {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  /* Hide service photos on mobile/tablet for Pairs, Families, Individuals */
+  #first .service-card,
+  #second .service-card,
+  #individual .service-card {
+    display: none;
   }
 
   /* On mobile/tablet, keep service text inside the content width,
@@ -610,8 +1205,8 @@ body {
   border-radius: 1.5rem;
   background: linear-gradient(
     180deg,
-    rgba(250, 246, 240, 0.98) 0%,
-    rgba(244, 236, 226, 0.96) 100%
+    rgb(234 227 215 / 98%) 0%,
+    rgb(227 223 215 / 96%) 100%
   );
   border: 1px solid rgba(149, 125, 96, 0.16);
   box-shadow: 0 18px 40px rgba(92, 71, 46, 0.08);
@@ -660,6 +1255,11 @@ body {
   margin: 1.5rem 0 0;
   color: #5f5144;
   text-align: left;
+}
+
+.price-note p {
+  text-align: center;
+  margin: 0;
 }
 
 @media screen and (max-width: 980px) {

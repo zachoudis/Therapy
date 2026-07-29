@@ -11,13 +11,17 @@
       var $this = $(this),
         indent = Math.max(0, $this.parents("li").length - 1),
         href = $this.attr("href"),
-        target = $this.attr("target");
+        target = $this.attr("target"),
+        i18nKey = $this.attr("data-i18n");
 
       b.push(
         "<a " +
           'class="link depth-' +
           indent +
           '"' +
+          (typeof i18nKey !== "undefined" && i18nKey != ""
+            ? ' data-i18n="' + i18nKey + '"'
+            : "") +
           (typeof target !== "undefined" && target != ""
             ? ' target="' + target + '"'
             : "") +

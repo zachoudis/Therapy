@@ -109,4 +109,38 @@
       return $("#nav").height() - 70;
     },
   });
+
+  // Mobile Menu (Panel)
+  // This creates a side-scrolling menu of the existing #nav links
+  $(
+    '<div id="titleBar">' +
+      '<a href="#navPanel" class="toggle"></a>' +
+      '<span class="title" data-i18n="header_title">' +
+      $("#header h1").text() +
+      "</span>" +
+      "</div>",
+  ).appendTo($body);
+
+  $(
+    '<div id="navPanel">' +
+      "<nav>" +
+      $("#nav").navList() + // Grab existing links
+      '<div class="nav-lang">' + // Mirror language switcher
+      $(".nav-lang").html() +
+      "</div>" +
+      "</nav>" +
+      "</div>",
+  )
+    .appendTo($body)
+    .panel({
+      delay: 500,
+      hideOnClick: true,
+      hideOnEscape: true,
+      hideOnSwipe: true,
+      resetScroll: true,
+      resetForms: true,
+      side: "left",
+      target: $body,
+      visibleClass: "navPanel-visible",
+    });
 })(jQuery);
