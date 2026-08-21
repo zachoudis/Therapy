@@ -1115,21 +1115,20 @@ body {
    Supervision Section Specifics
    ============================================================ */
 #supervision .service-split {
-  flex-direction: column;
-  text-align: center;
   align-items: center;
 }
 
 #supervision .service-split .content {
   padding: 0; /* Vertical breathing room */
-  max-width: 48rem; /* Editorial line length */
-  margin: 0 auto; /* Keep centered */
 }
 
 #supervision .service-split .content p,
 #supervision .service-split .content ul {
-  text-align: center;
   margin-bottom: 0;
+}
+
+#supervision .service-split .content .price-info {
+  display: flex;
 }
 
 #supervision .service-split .content ul li {

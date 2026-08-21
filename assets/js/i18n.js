@@ -48,7 +48,7 @@
 
       supervision_title: "Supervision",
       supervision_text:
-        "<p>I'm Meike Behrends, a systemic therapist in Berlin-Kreuzberg, and I support you through crises and change processes. Together we look at what is currently weighing on you—whether as a couple, as a family, in friendships, or individually. As a systemic therapist, I assume that you already carry the resources for change within you. My role is to support you on equal footing in opening up new perspectives and reviewing old beliefs. This can help you gain more clarity about inner patterns and roles, and regain room for action.</p>",
+        "<p>I'm <strong>Jan Drunkenmölle-Nazeri</strong>, systemic counselor* and supervisor* in Berlin-Kreuzberg. For professional and social contexts, I offer supervision for teams, groups, and individuals. This includes, in particular, regular case supervision—happy to meet in person or online, in English or German. For smaller groups and collectives, I offer a limited number of discounted solidarity spots.</p><p>I understand my counseling work as a contribution to personal and collective growth. My role is to hold a space and set a frame on equal footing that supports your own processes and strengthens your ability to act in the long term. Your concerns and goals are at the center of supervision. The aim is personal and collective relief through structured supervision.</p><p>I work from a systemic, trauma- and power-sensitive stance. In a free initial conversation, we can clarify content and framework before you decide to work with me.</p><div class=\"price-info\"><strong>Session length & fee</strong>60 min – 90 €</div>",
 
       prices_title: "Prices",
       price_title_couples: "Couples & Friends",
@@ -63,8 +63,8 @@
       price_value_coaching: "145 € · 90 min.",
       price_desc_coaching: "Systemic family sessions and parenting support.",
       price_title_supervision: "Supervision",
-      price_value_supervision: "",
-      price_desc_supervision: "",
+      price_value_supervision: "90 € · 60 min.",
+      price_desc_supervision: "Systemic Supervision",
       price_note_vat:
         'As a small-scale entrepreneur, my fees are exempt from VAT ("Kleinunternehmerregel" according to § 19 UStG).',
       price_note_access:
@@ -72,13 +72,15 @@
 
       cta_title: "About Us",
       cta_text:
-        '<p class="cta-name">Meike</p><p>I work independently as a systemic therapist and counselor and am recognized by the Systemische Gesellschaft (SG), the umbrella organization for systemic therapists in Germany. I have also completed a foundational training in Emotionally Focused Couple Therapy (EFT).</p><p>Alongside my private practice, I have worked for many years in a counseling center for refugees in Berlin. Further formative experience comes from supporting families in crisis through social-pedagogical family assistance. Ongoing supervision and intervision are important to me in order to reflect on and continuously develop my work.</p><p>I am currently training further in trauma education. I hold a Bachelor’s and Master’s degree in political and social sciences.</p>',
+        '<p class="cta-name">Meike Behrends</p><p>I work independently as a systemic therapist and counselor and am recognized by the Systemische Gesellschaft (SG), the umbrella organization for systemic therapists in Germany. I have also completed a foundational training in Emotionally Focused Couple Therapy (EFT).</p><p>Alongside my private practice, I have worked for many years in a counseling center for refugees in Berlin. Further formative experience comes from supporting families in crisis through social-pedagogical family assistance. Ongoing supervision and intervision are important to me in order to reflect on and continuously develop my work.</p><p>I am currently training further in trauma education. I hold a Bachelor’s and Master’s degree in political and social sciences.</p>',
+      cta_text_jan:
+        '<p class="cta-name">Jan Drunkenmölle-Nazeri</p><p>I work independently as a systemic counselor* and am recognized by the Systemische Gesellschaft (SG), the umbrella organization for systemic therapists in Germany. Since 2007, I have worked on anti-racism in education policy, including in schools, social work, and social movements. In 2026, I am completing advanced training as a systemic supervisor* at SIA (Systemisches Institut für Achtsamkeit). I hold a Bachelor’s degree in Politics and Philosophy.</p><p>Alongside my freelance work, I have been working since 2018 as a specialist counselor* at a psychosocial center for refugees in Berlin. Collective and power-critical processes in various groups and projects shape my life and flow into my work. Ongoing intervision, teaching supervision, and further training are important to me in order to reflect on and continuously develop my work.</p><p>I am queer. I am white and was socialized male. I engage extensively with racism and hegemonic masculinity, as well as care work as a parent.</p>',
       contact_location_title: "Location",
       contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_phone_text: '<a href="tel:+4917672160724">0176 72160724</a>',
       contact_email_title: "E-mail",
       contact_email_text:
-        '<a href="mailto:info@example.com">info@example.com</a>',
+        '<a href="mailto:therapie-behrends@posteo.de">therapie-behrends@posteo.de</a>',
       footer_imprint: "Impressum",
       // Backwards-compat key: some pages may still use data-i18n="footer_impressum"
       footer_impressum: "Impressum",
@@ -117,7 +119,7 @@
 
       supervision_title: "Supervision",
       supervision_text:
-        "<p>Ich bin Meike Behrends, systemische Therapeutin in Berlin-Kreuzberg. Ich begleite Sie in Krisen und Veränderungsprozessen. Gemeinsam schauen wir, was Sie aktuell belastet – ob als Paar, Familie, in Freundschaften oder individuell. Als systemische Therapeutin gehe ich davon aus, dass Sie die Ressourcen für Veränderung bereits in sich tragen. Meine Rolle dabei ist, Sie auf Augenhöhe dabei zu unterstützen, neue Perspektiven einzunehmen und alte Glaubenssätze zu überprüfen. Dadurch können Sie mehr Klarheit über innere Muster und Rollen gewinnen und wieder mehr Handlungsspielraum erlangen. Ich strebe eine Beratung an, in der Vielfalt als Stärke gesehen und geschätzt wird – unabhängig von sexueller Orientierung, Herkunft, Geschlecht oder Lebensmodell. Ich arbeite in Berlin-Kreuzberg oder online, auf Englisch und auf Deutsch.</p>",
+        "<p>Ich bin <strong>Jan Drunkenmölle-Nazeri</strong>, systemischer Berater* und Supervisor* in Berlin-Kreuzberg. Für berufliche und soziale Kontexte biete ich Supervision für Teams, Gruppen und Einzelpersonen an. Das umfasst insbesondere auch regelmäßige Fallsupervision. Gerne gemeinsam vor Ort oder online, auf Englisch und auf Deutsch. Für kleinere Gruppe und Kollektive stelle ich eine begrenzte Anzahl an vergünstigten Soli-Plätzen zur Verfügung.</p><p>Ich verstehe meine Beratungsarbeit als Beitrag für persönliche und kollektive Weiterentwicklung. Meine Rolle dabei ist, auf Augenhöhe einen Raum zu halten und einen Rahmen zu setzen, der Ihre eigenen Prozesse unterstützt und Ihre Handlungsfähigkeit langfristig stärkt. Ihre Anliegen und Ziele stehen im Mittelpunkt der Supervision. Ziel ist die persönliche und kollektive Entlastung durch eine strukturierte Supervision.</p><p>Ich arbeite aus einer systemischen, trauma- und machtsensiblen Grundhaltung heraus. In einem kostenlosen Vorgespräch können wir Inhalte und Rahmenbedingungen klären bevor Sie sich für die Zusammenarbeit mit mir entscheiden.</p><div class=\"price-info\"><strong>Dauer & Honorar</strong>60 Min – 90 Euro</div>",
 
       prices_title: "Preise",
       price_title_couples: "Paare und Freund*innen",
@@ -133,8 +135,8 @@
       price_desc_coaching:
         "Systemische Familiensitzungen und Unterstützung in der Elternschaft.",
       price_title_supervision: "Supervision",
-      price_value_supervision: "",
-      price_desc_supervision: "",
+      price_value_supervision: "90 € · 60 Min.",
+      price_desc_supervision: "Systemische Supervision",
       price_note_vat:
         "Als Kleinunternehmerin sind meine Honorare von der Umsatzsteuer befreit (Kleinunternehmerregelung gemäß § 19 UStG).",
       price_note_access:
@@ -142,13 +144,15 @@
 
       cta_title: "Über uns",
       cta_text:
-        '<p class="cta-name">Meike</p><p>Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeut*innen. Außerdem habe ich ein Basistraining in emotionsfokussierter Paartherapie (EFT) abgeschlossen.</p><p>Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin. Prägende Erfahrungen habe ich außerdem bei der Arbeit mit Familien in Krisen im Rahmen der Sozialpädagogischen Familienhilfe gesammelt. Fortlaufende Supervision und Intervision sind mir wichtig, um meine Arbeit zu reflektieren und weiterzuentwickeln.</p><p>Aktuell bilde ich mich zur Traumapädagogin weiter. Ich habe einen Bachelor- und Masterabschluss in Politik- und Sozialwissenschaften.</p>',
+        '<p class="cta-name">Meike Behrends</p><p>Ich arbeite selbstständig als Systemische Therapeutin und Beraterin und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeut*innen. Außerdem habe ich ein Basistraining in emotionsfokussierter Paartherapie (EFT) abgeschlossen.</p><p>Neben meiner freiberuflichen Tätigkeit arbeite ich seit vielen Jahren in einer Beratungsstelle für geflüchtete Menschen in Berlin. Prägende Erfahrungen habe ich außerdem bei der Arbeit mit Familien in Krisen im Rahmen der Sozialpädagogischen Familienhilfe gesammelt. Fortlaufende Supervision und Intervision sind mir wichtig, um meine Arbeit zu reflektieren und weiterzuentwickeln.</p><p>Aktuell bilde ich mich zur Traumapädagogin weiter. Ich habe einen Bachelor- und Masterabschluss in Politik- und Sozialwissenschaften.</p>',
+      cta_text_jan:
+        '<p class="cta-name">Jan Drunkenmölle-Nazeri</p><p>Ich arbeite selbstständig als Systemischer Berater* und bin anerkannt durch die Systemische Gesellschaft (SG), dem Dachverband Systemischer Therapeut*innen. Seit 2007 arbeite ich bildungspolitisch zu Anti-Rassismus u.a. an Schulen, in der Sozialen Arbeit und sozialen Bewegungen. 2026 schließe ich die Aufbauweiterbildung zur Systemischen Supervisor*in am SIA (Systemisches Institut für Achtsamkeit) ab. Ich habe einen Bachelorabschluss in Politik und Philosophie.</p><p>Neben meiner freiberuflichen Tätigkeit arbeite ich seit 2018 Jahren als Fachberater* in einem Psychosozialen Zentrum für geflüchtete Menschen in Berlin. Kollektive und machtkritische Prozesse in verschiedenen Gruppen und Projekten prägen mein Leben und fließen in meine Arbeit ein. Fortlaufende Intervision, Lehrsupervision und Fortbildungen sind mir wichtig, um meine Arbeit zu reflektieren und weiterzuentwickeln.</p><p>Ich bin queer. Ich bin weiß und männlich sozialisiert. Ich setze mich viel mit Rassismus und hegemonialer Männlichkeit, sowie Sorgearbeit als Elternperson auseinander.</p>',
       contact_location_title: "Standort",
       contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_phone_text: '<a href="tel:+4917672160724">0176 72160724</a>',
       contact_email_title: "E-Mail",
       contact_email_text:
-        '<a href="mailto:info@example.com">info@example.com</a>',
+        '<a href="mailto:therapie-behrends@posteo.de">therapie-behrends@posteo.de</a>',
       footer_imprint: "Impressum",
       footer_impressum: "Impressum",
       footer_privacy: "Datenschutzerklärung",
