@@ -1,0 +1,499 @@
+/* Prevent overflow of images inside content */
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Opt-out: make a particular block truly full-bleed */
+.main-content.full-bleed {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   Introduction section — therapist portrait
+   (swap images/therapist.jpg for your own photo)
+   ============================================================ */
+#intro .intro-spotlight {
+  display: flex;
+  align-items: center; /* Center image vertically relative to text */
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+#intro .intro-spotlight .image img {
+  width: 16em;
+  height: 16em;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 980px) {
+  #intro .intro-spotlight {
+    flex-direction: column-reverse;
+    align-items: center; /* Center image on mobile */
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #intro .intro-spotlight .image img {
+    width: 12em;
+    height: 12em;
+  }
+}
+
+/* ============================================================
+   Services — two-column split layout
+   ============================================================ */
+.service-split {
+  display: grid;
+  /* Give text more room; keep photo column narrower */
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 0.75fr);
+  gap: 2.5rem;
+  /* Center image vertically next to text */
+  align-items: center;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.service-split .content {
+  margin: 0;
+}
+
+.service-card {
+  display: block;
+  padding: 0;
+  border-radius: 1.5rem;
+  background: transparent !important;
+  border: none;
+  box-shadow: 0 18px 40px rgba(92, 71, 46, 0.12);
+  min-height: 0;
+  overflow: hidden;
+  max-width: 420px;
+  justify-self: end;
+  align-self: start;
+}
+
+.service-card__photo {
+  margin: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  /* Add border and radius back */
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Remove the tinted/white-looking base under the image */
+  background: transparent;
+}
+
+.service-card__photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.25rem; /* Slightly smaller than container to show border */
+}
+
+/* ============================================================
+   Supervision Section Specifics
+   ============================================================ */
+#supervision .service-split {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+#supervision .service-split .content {
+  padding: 0; /* Vertical breathing room */
+  max-width: 48rem; /* Editorial line length */
+  margin: 0 auto; /* Keep centered */
+}
+
+#supervision .service-split .content p,
+#supervision .service-split .content ul {
+  text-align: center;
+}
+
+#supervision .service-split .content ul li {
+  padding-left: 0;
+}
+
+#supervision .service-split .content ul li::before {
+  display: none;
+}
+
+#supervision .service-card {
+  max-width: 400px; /* Slightly smaller for circular shape */
+  margin: 2rem auto 0;
+  justify-self: center;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #ffffff; /* Background following the shape */
+}
+
+#supervision .service-card__photo {
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  aspect-ratio: 1 / 1;
+}
+
+#supervision .service-card__photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+@media screen and (max-width: 980px) {
+  .service-split {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Hide service photos on mobile/tablet for Pairs, Families, Individuals */
+  #first .service-card,
+  #second .service-card,
+  #individual .service-card {
+    display: none;
+  }
+
+  /* On mobile/tablet, keep service text inside the content width,
+     and prevent the template `p.content` padding from pushing it out. */
+  .service-split > p.content {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ============================================================
+   Prices — three-column card grid
+   ============================================================ */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.price-card {
+  padding: 2rem 1.75rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    180deg,
+    rgb(234 227 215 / 98%) 0%,
+    rgb(227 223 215 / 96%) 100%
+  );
+  border: 1px solid rgba(149, 125, 96, 0.16);
+  box-shadow: 0 18px 40px rgba(92, 71, 46, 0.08);
+  min-height: 100%;
+}
+
+.price-card__label {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #8a7356;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-feature-settings: normal;
+  letter-spacing: 0;
+  font-size: 1.45rem;
+  color: #4e4031;
+}
+
+.price-card__value {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2f261e;
+}
+
+.price-card__description {
+  margin: 0;
+  min-height: 8.5rem;
+  color: #5f5144;
+}
+
+.price-note {
+  max-width: none;
+  width: 100%;
+  margin: 1.5rem 0 0;
+  color: #5f5144;
+  text-align: left;
+}
+
+.price-note p {
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card__description {
+    min-height: 0;
+  }
+}
+
+/* ============================================================
+   Contact — three-column card grid
+   ============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.35rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* With only 2 cards (Location + E-mail), center them nicely on wide screens */
+@media screen and (min-width: 981px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(260px, 420px));
+    justify-content: center;
+  }
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.65rem 1.5rem;
+  border-radius: 1.35rem;
+  background-color: rgba(240, 240, 240, 0.96);
+  border: 1px solid rgba(200, 200, 200, 0.45);
+  box-shadow: none;
+  text-align: center;
+}
+
+.contact-card__body {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card__icon {
+  flex: 0 0 auto;
+  width: 3.35rem;
+  height: 3.35rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(149, 125, 96, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(149, 125, 96, 0.12);
+  color: #8a7356;
+}
+
+.contact-card__icon .icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.contact-card__icon .icon:before {
+  display: block;
+}
+
+.contact-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+  letter-spacing: -0.015em;
+  font-size: 1.62rem;
+  line-height: 1.25;
+  color: #4e4031;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 1.14rem;
+  color: #5f5144;
+  line-height: 1.65;
+}
+
+.contact-card a {
+  color: #5f5144;
+  border-bottom: none;
+}
+
+.contact-card a:hover {
+  color: #2f261e;
+}
+
+/* Make the Google Maps link clearly interactive */
+.contact-card a.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(149, 125, 96, 0.22);
+  color: #5a4b3a;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-card a.map-link::before {
+  content: "📍";
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.contact-card a.map-link:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2f261e;
+}
+
+.cta-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 736px) {
+  .cta-columns {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.cta-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #2d2820;
+  margin: 0 0 0.75rem 0;
+}
+
+.contact-intro {
+  max-width: 52rem;
+  margin: 0 0 1rem;
+  color: #5f5144;
+  text-align: left;
+}
+
+/* About/CTA text uses HTML paragraphs (data-i18n-html). Remove gaps. */
+#cta .contact-intro p {
+  margin: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Modal (Impressum, etc.)
+   ============================================================ */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 16, 12, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.modal__dialog {
+  position: relative;
+  width: min(48rem, calc(100% - 2rem));
+  max-height: min(82vh, 52rem);
+  overflow: auto;
+  margin: 10vh auto;
+  padding: 1.6rem 1.6rem 1.4rem 1.6rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(149, 125, 96, 0.2);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.modal__dialog h2 {
+  margin: 0 0 0.85rem 0;
+}
+
+.modal__content {
+  color: #4a4036;
+}
+
+.modal__content p {
+  margin: 0 0 1rem 0;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  background: rgba(28, 22, 16, 0.82);
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.modal__close:hover {
+  background: rgba(28, 22, 16, 0.92);
+}
+
+.modal__close:focus-visible {
+  outline: 2px solid #8a7356;
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 736px) {
+  .modal__dialog {
+    margin: 6vh auto;
+    padding: 1.25rem 1.25rem 1.1rem 1.25rem;
+  }
+}

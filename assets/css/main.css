@@ -2072,9 +2072,15 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-  background-color: #8cc9f0;
-  color: #ffffff !important;
   box-shadow: none;
+  background-color: #405540 !important;
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease;
+}
+
+.button.primary:hover {
+  background-color: #566f56 !important;
 }
 
 input[type="submit"].primary:hover,
@@ -3726,7 +3732,7 @@ body.is-preload #header.alt > * {
 }
 
 #main > .main:nth-child(even) {
-  background-color: rgba(240, 240, 240, 0.96);
+  background-color: rgba(240, 240, 240, 0.5);
 }
 
 #main > .main:first-child {
