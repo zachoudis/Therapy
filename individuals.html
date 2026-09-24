@@ -8,13 +8,15 @@
       name="description"
       content="Individual therapy (Einzeltherapie) in Berlin: systemic counseling and therapy for personal development and support through challenges. Topics, process, and practical info."
     />
-    <link rel="canonical" href="individuals.html" />
+    <link rel="canonical" href="https://www.behrends-drunkenmoelle.de/individuals.html" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.behrends-drunkenmoelle.de/individuals.html" />
     <meta property="og:title" content="Individual Therapy in Berlin | Meike Behrends" />
     <meta
       property="og:description"
       content="Systemic individual therapy / Einzeltherapie in Berlin. Topics, process, and practical information."
     />
+    <meta property="og:image" content="https://www.behrends-drunkenmoelle.de/images/individuals.jpeg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +30,43 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/site.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Individual Therapy (Einzeltherapie)",
+        "serviceType": "Systemic individual therapy",
+        "provider": {
+          "@type": "Person",
+          "name": "Meike Behrends"
+        },
+        "areaServed": { "@type": "City", "name": "Berlin" },
+        "availableLanguage": ["German", "English"],
+        "offers": {
+          "@type": "Offer",
+          "price": "90",
+          "priceCurrency": "EUR",
+          "description": "60 minutes"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I know if individual therapy is right for me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you feel stuck, overwhelmed, or want support with a life transition, a short first conversation can clarify whether this format fits your needs."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="is-preload">
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -70,8 +109,11 @@
 
           <div class="main-content">
             <p>
-              This page is a detailed landing page for individual sessions. Replace placeholders with your real
-              wording, but keep the structure (it helps clients and SEO).
+              My services are for people who feel stuck, overwhelmed, or are going through a personal crisis.
+              How we perceive ourselves and relate to ourselves is often shaped by beliefs and experiences from
+              our family of origin. What used to be helpful or necessary in the past can limit us today and make
+              change harder. That’s why we look together at your relationships with other people as well as your
+              relationship with yourself.
             </p>
 
             <h3>Common reasons to start (examples)</h3>
@@ -99,7 +141,7 @@
 
             <h3>Practical information</h3>
             <ul>
-              <li><strong>Location</strong>: Berlin (add neighborhood here)</li>
+              <li><strong>Location</strong>: Kottbusser Damm 94, 10967 Berlin (Berlin-Kreuzberg) — <a href="https://www.google.com/maps/search/?api=1&amp;query=Kottbusser+Damm+94%2C+10967+Berlin" target="_blank" rel="noopener">Open in Google Maps</a></li>
               <li><strong>Languages</strong>: German & English</li>
               <li><strong>Fees</strong>: see <a href="index.html#prices">Prices</a></li>
               <li><strong>Booking</strong>: via <a href="index.html#cta">contact</a></li>
@@ -107,16 +149,17 @@
 
             <h3>FAQ</h3>
             <details>
-              <summary>How do I know if therapy is right for me?</summary>
+              <summary>How do I know if individual therapy is right for me?</summary>
               <p>
-                Placeholder answer: If you feel stuck, overwhelmed, or want support with a transition, a short
-                first conversation can clarify whether this format fits your needs.
+                If you feel stuck, overwhelmed, or want support with a life transition, a short first
+                conversation can clarify whether this format fits your needs.
               </p>
             </details>
             <details>
               <summary>Do you offer online sessions?</summary>
               <p>
-                Placeholder answer: Add your real policy (online / in-person / hybrid) here.
+                <!-- TODO: confirm real policy (online / in-person / hybrid) and replace this line -->
+                Please contact us to confirm whether online, in-person, or hybrid sessions are currently available.
               </p>
             </details>
 
@@ -135,10 +178,11 @@
           <ul>
             <li>
               <a
-                href="#"
+                href="impressum.html"
                 data-i18n="footer_imprint"
                 data-modal-target="site-modal"
                 data-modal-title="Impressum"
+                data-modal-url="impressum.html"
               >Imprint</a>
             </li>
             <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
@@ -154,26 +198,7 @@
         <button class="modal__close" type="button" aria-label="Close" data-modal-close="true">×</button>
         <h2 id="site-modal-title">Impressum</h2>
         <div class="modal__content" id="site-modal-content">
-          <p><strong>Angaben gemäß § 5 TMG</strong></p>
-          <p>
-            Max Mustermann<br />
-            Musterstraße 12<br />
-            12345 Berlin
-          </p>
-          <p>
-            <strong>Kontakt:</strong><br />
-            Telefon: +49 123 456789<br />
-            E-Mail: info@deinewebsite.de
-          </p>
-          <p>
-            Berufsbezeichnung: [z. B. Heilpraktiker für Psychotherapie]<br />
-            Zuständige Aufsichtsbehörde: [falls zutreffend]
-          </p>
-          <p>Umsatzsteuer-ID: [falls vorhanden]</p>
-          <p>
-            <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br />
-            Max Mustermann
-          </p>
+          <p>Loading…</p>
         </div>
       </div>
     </div>

@@ -686,6 +686,16 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* Inline emphasis (e.g. a name mentioned mid-sentence) should stay in the
+   text flow, not become a block-level mini-heading like "Topics" above. */
+.service-split .content strong.inline-name {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
 /* Custom list styling */
 .service-split .content ul {
   list-style: none;
@@ -1127,10 +1137,6 @@ body {
   margin-bottom: 0;
 }
 
-#supervision .service-split .content .price-info {
-  display: flex;
-}
-
 #supervision .service-split .content ul li {
   padding-left: 0;
 }
@@ -1282,10 +1288,10 @@ body {
   text-align: center;
 }
 
-/* With only 2 cards (Location + E-mail), center them nicely on wide screens */
+/* Center the cards nicely on wide screens (Location, Phone, E-mail) */
 @media screen and (min-width: 981px) {
   .contact-grid {
-    grid-template-columns: repeat(2, minmax(260px, 420px));
+    grid-template-columns: repeat(3, minmax(220px, 320px));
     justify-content: center;
   }
 }
