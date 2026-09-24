@@ -1288,10 +1288,10 @@ body {
   text-align: center;
 }
 
-/* Center the cards nicely on wide screens (Location, Phone, E-mail) */
+/* With only 2 cards (Location + E-mail), center them nicely on wide screens */
 @media screen and (min-width: 981px) {
   .contact-grid {
-    grid-template-columns: repeat(3, minmax(220px, 320px));
+    grid-template-columns: repeat(2, minmax(260px, 420px));
     justify-content: center;
   }
 }
