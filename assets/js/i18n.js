@@ -78,8 +78,6 @@
       contact_location_title: "Location",
       contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_map_link: "Open in Google Maps",
-      contact_phone_title: "Phone",
-      contact_phone_text: '<a href="tel:+4917672160724">0176 72160724</a>',
       contact_email_title: "E-mail",
       contact_email_text:
         '<a href="mailto:therapie-behrends@posteo.de">therapie-behrends@posteo.de</a>',
@@ -152,8 +150,6 @@
       contact_location_title: "Standort",
       contact_location_text: "Kottbusser Damm 94<br />10967 Berlin",
       contact_map_link: "In Google Maps öffnen",
-      contact_phone_title: "Telefon",
-      contact_phone_text: '<a href="tel:+4917672160724">0176 72160724</a>',
       contact_email_title: "E-Mail",
       contact_email_text:
         '<a href="mailto:therapie-behrends@posteo.de">therapie-behrends@posteo.de</a>',
