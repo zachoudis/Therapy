@@ -145,21 +145,67 @@
     });
 })(jQuery);
 
-/* Collapsible "My work is" section on mobile.
-   The click listener sits on the .intro-work container, which is never replaced,
-   so it keeps working after i18n.js swaps the inner HTML on a language change.
-   The open/closed state is stored in aria-expanded on the button; the CSS reads it. */
+/* Collapsible "My work is" section on mobile. It hides the three topics and
+   the Couples & Friends, Families and Individuals sections until opened.
+   The click listener sits on the .intro-work container, which is never replaced.
+   The CSS reads the state from aria-expanded on the button. i18n.js replaces the
+   button (on page load and on every language switch), so the state is also kept
+   in `isOpen` and re-applied whenever that happens. */
 (function () {
   var introWork = document.querySelector("#intro .intro-work");
   if (!introWork) return;
 
   var mobile = window.matchMedia("(max-width: 980px)");
+  var hiddenSections = ["#first", "#second", "#individual"];
+  var isOpen = false;
+
+  function applyState() {
+    var button = introWork.querySelector(".intro-section-title");
+    if (button) button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  }
+
+  function setOpen(open) {
+    isOpen = open;
+    applyState();
+  }
+
+  // Re-apply the state after i18n.js swaps the inner HTML
+  new MutationObserver(applyState).observe(introWork, { childList: true });
 
   introWork.addEventListener("click", function (event) {
     var button = event.target.closest(".intro-section-title");
-    if (!button || !mobile.matches) return; // on desktop the topics are always visible
+    if (!button || !mobile.matches) return; // on desktop everything is always visible
 
-    var isOpen = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    setOpen(!isOpen);
+  });
+
+  // A menu link (or a shared URL) pointing to a hidden section must open the
+  // collapsible first, otherwise the browser has nothing to scroll to.
+  function openIfHiddenTarget(hash) {
+    if (mobile.matches && hiddenSections.indexOf(hash) !== -1) setOpen(true);
+  }
+
+  document.addEventListener(
+    "click",
+    function (event) {
+      var link = event.target.closest('a[href^="#"]');
+      if (link) openIfHiddenTarget(link.getAttribute("href"));
+    },
+    true, // capture phase: runs before the mobile menu panel handles the click
+  );
+
+  window.addEventListener("hashchange", function () {
+    openIfHiddenTarget(window.location.hash);
+  });
+
+  // Page opened with e.g. #first in the URL: the browser tried to scroll
+  // before the section was visible, so open it and scroll again.
+  // Waits for DOMContentLoaded so i18n.js (loaded after this file) has run.
+  document.addEventListener("DOMContentLoaded", function () {
+    var initialHash = window.location.hash;
+    if (mobile.matches && hiddenSections.indexOf(initialHash) !== -1) {
+      setOpen(true);
+      document.querySelector(initialHash).scrollIntoView();
+    }
   });
 })();
