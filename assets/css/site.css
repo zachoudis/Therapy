@@ -480,8 +480,9 @@ body {
   position: relative;
 }
 
-/* The chevron is only used on mobile */
-#intro .intro-chevron {
+/* The chevron and the "My work & offers" label are only used on mobile */
+#intro .intro-chevron,
+#intro .label-mobile {
   display: none;
 }
 
@@ -581,6 +582,15 @@ body {
     outline-offset: 3px;
   }
 
+  /* On mobile the button also reveals the services, so it gets its own label */
+  #intro .label-desktop {
+    display: none;
+  }
+
+  #intro .label-mobile {
+    display: inline;
+  }
+
   /* No divider line under the pill */
   #intro .intro-work .intro-section-title::after {
     display: none;
@@ -617,6 +627,28 @@ body {
   /* Space between the pill and the first topic (inside the clipped area) */
   #intro .work-pillars > .pillar:first-child {
     margin-top: 3rem;
+  }
+
+  /* The service sections (Couples & Friends, Families, Individuals) follow the
+     intro directly, so they are also hidden until "My work is" is opened. */
+  #main:not(:has(#intro .intro-section-title[aria-expanded="true"])) :is(#first, #second, #individual) {
+    display: none;
+  }
+
+  /* Gentle fade-in when they appear */
+  :is(#first, #second, #individual) {
+    animation: service-reveal 0.5s ease;
+  }
+
+  @keyframes service-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
 
