@@ -144,3 +144,22 @@
       visibleClass: "navPanel-visible",
     });
 })(jQuery);
+
+/* Collapsible "My work is" section on mobile.
+   The click listener sits on the .intro-work container, which is never replaced,
+   so it keeps working after i18n.js swaps the inner HTML on a language change.
+   The open/closed state is stored in aria-expanded on the button; the CSS reads it. */
+(function () {
+  var introWork = document.querySelector("#intro .intro-work");
+  if (!introWork) return;
+
+  var mobile = window.matchMedia("(max-width: 980px)");
+
+  introWork.addEventListener("click", function (event) {
+    var button = event.target.closest(".intro-section-title");
+    if (!button || !mobile.matches) return; // on desktop the topics are always visible
+
+    var isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+  });
+})();
