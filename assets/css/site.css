@@ -454,8 +454,21 @@ body {
   width: 100%;
 }
 
-/* Extra breathing room before "My work is / Meine Arbeit ist" */
-#intro .intro-work p.intro-section-title {
+/* Extra breathing room before "My work is / Meine Arbeit ist".
+   It is a <button> (it toggles the topics on mobile), so the template's
+   button styles are reset here to keep it looking like a plain title on desktop. */
+#intro .intro-work .intro-section-title {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: default;
+  white-space: normal;
+  line-height: inherit;
   margin-top: 5rem;
   margin-bottom: 2.5rem;
   text-align: center;
@@ -463,11 +476,16 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #8e9b8e; /* Sage green accent */
+  color: #8e9b8e !important; /* Sage green accent; !important beats the template's #main button color */
   position: relative;
 }
 
-#intro .intro-work p.intro-section-title::after {
+/* The chevron is only used on mobile */
+#intro .intro-chevron {
+  display: none;
+}
+
+#intro .intro-work .intro-section-title::after {
   content: "";
   display: block;
   width: 40px;
@@ -521,6 +539,84 @@ body {
   }
   .pillar p {
     text-align: center;
+  }
+
+  /* --- Collapsible "My work is" (mobile only) ---
+     The second grid row holds the topics. It animates from 0fr (closed)
+     to 1fr (open), which gives a smooth height transition without JS measuring. */
+  #intro .intro-work {
+    display: grid;
+    grid-template-rows: auto 0fr;
+    align-content: start; /* stops leftover space stretching the button row mid-animation */
+    transition: grid-template-rows 0.4s ease;
+  }
+
+  #intro .intro-work:has(> .intro-section-title[aria-expanded="true"]) {
+    grid-template-rows: auto 1fr;
+  }
+
+  /* Pill-shaped toggle button */
+  #intro .intro-work .intro-section-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: center;
+    width: auto;
+    margin: 3rem 0 0;
+    padding: 0.8rem 1.75rem;
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 1px #ccd5cc;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  #intro .intro-work .intro-section-title:hover,
+  #intro .intro-work .intro-section-title[aria-expanded="true"] {
+    background-color: rgba(142, 155, 142, 0.1);
+  }
+
+  #intro .intro-work .intro-section-title:focus-visible {
+    outline: 2px solid #8e9b8e;
+    outline-offset: 3px;
+  }
+
+  /* No divider line under the pill */
+  #intro .intro-work .intro-section-title::after {
+    display: none;
+  }
+
+  /* Chevron drawn with two borders; rotates to point up when open */
+  #intro .intro-chevron {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-25%) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  #intro .intro-section-title[aria-expanded="true"] .intro-chevron {
+    transform: translateY(25%) rotate(-135deg);
+  }
+
+  /* Topics are clipped while closed, and hidden from keyboard/screen readers */
+  #intro .work-pillars {
+    min-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    visibility: hidden;
+    transition: visibility 0.4s;
+  }
+
+  #intro .intro-work:has(> .intro-section-title[aria-expanded="true"]) .work-pillars {
+    visibility: visible;
+  }
+
+  /* Space between the pill and the first topic (inside the clipped area) */
+  #intro .work-pillars > .pillar:first-child {
+    margin-top: 3rem;
   }
 }
 
@@ -887,7 +983,8 @@ body {
    ============================================================ */
 .about-me-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* min() lets a column shrink below 350px on narrow phones instead of overflowing */
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: 4rem;
   margin-bottom: 4rem;
   text-align: left;
@@ -957,6 +1054,24 @@ body {
   text-decoration: none;
   border-bottom: 1px solid rgba(142, 155, 142, 0.2);
   transition: all 0.3s ease;
+}
+
+/* Name label above each email address in the E-Mail card */
+.contact-card__body .contact-name {
+  display: block;
+  font-weight: 500;
+  color: #2d2820;
+}
+
+/* Space between Meike's address and Jan's name */
+.contact-card__body a + .contact-name {
+  margin-top: 0.75rem;
+}
+
+/* Each address is split into "name" and "@domain" parts that never break
+   internally; on narrow phones the line can only wrap before the "@". */
+.contact-card__body .nobr {
+  white-space: nowrap;
 }
 
 .contact-card__body a:hover {
@@ -1182,6 +1297,23 @@ body {
   #second .service-card,
   #individual .service-card {
     display: none;
+  }
+
+  /* Center the "Session length & fee" boxes in every section on mobile.
+     As a block with fit-content width, auto margins center it regardless
+     of the parent's text-align (which differs between sections). */
+  .price-info {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Show Jan's photo above his text on mobile, like Meike's intro */
+  #supervision .service-card {
+    order: -1;
+    margin: 0 auto 1rem;
   }
 
   /* On mobile/tablet, keep service text inside the content width,
